@@ -7,7 +7,7 @@ public class BlandPotatoController : MonoBehaviour
     new Rigidbody rb;
     //new Collider col;
     float cooldown = 3;
-    float force = 5f;
+    float force = 2f;
     Vector3 direction = new Vector3(-1,0,0); 
     // Start is called before the first frame update
     void Start()
