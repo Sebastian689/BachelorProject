@@ -53,7 +53,26 @@ public class BlandPotatoController : MonoBehaviour
             case "Goal":
                 finished = true;
             break;
+
+            case "Death":
+                InitiateDeath();
+            break;
+
+            case "Boost":
+                rb.AddForce(new Vector3(1, 0, 0) * jumpForce);
+            break;
+
+            case "Brake":
+                rb.velocity = new Vector3(0, 0, 0);
+                cooldown = 1;
+            break;
         }
 
+    }
+
+    private void InitiateDeath()
+    {
+        //Oh no
+        Destroy(this.gameObject);
     }
 }
