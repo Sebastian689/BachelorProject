@@ -8,7 +8,10 @@ public class BlandPotatoController : MonoBehaviour
     //new Collider col;
     float cooldown = 3;
     float force = 2f;
-    Vector3 direction = new Vector3(-1,0,0); 
+    float jumpForce = 500f;
+    float maxVelocity = 3f;
+    Vector3 direction = new Vector3(1,0,0);
+    bool finished = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,12 +22,21 @@ public class BlandPotatoController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(cooldown <= 0)
+        if(cooldown <= 0 && finished != true)
         {
             rb.AddForce(direction * force);
-        } else
+        } /*else if(finished == true)
+        {
+            rb.velocity = new Vector3(0, 0, 0);
+        }*/
+        else
         {
             cooldown -= Time.deltaTime;
+        }
+
+        if(rb.velocity.sqrMagnitude > maxVelocity)
+        {
+            rb.velocity *= 0.99f;
         }
     }
 
@@ -35,8 +47,13 @@ public class BlandPotatoController : MonoBehaviour
         switch (tag)
         {
             case "Jump":
-                //DoSomething
+                rb.AddForce( new Vector3(0, 1, 0) * jumpForce);
+            break;
+
+            case "Goal":
+                finished = true;
             break;
         }
+
     }
 }
