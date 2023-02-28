@@ -5,7 +5,7 @@ using UnityEngine;
 public class GridBuildingSystem : MonoBehaviour
 {
     
-    [SerializeField] private Transform testTransform;
+    public Transform testTransform;
     private GridXZ<GridObject> grid;
 
     private void Awake(){
@@ -16,7 +16,6 @@ public class GridBuildingSystem : MonoBehaviour
     }
 
     public class GridObject {
-         
         private GridXZ<GridObject> grid;
         private int x;
         private int z;
@@ -27,7 +26,7 @@ public class GridBuildingSystem : MonoBehaviour
             this.x = x;
             this.z = z;
         }
-
+        
         public void SetTransform(Transform transform){
             this.transform = transform;
             grid.TriggerGridObjectChanged(x, z);
@@ -41,10 +40,11 @@ public class GridBuildingSystem : MonoBehaviour
         public bool CanBuild(){
             return transform == null;
         }
+        
 
         public override string ToString()
         {
-            return x + ", " + z + "\n" + transform;
+            return x + ", " + z + "\n" + "transform";
         }
     }
 
@@ -53,17 +53,17 @@ public class GridBuildingSystem : MonoBehaviour
         {
             grid.GetXZ(Mouse3D.GetMouseWorldPosition(), out int x, out int z);
 
+            
             GridObject gridObject = grid.GetGridObject(x, z);
+
             if (gridObject.CanBuild())
             {
                 Transform builtTransform = Instantiate(testTransform, grid.GetWorldPosition(x, z), Quaternion.identity);
                 gridObject.SetTransform(builtTransform);
-            }
-            else
+            } else
             {
                 Debug.Log("Cant build");
             }
-            
         }
     }
 }
