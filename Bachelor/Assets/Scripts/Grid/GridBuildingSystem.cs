@@ -6,13 +6,14 @@ public class GridBuildingSystem : MonoBehaviour
 {
     
     public Transform testTransform;
+    [SerializeField] private Transform testTransform2;
     private GridXZ<GridObject> grid;
 
     private void Awake(){
         int gridWidth = 10;
         int gridHeight = 10;
         float cellSize = 10f;
-        grid = new GridXZ<GridObject>(gridWidth, gridHeight, cellSize, new Vector3(0, 0, 0), (GridXZ<GridObject> g, int x, int y) => new GridObject(g, x, y));
+        grid = new GridXZ<GridObject>(gridWidth, gridHeight, cellSize, Vector3.zero, (GridXZ<GridObject> g, int x, int y) => new GridObject(g, x, y));
     }
 
     public class GridObject {
@@ -37,11 +38,12 @@ public class GridBuildingSystem : MonoBehaviour
             grid.TriggerGridObjectChanged(x, z);
         }
 
+        // Checks if there already is a object on that grid position
         public bool CanBuild(){
             return transform == null;
         }
         
-
+        // Text in Unity showing grid text
         public override string ToString()
         {
             return x + ", " + z + "\n" + "transform";
@@ -51,9 +53,10 @@ public class GridBuildingSystem : MonoBehaviour
     private void Update(){
         if (Input.GetMouseButtonDown(0))
         {
+            // Takes world position of mouse and converts it to grid position
+            // This is most likely the problem, since it spawns in the wrong position
             grid.GetXZ(Mouse3D.GetMouseWorldPosition(), out int x, out int z);
 
-            
             GridObject gridObject = grid.GetGridObject(x, z);
 
             if (gridObject.CanBuild())
