@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ButtonBehaviour : MonoBehaviour
+public class MainButtonBehaviour : MonoBehaviour
 {
 
 	public Button yourButton;
 	public GameObject overPanel;
-	bool Active = false;
-	Image panel;
+	public bool Active = false;
+	GameObject panel;
 	
 
 	// Start is called before the first frame update
@@ -17,8 +17,8 @@ public class ButtonBehaviour : MonoBehaviour
 	{
 		Button btn = yourButton.GetComponent<Button>();
 		btn.onClick.AddListener(TaskOnClick);
-		panel = overPanel.GetComponent<Image>();
-		panel.enabled = false;
+		panel = overPanel;
+		panel.SetActive(false);
 	}
 
 	void TaskOnClick()
@@ -28,12 +28,12 @@ public class ButtonBehaviour : MonoBehaviour
 		if (Active)
         {
 			Active = false;
-			panel.enabled = false;
+			panel.SetActive(false);
         }
 		else
         {
 			Active = true;
-			panel.enabled = true;
+			panel.SetActive(true);
         }
 
 	}
