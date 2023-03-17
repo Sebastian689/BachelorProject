@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class BlandPotatoController : MonoBehaviour
 {
-    new Rigidbody rb;
+    Rigidbody2D rb;
     //new Collider col;
     float cooldown = 3;
-    float force = 2f;
+    public float force;
     float jumpForce = 500f;
-    float maxVelocity = 3f;
+    public float maxVelocity = 3f;
     Vector3 direction = new Vector3(1,0,0);
     bool finished = false;
     // Start is called before the first frame update
     void Start()
     {
-        rb = this.GetComponent<Rigidbody>();
+        rb = this.GetComponent<Rigidbody2D>();
         //col = this.GetComponent<Collider>();
     }
 
@@ -40,7 +40,7 @@ public class BlandPotatoController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         tag = collision.gameObject.tag;
 
@@ -66,8 +66,23 @@ public class BlandPotatoController : MonoBehaviour
                 rb.velocity = new Vector3(0, 0, 0);
                 cooldown = 1;
             break;
+
+            case "NormalSpeed":
+                force = 0.1f;
+                Debug.Log("Normal speed");
+            break;
         }
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Stop")
+        {
+            force = 0f;
+            Debug.Log("Force 0");
+            
+        }
     }
 
     private void InitiateDeath()
