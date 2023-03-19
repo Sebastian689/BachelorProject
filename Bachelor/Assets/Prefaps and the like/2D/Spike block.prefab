@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: 8936101036625801575}
   - component: {fileID: 3074088525972111440}
   m_Layer: 0
-  m_Name: Floor block 3 (spikes)
+  m_Name: Spike block
   m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

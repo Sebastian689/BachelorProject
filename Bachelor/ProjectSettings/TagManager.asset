@@ -11,6 +11,7 @@ TagManager:
   - Brake
   - Stop
   - NormalSpeed
+  - ChangeDirection
   layers:
   - Default
   - TransparentFX
