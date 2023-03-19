@@ -18,14 +18,20 @@ public class Mouse3D : MonoBehaviour {
             transform.position = raycastHit.point;
         }
     }
+    
+    // HERP
+
+    // DERP
 
     public static Vector3 GetMouseWorldPosition() => Instance.GetMouseWorldPosition_Instance();
 
     private Vector3 GetMouseWorldPosition_Instance() {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Debug.Log(ray);
         if (Physics.Raycast(ray, out RaycastHit raycastHit, 999f, mouseColliderLayerMask)) {
             return raycastHit.point;
         } else {
+            Debug.Log("Derp");
             return Vector3.zero;
         }
     }

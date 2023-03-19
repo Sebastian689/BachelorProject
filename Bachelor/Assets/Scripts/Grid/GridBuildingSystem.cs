@@ -6,7 +6,6 @@ public class GridBuildingSystem : MonoBehaviour
 {
     
     public Transform testTransform;
-    [SerializeField] private Transform testTransform2;
     private GridXZ<GridObject> grid;
 
     private void Awake(){
@@ -46,7 +45,7 @@ public class GridBuildingSystem : MonoBehaviour
         // Text in Unity showing grid text
         public override string ToString()
         {
-            return x + ", " + z + "\n" + "transform";
+            return x + ", " + z + "\n";
         }
     }
 
