@@ -36,7 +36,7 @@ public class Monster : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         tag = collision.gameObject.tag;
-        if (tag == "ChangeDirection" && movingRight == true)
+        if (CompareTag("ChangeDirection") && movingRight)
         {
             movingRight = false;
             gameObject.transform.eulerAngles = new Vector3(0, 180);
