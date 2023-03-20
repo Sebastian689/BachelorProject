@@ -9,9 +9,9 @@ public class GridBuildingSystem : MonoBehaviour
     private GridXZ<GridObject> grid;
 
     private void Awake(){
-        int gridWidth = 10;
-        int gridHeight = 10;
-        float cellSize = 10f;
+        int gridWidth = 25;
+        int gridHeight = 25;
+        float cellSize = 1f;
         grid = new GridXZ<GridObject>(gridWidth, gridHeight, cellSize, Vector3.zero, (GridXZ<GridObject> g, int x, int y) => new GridObject(g, x, y));
     }
 
@@ -45,7 +45,7 @@ public class GridBuildingSystem : MonoBehaviour
         // Text in Unity showing grid text
         public override string ToString()
         {
-            return x + ", " + z + "\n";
+            return "" /*x + ", " + z + "\n"*/;
         }
     }
 

@@ -18,10 +18,6 @@ public class Mouse3D : MonoBehaviour {
             transform.position = raycastHit.point;
         }
     }
-    
-    // HERP
-
-    // DERP
 
     public static Vector3 GetMouseWorldPosition() => Instance.GetMouseWorldPosition_Instance();
 
