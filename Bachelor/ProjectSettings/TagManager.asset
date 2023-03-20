@@ -9,6 +9,9 @@ TagManager:
   - Death
   - Boost
   - Brake
+  - Stop
+  - NormalSpeed
+  - ChangeDirection
   layers:
   - Default
   - TransparentFX
