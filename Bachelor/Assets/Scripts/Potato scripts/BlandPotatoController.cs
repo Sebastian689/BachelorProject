@@ -8,7 +8,7 @@ public class BlandPotatoController : MonoBehaviour
     //new Collider col;
     float cooldown = 3;
     public float force;
-    float jumpForce = 500f;
+    float jumpForce = 1500f;
     public float maxVelocity = 3f;
     Vector3 direction = new Vector3(1,0,0);
     bool finished = false;
@@ -46,12 +46,9 @@ public class BlandPotatoController : MonoBehaviour
 
         switch (tag)
         {
-            case "Jump":
-                rb.AddForce( new Vector3(0, 1, 0) * jumpForce);
-            break;
-
             case "Goal":
                 finished = true;
+                Debug.Log("Finished");
             break;
 
             case "Death":
@@ -77,11 +74,18 @@ public class BlandPotatoController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Stop")
+        tag = other.gameObject.tag;
+
+        switch (tag)
         {
-            force = 0f;
-            Debug.Log("Force 0");
-            
+            case "Jump":
+                rb.AddForce( new Vector3(0, 1f * jumpForce, 0));
+                break;
+
+            case "Stop":
+                force = 0f;
+                Debug.Log("Force 0");
+                break;
         }
     }
 
