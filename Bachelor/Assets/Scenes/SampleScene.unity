@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657892, g: 0.49641347, b: 0.57481635, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.496413, b: 0.57481563, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2813,6 +2813,11 @@ MonoBehaviour:
   yourButton: {fileID: 930334232}
   overPanel: {fileID: 1886655349}
   Active: 0
+  panelHolder:
+  - {fileID: 1144116693}
+  - {fileID: 1308482815}
+  - {fileID: 1136050544}
+  - {fileID: 1836022408}
 --- !u!1 &935009361
 GameObject:
   m_ObjectHideFlags: 0
@@ -3797,6 +3802,11 @@ MonoBehaviour:
   yourButton: {fileID: 1136050541}
   overPanel: {fileID: 935009361}
   Active: 0
+  panelHolder:
+  - {fileID: 1144116693}
+  - {fileID: 1308482815}
+  - {fileID: 1836022408}
+  - {fileID: 930334235}
 --- !u!1 &1144116688
 GameObject:
   m_ObjectHideFlags: 0
@@ -3935,6 +3945,11 @@ MonoBehaviour:
   yourButton: {fileID: 1144116690}
   overPanel: {fileID: 454552425}
   Active: 0
+  panelHolder:
+  - {fileID: 1308482815}
+  - {fileID: 1136050544}
+  - {fileID: 1836022408}
+  - {fileID: 930334235}
 --- !u!1 &1156788987
 GameObject:
   m_ObjectHideFlags: 0
@@ -4814,6 +4829,11 @@ MonoBehaviour:
   yourButton: {fileID: 1308482812}
   overPanel: {fileID: 369863269}
   Active: 0
+  panelHolder:
+  - {fileID: 1144116693}
+  - {fileID: 1136050544}
+  - {fileID: 1836022408}
+  - {fileID: 930334235}
 --- !u!1 &1396615067
 GameObject:
   m_ObjectHideFlags: 0
@@ -6499,6 +6519,11 @@ MonoBehaviour:
   yourButton: {fileID: 1836022405}
   overPanel: {fileID: 761649588}
   Active: 0
+  panelHolder:
+  - {fileID: 1144116693}
+  - {fileID: 1308482815}
+  - {fileID: 1136050544}
+  - {fileID: 930334235}
 --- !u!1 &1842336352
 GameObject:
   m_ObjectHideFlags: 0

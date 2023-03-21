@@ -11,6 +11,7 @@ public class MainButtonBehaviour : MonoBehaviour
 	public bool Active = false;
 	GameObject panel;
 	
+	public MainButtonBehaviour[] panelHolder;
 
 	// Start is called before the first frame update
 	void Start()
@@ -19,21 +20,40 @@ public class MainButtonBehaviour : MonoBehaviour
 		btn.onClick.AddListener(TaskOnClick);
 		panel = overPanel;
 		panel.SetActive(false);
+
+		
 	}
 
-	void TaskOnClick()
+    private void Update()
+    {
+        if(Active == false)
+        {
+			panel.SetActive(false);
+		}
+		else if(Active == true)
+        {
+			panel.SetActive(true);
+		}
+    }
+    void TaskOnClick()
 	{
 		Debug.Log("You have clicked the button!");
 
 		if (Active)
         {
 			Active = false;
-			panel.SetActive(false);
+			
         }
 		else
         {
 			Active = true;
-			panel.SetActive(true);
+			
+
+			foreach(MainButtonBehaviour panel in panelHolder)
+            {
+				panel.Active = false;
+				Debug.Log("Deactivated panel");
+            }
         }
 
 	}
