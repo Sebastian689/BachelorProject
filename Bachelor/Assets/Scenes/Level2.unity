@@ -6362,7 +6362,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74fe33d8eae7ee54092c54f5c1779c41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testTransform: {fileID: 3756983745368360857, guid: f374eb52abadcbe4080db4aed2f3f6f2, type: 3}
+  testTransform: {fileID: 3860476917799931408, guid: bbadd7f4005ea6941a1cba90fa2b49b7, type: 3}
+  testTransform2: {fileID: 8963406766226953249, guid: 7f96a87e4d6de07488e01bb5637a2857, type: 3}
 --- !u!4 &1478550641
 Transform:
   m_ObjectHideFlags: 0

@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class GridBuildingSystem : MonoBehaviour
 {
-    
+    private string objectToPlace;
     public Transform testTransform;
+    public Transform testTransform2;
     private GridXZ<GridObject> grid;
 
     private void Awake(){
-        int gridWidth = 25;
-        int gridHeight = 25;
+        int gridWidth = 17;
+        int gridHeight = 9;
         float cellSize = 1f;
         grid = new GridXZ<GridObject>(gridWidth, gridHeight, cellSize, Vector3.zero, (GridXZ<GridObject> g, int x, int y) => new GridObject(g, x, y));
     }
@@ -49,6 +50,22 @@ public class GridBuildingSystem : MonoBehaviour
         }
     }
 
+    void SelectedObject()
+    {
+        
+        switch (objectToPlace)
+        {
+            case "Spring":
+                //GameObject prefabToSpawn = Resources.Load<GameObject>(objectToPlace);
+                Debug.Log("Spring Equipped");
+                break;
+            case "Booster":
+                
+                Debug.Log("Spring Equipped");
+                break;
+        }
+    }
+
     private void Update(){
         if (Input.GetMouseButtonDown(0))
         {
@@ -61,6 +78,23 @@ public class GridBuildingSystem : MonoBehaviour
             if (gridObject.CanBuild())
             {
                 Transform builtTransform = Instantiate(testTransform, grid.GetWorldPosition(x, z), Quaternion.identity);
+                gridObject.SetTransform(builtTransform);
+            } else
+            {
+                Debug.Log("Cant build");
+            }
+        }
+        if (Input.GetMouseButtonDown(1))
+        {
+            // Takes world position of mouse and converts it to grid position
+            // This is most likely the problem, since it spawns in the wrong position
+            grid.GetXZ(Mouse3D.GetMouseWorldPosition(), out int x, out int z);
+
+            GridObject gridObject = grid.GetGridObject(x, z);
+
+            if (gridObject.CanBuild())
+            {
+                Transform builtTransform = Instantiate(testTransform2, grid.GetWorldPosition(x, z), Quaternion.identity);
                 gridObject.SetTransform(builtTransform);
             } else
             {
