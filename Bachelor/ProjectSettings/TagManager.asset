@@ -12,6 +12,7 @@ TagManager:
   - Stop
   - NormalSpeed
   - ChangeDirection
+  - GameManager
   layers:
   - Default
   - TransparentFX

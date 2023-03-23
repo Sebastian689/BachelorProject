@@ -12,18 +12,30 @@ public class BlandPotatoController : MonoBehaviour
     public float maxVelocity = 3f;
     Vector3 direction = new Vector3(1,0,0);
     bool finished = false;
+    public GameManager GM;
+    public GameObject go;
     // Start is called before the first frame update
     void Start()
     {
+        go = GameObject.FindGameObjectWithTag("GameManager");
+        GM = go.GetComponent<GameManager>();
+
         rb = this.GetComponent<Rigidbody2D>();
         //col = this.GetComponent<Collider>();
     }
+
+    
 
     // Update is called once per frame
     void Update()
     {
         if(cooldown <= 0 && finished != true)
         {
+            if(GM.timerHasBegun == false)
+            {
+                GM.BeginTimer();
+            }
+
             rb.AddForce(direction * force);
         } /*else if(finished == true)
         {
