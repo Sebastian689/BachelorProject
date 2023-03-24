@@ -43,9 +43,9 @@ public class BlandPotatoController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        tag = collision.gameObject.tag;
+        string otherTag = collision.gameObject.tag;
 
-        switch (tag)
+        switch (otherTag)
         {
             case "Goal":
                 finished = true;
