@@ -13,10 +13,13 @@ public class BlandPotatoController : MonoBehaviour
     public float maxVelocity = 3f;
     Vector3 direction = new Vector3(1,0,0);
     bool finished = false;
+
+    public SoundManager soundManager;
     // Start is called before the first frame update
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
+        soundManager = GameObject.FindWithTag("SoundManager").GetComponent<SoundManager>();
         //col = this.GetComponent<Collider>();
     }
 
@@ -77,6 +80,7 @@ public class BlandPotatoController : MonoBehaviour
         {
             case "Jump":
                 rb.AddForce( new Vector3(0, 1f * jumpForce, 0));
+                soundManager.PlayJump();
                 break;
 
             case "Stop":
@@ -86,6 +90,7 @@ public class BlandPotatoController : MonoBehaviour
             
             case "Boost":
                 rb.AddForce(new Vector3(1, 0, 0) * boostForce);
+                soundManager.PlayBoost();
                 break;
         }
     }
