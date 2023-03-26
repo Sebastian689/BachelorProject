@@ -1,0 +1,2928 @@
+fileFormatVersion: 2
+guid: 237737a9ebdd08241a9dd59511a9e516
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8889607619868517755
+    second: Maintilemap_0
+  - first:
+      213: -6105242058993151894
+    second: Maintilemap_1
+  - first:
+      213: -3378784029469813326
+    second: Maintilemap_2
+  - first:
+      213: -205531501532987016
+    second: Maintilemap_3
+  - first:
+      213: 8106598117614515836
+    second: Maintilemap_4
+  - first:
+      213: -516660377480450533
+    second: Maintilemap_5
+  - first:
+      213: 3973144684354031617
+    second: Maintilemap_6
+  - first:
+      213: -3574668524763864872
+    second: Maintilemap_7
+  - first:
+      213: -3706835892659521953
+    second: Maintilemap_8
+  - first:
+      213: 6087607125239104074
+    second: Maintilemap_9
+  - first:
+      213: 4242226922714466246
+    second: Maintilemap_10
+  - first:
+      213: -6244437688324595980
+    second: Maintilemap_11
+  - first:
+      213: -6544320592625957646
+    second: Maintilemap_12
+  - first:
+      213: 8246474957769891871
+    second: Maintilemap_13
+  - first:
+      213: -1777241993704405031
+    second: Maintilemap_14
+  - first:
+      213: 1345991339669860526
+    second: Maintilemap_15
+  - first:
+      213: -3349043042367875900
+    second: Maintilemap_16
+  - first:
+      213: -4524507848536414953
+    second: Maintilemap_17
+  - first:
+      213: -8670444530505686386
+    second: Maintilemap_18
+  - first:
+      213: 5483973506533157624
+    second: Maintilemap_19
+  - first:
+      213: -3795964165493343124
+    second: Maintilemap_20
+  - first:
+      213: -1331001278503808533
+    second: Maintilemap_21
+  - first:
+      213: 998115858412037492
+    second: Maintilemap_22
+  - first:
+      213: -4196633459303563309
+    second: Maintilemap_23
+  - first:
+      213: -32137360496586169
+    second: Maintilemap_24
+  - first:
+      213: 5468980198671001852
+    second: Maintilemap_25
+  - first:
+      213: -8341043754768687725
+    second: Maintilemap_26
+  - first:
+      213: -1376015448347655484
+    second: Maintilemap_27
+  - first:
+      213: -5518566847583808955
+    second: Maintilemap_28
+  - first:
+      213: -6462875799151286748
+    second: Maintilemap_29
+  - first:
+      213: 7035809990686535005
+    second: Maintilemap_30
+  - first:
+      213: 3100067753213639873
+    second: Maintilemap_31
+  - first:
+      213: 5905658987651501945
+    second: Maintilemap_32
+  - first:
+      213: 6466960828745270135
+    second: Maintilemap_33
+  - first:
+      213: -1362700945433156447
+    second: Maintilemap_34
+  - first:
+      213: -1427302042674350370
+    second: Maintilemap_35
+  - first:
+      213: 4400128122863789583
+    second: Maintilemap_36
+  - first:
+      213: -7221661045668384005
+    second: Maintilemap_37
+  - first:
+      213: -4179024882419934162
+    second: Maintilemap_38
+  - first:
+      213: -6590540801109144354
+    second: Maintilemap_39
+  - first:
+      213: 1578945187814766252
+    second: Maintilemap_40
+  - first:
+      213: 5513310817162532193
+    second: Maintilemap_41
+  - first:
+      213: -2752194465645994459
+    second: Maintilemap_42
+  - first:
+      213: -8071636885951506771
+    second: Maintilemap_43
+  - first:
+      213: 4485938343647177437
+    second: Maintilemap_44
+  - first:
+      213: 5506350179769223311
+    second: Maintilemap_45
+  - first:
+      213: 3445945662608778501
+    second: Maintilemap_46
+  - first:
+      213: 7275708685880092177
+    second: Maintilemap_47
+  - first:
+      213: -8704807179617168735
+    second: Maintilemap_48
+  - first:
+      213: 8855845467248354416
+    second: Maintilemap_49
+  - first:
+      213: -8274872762786304257
+    second: Maintilemap_50
+  - first:
+      213: 4677704888139909119
+    second: Maintilemap_51
+  - first:
+      213: 6475238833868289423
+    second: Maintilemap_52
+  - first:
+      213: 8545504887941149432
+    second: Maintilemap_53
+  - first:
+      213: 56532936820161477
+    second: Maintilemap_54
+  - first:
+      213: 4159855859145156935
+    second: Maintilemap_55
+  - first:
+      213: -968879663739414069
+    second: Maintilemap_56
+  - first:
+      213: 878550618055289822
+    second: Maintilemap_57
+  - first:
+      213: -7391619407403838777
+    second: Maintilemap_58
+  - first:
+      213: 7741822843298273141
+    second: Maintilemap_59
+  - first:
+      213: 1141960762819389097
+    second: Maintilemap_60
+  - first:
+      213: -454824049418470803
+    second: Maintilemap_61
+  - first:
+      213: -5448645102860273637
+    second: Maintilemap_62
+  - first:
+      213: -3071038957288401844
+    second: Maintilemap_63
+  - first:
+      213: -7795204905701491262
+    second: Maintilemap_64
+  - first:
+      213: -4107206159227541210
+    second: Maintilemap_65
+  - first:
+      213: 619534719624108759
+    second: Maintilemap_66
+  - first:
+      213: -4756777200840408122
+    second: Maintilemap_67
+  - first:
+      213: -1075352831163309977
+    second: Maintilemap_68
+  - first:
+      213: 7950853776526586470
+    second: Maintilemap_69
+  - first:
+      213: -9198113267509307804
+    second: Maintilemap_70
+  - first:
+      213: 482589250940082044
+    second: Maintilemap_71
+  - first:
+      213: -4857517731441707989
+    second: Maintilemap_72
+  - first:
+      213: -5724881817052719688
+    second: Maintilemap_73
+  - first:
+      213: 4018019371736382269
+    second: Maintilemap_74
+  - first:
+      213: 7375686048526111205
+    second: Maintilemap_75
+  - first:
+      213: 7288784370306730506
+    second: Maintilemap_76
+  - first:
+      213: 8223531760212754792
+    second: Maintilemap_77
+  - first:
+      213: -7201725084295640895
+    second: Maintilemap_78
+  - first:
+      213: 67975541872803650
+    second: Maintilemap_79
+  - first:
+      213: 2417511263232865141
+    second: Maintilemap_80
+  - first:
+      213: 7387889536258288123
+    second: Maintilemap_81
+  - first:
+      213: -1898351899989380935
+    second: Maintilemap_82
+  - first:
+      213: 1800807343377473281
+    second: Maintilemap_83
+  - first:
+      213: -8327385715657607718
+    second: Maintilemap_84
+  - first:
+      213: 6775027535615947764
+    second: Maintilemap_85
+  - first:
+      213: 7503327451948485805
+    second: Maintilemap_86
+  - first:
+      213: 3684817137217075853
+    second: Maintilemap_87
+  - first:
+      213: 5540721012172268348
+    second: Maintilemap_88
+  - first:
+      213: 2335602207276586261
+    second: Maintilemap_89
+  - first:
+      213: -268225032165523152
+    second: Maintilemap_90
+  - first:
+      213: -44412427661121706
+    second: Maintilemap_91
+  - first:
+      213: -7251885600150294167
+    second: Maintilemap_92
+  - first:
+      213: 4842676816380902557
+    second: Maintilemap_93
+  - first:
+      213: -3538767098937488951
+    second: Maintilemap_94
+  - first:
+      213: -5347211375967845708
+    second: Maintilemap_95
+  - first:
+      213: 4013607651435245245
+    second: Maintilemap_96
+  - first:
+      213: 6308854780821187613
+    second: Maintilemap_97
+  - first:
+      213: -5708800455040494614
+    second: Maintilemap_98
+  - first:
+      213: -5154860116145574244
+    second: Maintilemap_99
+  - first:
+      213: -4881659769701834367
+    second: Maintilemap_100
+  - first:
+      213: 6099646214756071388
+    second: Maintilemap_101
+  - first:
+      213: -46178686862527894
+    second: Maintilemap_102
+  - first:
+      213: 2507920223316925745
+    second: Maintilemap_103
+  - first:
+      213: -5475332760739752268
+    second: Maintilemap_104
+  - first:
+      213: -642942929054554230
+    second: Maintilemap_105
+  - first:
+      213: 1978000263913744608
+    second: Maintilemap_106
+  - first:
+      213: 8880241810240499388
+    second: Maintilemap_107
+  - first:
+      213: -2976199320886438529
+    second: Maintilemap_108
+  - first:
+      213: -5635361156821974025
+    second: Maintilemap_109
+  - first:
+      213: 3561832452812473472
+    second: Maintilemap_110
+  - first:
+      213: -2572549728066695174
+    second: Maintilemap_111
+  - first:
+      213: 2534654472872337336
+    second: Maintilemap_112
+  - first:
+      213: -4130108189678694634
+    second: Maintilemap_113
+  - first:
+      213: -6513508813742186607
+    second: Maintilemap_114
+  - first:
+      213: 5678550525638844891
+    second: Maintilemap_115
+  - first:
+      213: -7464681065227292919
+    second: Maintilemap_116
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Maintilemap_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 767
+        width: 529
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b756ed6f70b3e5b70800000000000000
+      internalID: 8889607619868517755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_1
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 672
+        width: 768
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6050fdb1b2d54ba0800000000000000
+      internalID: -6105242058993151894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_2
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 767
+        width: 98
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b550b6a3d52c11d0800000000000000
+      internalID: -3378784029469813326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_3
+      rect:
+        serializedVersion: 2
+        x: 1684
+        y: 1007
+        width: 138
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87149f4303ec52df0800000000000000
+      internalID: -205531501532987016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_4
+      rect:
+        serializedVersion: 2
+        x: 1824
+        y: 959
+        width: 98
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c767341990c608070800000000000000
+      internalID: 8106598117614515836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_5
+      rect:
+        serializedVersion: 2
+        x: 1967
+        y: 815
+        width: 146
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1e22c2cf1474d8f0800000000000000
+      internalID: -516660377480450533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_6
+      rect:
+        serializedVersion: 2
+        x: 2159
+        y: 863
+        width: 146
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10057203a02732730800000000000000
+      internalID: 3973144684354031617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_7
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 672
+        width: 289
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d02ea78ae9346ec0800000000000000
+      internalID: -3574668524763864872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_8
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 767
+        width: 194
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f567c51356cae8cc0800000000000000
+      internalID: -3706835892659521953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_9
+      rect:
+        serializedVersion: 2
+        x: 1681
+        y: 767
+        width: 143
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4283084d668b7450800000000000000
+      internalID: 6087607125239104074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_10
+      rect:
+        serializedVersion: 2
+        x: 1872
+        y: 863
+        width: 50
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c78ef0f8ea6fda30800000000000000
+      internalID: 4242226922714466246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_11
+      rect:
+        serializedVersion: 2
+        x: 2159
+        y: 672
+        width: 146
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fed955c10d4759a0800000000000000
+      internalID: -6244437688324595980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 527
+        width: 529
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f481442817ed25a0800000000000000
+      internalID: -6544320592625957646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_13
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 576
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f10670b484d517270800000000000000
+      internalID: 8246474957769891871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_14
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 575
+        width: 80
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d7875da2d7f557e0800000000000000
+      internalID: -1777241993704405031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_15
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 575
+        width: 78
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea036c7fdfbeda210800000000000000
+      internalID: 1345991339669860526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_16
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 575
+        width: 98
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c45b22d81fc581d0800000000000000
+      internalID: -3349043042367875900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_17
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 672
+        width: 124
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71525886518b531c0800000000000000
+      internalID: -4524507848536414953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_18
+      rect:
+        serializedVersion: 2
+        x: 1775
+        y: 672
+        width: 124
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e82ea7233a46ca780800000000000000
+      internalID: -8670444530505686386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_19
+      rect:
+        serializedVersion: 2
+        x: 1967
+        y: 672
+        width: 146
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8faef8e49dcfa1c40800000000000000
+      internalID: 5483973506533157624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_20
+      rect:
+        serializedVersion: 2
+        x: 2326
+        y: 672
+        width: 92
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6c38af04b6025bc0800000000000000
+      internalID: -3795964165493343124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_21
+      rect:
+        serializedVersion: 2
+        x: 2591
+        y: 575
+        width: 97
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be1903f9365578de0800000000000000
+      internalID: -1331001278503808533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_22
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 613
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4756551c5150add00800000000000000
+      internalID: 998115858412037492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_23
+      rect:
+        serializedVersion: 2
+        x: 1604
+        y: 575
+        width: 125
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3df31bd7a1092c5c0800000000000000
+      internalID: -4196633459303563309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_24
+      rect:
+        serializedVersion: 2
+        x: 1775
+        y: 575
+        width: 126
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 742159bad33dd8ff0800000000000000
+      internalID: -32137360496586169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_25
+      rect:
+        serializedVersion: 2
+        x: 1953
+        y: 432
+        width: 77
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf82e69c388b5eb40800000000000000
+      internalID: 5468980198671001852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_26
+      rect:
+        serializedVersion: 2
+        x: 2111
+        y: 432
+        width: 147
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39d9505d5e8ae3c80800000000000000
+      internalID: -8341043754768687725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_27
+      rect:
+        serializedVersion: 2
+        x: 2351
+        y: 432
+        width: 194
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c2c9cb7d3967ece0800000000000000
+      internalID: -1376015448347655484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_28
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 605
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5421584d0bc1a63b0800000000000000
+      internalID: -5518566847583808955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_29
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 598
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4266e14d3b04f46a0800000000000000
+      internalID: -6462875799151286748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_30
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 527
+        width: 28
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5de302c8e734a160800000000000000
+      internalID: 7035809990686535005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_31
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 592
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cc31f95237a50b20800000000000000
+      internalID: 3100067753213639873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_32
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 593
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97f8f8b4f8d15f150800000000000000
+      internalID: 5905658987651501945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_33
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 588
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7734abd3c924fb950800000000000000
+      internalID: 6466960828745270135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_34
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 527
+        width: 28
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a42e54c5b6b61de0800000000000000
+      internalID: -1362700945433156447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_35
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 527
+        width: 29
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed6b437ba54313ce0800000000000000
+      internalID: -1427302042674350370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_36
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 527
+        width: 28
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f06a0810735601d30800000000000000
+      internalID: 4400128122863789583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_37
+      rect:
+        serializedVersion: 2
+        x: 988
+        y: 586
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf2f8ac7a8187cb90800000000000000
+      internalID: -7221661045668384005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_38
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 527
+        width: 27
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2c57d7c20f1106c0800000000000000
+      internalID: -4179024882419934162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 287
+        width: 529
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edccb204f02b984a0800000000000000
+      internalID: -6590540801109144354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_40
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 527
+        width: 29
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca6f28f584a89e510800000000000000
+      internalID: 1578945187814766252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_41
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 537
+        width: 42
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1659a493af6338c40800000000000000
+      internalID: 5513310817162532193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_42
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 530
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52edf5a17bd3ec9d0800000000000000
+      internalID: -2752194465645994459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_43
+      rect:
+        serializedVersion: 2
+        x: 1204
+        y: 529
+        width: 42
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da69be08409cbff80800000000000000
+      internalID: -8071636885951506771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_44
+      rect:
+        serializedVersion: 2
+        x: 1251
+        y: 498
+        width: 42
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddae461f721414e30800000000000000
+      internalID: 4485938343647177437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_45
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 488
+        width: 44
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f888d0a805c7a6c40800000000000000
+      internalID: 5506350179769223311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_46
+      rect:
+        serializedVersion: 2
+        x: 1353
+        y: 488
+        width: 30
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 505281f925572df20800000000000000
+      internalID: 3445945662608778501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_47
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 484
+        width: 33
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1166b1f508288f460800000000000000
+      internalID: 7275708685880092177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_48
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 527
+        width: 28
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a216ac7dff423780800000000000000
+      internalID: -8704807179617168735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_49
+      rect:
+        serializedVersion: 2
+        x: 1487
+        y: 537
+        width: 50
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 074671d388846ea70800000000000000
+      internalID: 8855845467248354416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_50
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 479
+        width: 288
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffe219c701fb92d80800000000000000
+      internalID: -8274872762786304257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_51
+      rect:
+        serializedVersion: 2
+        x: 1886
+        y: 517
+        width: 20
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff700bdefcb8ae040800000000000000
+      internalID: 4677704888139909119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_52
+      rect:
+        serializedVersion: 2
+        x: 2591
+        y: 432
+        width: 97
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f85b880896bacd950800000000000000
+      internalID: 6475238833868289423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_53
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 487
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f2b8186b6bb79670800000000000000
+      internalID: 8545504887941149432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_54
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 491
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cb76411868d8c000800000000000000
+      internalID: 56532936820161477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_55
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 487
+        width: 29
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 749ac213dd6cab930800000000000000
+      internalID: 4159855859145156935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_56
+      rect:
+        serializedVersion: 2
+        x: 1448
+        y: 436
+        width: 33
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc956b44419dd82f0800000000000000
+      internalID: -968879663739414069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_57
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 479
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edba262e12d313c00800000000000000
+      internalID: 878550618055289822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_58
+      rect:
+        serializedVersion: 2
+        x: 1838
+        y: 479
+        width: 21
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c29fcabf41bb6990800000000000000
+      internalID: -7391619407403838777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_59
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 432
+        width: 43
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5775cc8abda707b60800000000000000
+      internalID: 7741822843298273141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_60
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 432
+        width: 44
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a6a84f634f09df00800000000000000
+      internalID: 1141960762819389097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_61
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 483
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6a7b13dfe320b9f0800000000000000
+      internalID: -454824049418470803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_62
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 287
+        width: 194
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1877d8a5268264b0800000000000000
+      internalID: -5448645102860273637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_63
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 432
+        width: 44
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c445073e65a7165d0800000000000000
+      internalID: -3071038957288401844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_64
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 432
+        width: 44
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cdb744607ed1d390800000000000000
+      internalID: -7795204905701491262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_65
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 432
+        width: 44
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62922f352c54007c0800000000000000
+      internalID: -4107206159227541210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_66
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 432
+        width: 45
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7da57398b87099800800000000000000
+      internalID: 619534719624108759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_67
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 439
+        width: 25
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c30b3c96588cfdb0800000000000000
+      internalID: -4756777200840408122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_68
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 438
+        width: 32
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 760ec4a2c449311f0800000000000000
+      internalID: -1075352831163309977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_69
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 439
+        width: 25
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 662b0f2626b175e60800000000000000
+      internalID: 7950853776526586470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_70
+      rect:
+        serializedVersion: 2
+        x: 1316
+        y: 409
+        width: 60
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 466dc4687bcb95080800000000000000
+      internalID: -9198113267509307804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_71
+      rect:
+        serializedVersion: 2
+        x: 1394
+        y: 445
+        width: 33
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7794baed5082b600800000000000000
+      internalID: 482589250940082044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_72
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 338
+        width: 288
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2471470c51a69cb0800000000000000
+      internalID: -4857517731441707989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_73
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 443
+        width: 38
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b5da71b1522d80b0800000000000000
+      internalID: -5724881817052719688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_74
+      rect:
+        serializedVersion: 2
+        x: 1876
+        y: 445
+        width: 40
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3b3cf8845fd2c730800000000000000
+      internalID: 4018019371736382269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_75
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 390
+        width: 29
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e114311263bb5660800000000000000
+      internalID: 7375686048526111205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_76
+      rect:
+        serializedVersion: 2
+        x: 1394
+        y: 383
+        width: 45
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0a4d8464c6f62560800000000000000
+      internalID: 7288784370306730506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_77
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 418
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 861cf96d09adf1270800000000000000
+      internalID: 8223531760212754792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_78
+      rect:
+        serializedVersion: 2
+        x: 1517
+        y: 415
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c8c98431355e0c90800000000000000
+      internalID: -7201725084295640895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_79
+      rect:
+        serializedVersion: 2
+        x: 2422
+        y: 287
+        width: 266
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24f3eba256f71f000800000000000000
+      internalID: 67975541872803650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_80
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 391
+        width: 40
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57330857fa9bc8120800000000000000
+      internalID: 2417511263232865141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_81
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 404
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf92088f36e078660800000000000000
+      internalID: 7387889536258288123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_82
+      rect:
+        serializedVersion: 2
+        x: 1498
+        y: 409
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b0f17e3103b7a5e0800000000000000
+      internalID: -1898351899989380935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_83
+      rect:
+        serializedVersion: 2
+        x: 1838
+        y: 397
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10fddeadcb0cdf810800000000000000
+      internalID: 1800807343377473281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_84
+      rect:
+        serializedVersion: 2
+        x: 2303
+        y: 287
+        width: 98
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad5f09edfce2f6c80800000000000000
+      internalID: -8327385715657607718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_85
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 401
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f3f0e3e5abb50e50800000000000000
+      internalID: 6775027535615947764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_86
+      rect:
+        serializedVersion: 2
+        x: 1880
+        y: 315
+        width: 32
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dac83de209c212860800000000000000
+      internalID: 7503327451948485805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_87
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 390
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8a781ec9a9132330800000000000000
+      internalID: 3684817137217075853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_88
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 395
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c332212976894ec40800000000000000
+      internalID: 5540721012172268348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_89
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 390
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 515d65d35d9b96020800000000000000
+      internalID: 2335602207276586261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_90
+      rect:
+        serializedVersion: 2
+        x: 1509
+        y: 394
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03108ed11c2174cf0800000000000000
+      internalID: -268225032165523152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_91
+      rect:
+        serializedVersion: 2
+        x: 1941
+        y: 287
+        width: 124
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65765a1e127326ff0800000000000000
+      internalID: -44412427661121706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_92
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 336
+        width: 42
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 961754308702c5b90800000000000000
+      internalID: -7251885600150294167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_93
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 336
+        width: 42
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9c376a28e4a43340800000000000000
+      internalID: 4842676816380902557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_94
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 387
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c9cdfc9216c3eec0800000000000000
+      internalID: -3538767098937488951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_95
+      rect:
+        serializedVersion: 2
+        x: 1467
+        y: 386
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b242849593eac5b0800000000000000
+      internalID: -5347211375967845708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_96
+      rect:
+        serializedVersion: 2
+        x: 2111
+        y: 287
+        width: 124
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbe669bd4e233b730800000000000000
+      internalID: 4013607651435245245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_97
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 336
+        width: 42
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1c2f565ffd8d8750800000000000000
+      internalID: 6308854780821187613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_98
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 336
+        width: 42
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae319bf8b3446c0b0800000000000000
+      internalID: -5708800455040494614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_99
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 336
+        width: 42
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9e605639024678b0800000000000000
+      internalID: -5154860116145574244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_100
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 336
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1816b98bd4cd04cb0800000000000000
+      internalID: -4881659769701834367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_101
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 337
+        width: 36
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd7771e3aeb46a450800000000000000
+      internalID: 6099646214756071388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_102
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 300
+        width: 68
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a627d5d9ab0fb5ff0800000000000000
+      internalID: -46178686862527894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_103
+      rect:
+        serializedVersion: 2
+        x: 1303
+        y: 344
+        width: 34
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13dd2d3d72cedc220800000000000000
+      internalID: 2507920223316925745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_104
+      rect:
+        serializedVersion: 2
+        x: 1351
+        y: 344
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b65c091dd5b304b0800000000000000
+      internalID: -5475332760739752268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_105
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 350
+        width: 33
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a87aadeffcec317f0800000000000000
+      internalID: -642942929054554230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_106
+      rect:
+        serializedVersion: 2
+        x: 1442
+        y: 335
+        width: 45
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e8253892c4437b10800000000000000
+      internalID: 1978000263913744608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_107
+      rect:
+        serializedVersion: 2
+        x: 1498
+        y: 287
+        width: 227
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbee4fa70e4fc3b70800000000000000
+      internalID: 8880241810240499388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_108
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 319
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f751ec97c7a62b6d0800000000000000
+      internalID: -2976199320886438529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_109
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 319
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f38792a2ec2bc1b0800000000000000
+      internalID: -5635361156821974025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_110
+      rect:
+        serializedVersion: 2
+        x: 1831
+        y: 315
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08488539ebb2e6130800000000000000
+      internalID: 3561832452812473472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_111
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 47
+        width: 529
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aff8e8bf6a77c4cd0800000000000000
+      internalID: -2572549728066695174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_112
+      rect:
+        serializedVersion: 2
+        x: 1303
+        y: 296
+        width: 34
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bf19eb50d6ec2320800000000000000
+      internalID: 2534654472872337336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_113
+      rect:
+        serializedVersion: 2
+        x: 1351
+        y: 296
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61f0546db78eea6c0800000000000000
+      internalID: -4130108189678694634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_114
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 296
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19f55837e3e5b95a0800000000000000
+      internalID: -6513508813742186607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_115
+      rect:
+        serializedVersion: 2
+        x: 1453
+        y: 302
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd1afc7ed934ece40800000000000000
+      internalID: 5678550525638844891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maintilemap_116
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 96
+        width: 146
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90fea89ee10286890800000000000000
+      internalID: -7464681065227292919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 9a9cf0ac6bd50014d8f5f932f3948443
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
