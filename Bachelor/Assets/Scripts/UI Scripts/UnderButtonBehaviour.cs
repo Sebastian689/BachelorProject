@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,10 +12,17 @@ public class UnderButtonBehaviour : MonoBehaviour
     GameObject panel;
     public GameObject embeddedObject;
     public MainButtonBehaviour overButton;
+    public GridBuildingSystem gridSystem;
+    private string objectToPlace;
 
     // Start is called before the first frame update
     void Start()
     {
+        if (embeddedObject != null)
+        {
+            objectToPlace = embeddedObject.ToString();
+            //Debug.Log(objectToPlace);
+        }
         Button btn = yourButton.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
         panel = overPanel;
@@ -23,8 +31,15 @@ public class UnderButtonBehaviour : MonoBehaviour
     void TaskOnClick()
     {
         Debug.Log("You have clicked the button!");
-
         //Activate placement
+
+        if (embeddedObject != null)
+        {
+            gridSystem.testTransform = embeddedObject.transform;
+            //objectToPlace = embeddedObject.ToString();
+            Debug.Log(embeddedObject);
+        }
+        
         panel.SetActive(false);
         overButton.Active = false;
     }

@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class GridBuildingSystem : MonoBehaviour
 {
-    private string objectToPlace;
     public Transform testTransform;
-    public Transform testTransform2;
+    //public Transform testTransform2;
     private GridXZ<GridObject> grid;
 
     private void Awake(){
@@ -50,22 +49,6 @@ public class GridBuildingSystem : MonoBehaviour
         }
     }
 
-    void SelectedObject()
-    {
-        
-        switch (objectToPlace)
-        {
-            case "Spring":
-                //GameObject prefabToSpawn = Resources.Load<GameObject>(objectToPlace);
-                Debug.Log("Spring Equipped");
-                break;
-            case "Booster":
-                
-                Debug.Log("Spring Equipped");
-                break;
-        }
-    }
-
     private void Update(){
         if (Input.GetMouseButtonDown(0))
         {
@@ -84,6 +67,7 @@ public class GridBuildingSystem : MonoBehaviour
                 Debug.Log("Cant build");
             }
         }
+        /*
         if (Input.GetMouseButtonDown(1))
         {
             // Takes world position of mouse and converts it to grid position
@@ -101,5 +85,6 @@ public class GridBuildingSystem : MonoBehaviour
                 Debug.Log("Cant build");
             }
         }
+        */
     }
 }
