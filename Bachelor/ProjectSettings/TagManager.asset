@@ -12,6 +12,7 @@ TagManager:
   - Stop
   - NormalSpeed
   - ChangeDirection
+  - LeftBoost
   layers:
   - Default
   - TransparentFX

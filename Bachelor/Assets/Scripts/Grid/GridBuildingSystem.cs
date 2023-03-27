@@ -10,7 +10,7 @@ public class GridBuildingSystem : MonoBehaviour
 
     private void Awake(){
         int gridWidth = 17;
-        int gridHeight = 9;
+        int gridHeight = 17;
         float cellSize = 1f;
         grid = new GridXZ<GridObject>(gridWidth, gridHeight, cellSize, Vector3.zero, (GridXZ<GridObject> g, int x, int y) => new GridObject(g, x, y));
     }

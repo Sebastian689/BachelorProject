@@ -88,6 +88,10 @@ public class BlandPotatoController : MonoBehaviour
             case "Boost":
                 rb.AddForce(new Vector3(1, 0, 0) * boostForce);
                 break;
+            
+            case "LeftBoost":
+                rb.AddForce(new Vector3(-1, 0, 0) * boostForce);
+                break;
         }
     }
 
