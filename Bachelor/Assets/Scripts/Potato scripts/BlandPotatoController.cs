@@ -26,6 +26,7 @@ public class BlandPotatoController : MonoBehaviour
         rb = this.GetComponent<Rigidbody2D>();
         soundManager = GameObject.FindWithTag("SoundManager").GetComponent<SoundManager>();
         //col = this.GetComponent<Collider>();
+        GM.BeginTimer();
     }
 
     
@@ -35,10 +36,7 @@ public class BlandPotatoController : MonoBehaviour
     {
         if(cooldown <= 0 && finished != true)
         {
-            if(GM.timerHasBegun == false)
-            {
-                GM.BeginTimer();
-            }
+            
 
             rb.AddForce(direction * force);
         } /*else if(finished == true)
@@ -85,9 +83,9 @@ public class BlandPotatoController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        tag = other.gameObject.tag;
+        string otherTag = other.gameObject.tag;
 
-        switch (tag)
+        switch (otherTag)
         {
             case "Jump":
                 rb.AddForce( new Vector3(0, 1f * jumpForce, 0));
@@ -113,9 +111,10 @@ public class BlandPotatoController : MonoBehaviour
     private void InitiateDeath()
     {
         //Oh no
-        GameObject.FindGameObjectWithTag("StartBlock").GetComponent<Spawnpotato>().Invoke("SpawnPotato", 0);
+        GameObject.FindGameObjectWithTag("StartBlock").GetComponent<Spawnpotato>().Invoke(nameof(Spawnpotato.SpawnPotato), 3);
         GM.RecieveDeath();
-        Debug.LogWarning("I died");
         Destroy(this.gameObject);
+        Debug.LogWarning("I died");
+        
     }
 }
