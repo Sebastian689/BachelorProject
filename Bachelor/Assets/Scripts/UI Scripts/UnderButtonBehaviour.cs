@@ -12,12 +12,16 @@ public class UnderButtonBehaviour : MonoBehaviour
     GameObject panel;
     public GameObject embeddedObject;
     public MainButtonBehaviour overButton;
-    public GridBuildingSystem gridSystem;
+    [SerializeField] private GameObject GBS;
+    [SerializeField] private GridBuildingSystem gridSystem;
     private string objectToPlace;
 
     // Start is called before the first frame update
     void Start()
     {
+        GBS = GameObject.FindGameObjectWithTag("Grid");
+        gridSystem = GBS.GetComponent<GridBuildingSystem>();
+        
         if (embeddedObject != null)
         {
             objectToPlace = embeddedObject.ToString();
