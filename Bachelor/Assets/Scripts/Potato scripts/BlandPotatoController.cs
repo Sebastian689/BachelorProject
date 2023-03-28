@@ -8,14 +8,18 @@ public class BlandPotatoController : MonoBehaviour
     //new Collider col;
     float cooldown = 3;
     public float force;
-    float jumpForce = 1500f;
+    float jumpForce = 400f;
+    float boostForce = 100f;
     public float maxVelocity = 3f;
     Vector3 direction = new Vector3(1,0,0);
     bool finished = false;
+
+    public SoundManager soundManager;
     // Start is called before the first frame update
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
+        soundManager = GameObject.FindWithTag("SoundManager").GetComponent<SoundManager>();
         //col = this.GetComponent<Collider>();
     }
 
@@ -42,9 +46,9 @@ public class BlandPotatoController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        tag = collision.gameObject.tag;
+        string otherTag = collision.gameObject.tag;
 
-        switch (tag)
+        switch (otherTag)
         {
             case "Goal":
                 finished = true;
@@ -53,10 +57,6 @@ public class BlandPotatoController : MonoBehaviour
 
             case "Death":
                 InitiateDeath();
-            break;
-
-            case "Boost":
-                rb.AddForce(new Vector3(1, 0, 0) * jumpForce);
             break;
 
             case "Brake":
@@ -80,11 +80,17 @@ public class BlandPotatoController : MonoBehaviour
         {
             case "Jump":
                 rb.AddForce( new Vector3(0, 1f * jumpForce, 0));
+                soundManager.PlayJump();
                 break;
 
             case "Stop":
                 force = 0f;
                 Debug.Log("Force 0");
+                break;
+            
+            case "Boost":
+                rb.AddForce(new Vector3(1, 0, 0) * boostForce);
+                soundManager.PlayBoost();
                 break;
         }
     }
@@ -92,6 +98,7 @@ public class BlandPotatoController : MonoBehaviour
     private void InitiateDeath()
     {
         //Oh no
+        GameObject.FindGameObjectWithTag("StartBlock").GetComponent<Spawnpotato>().Invoke("SpawnPotato", 0);
         Destroy(this.gameObject);
     }
 }

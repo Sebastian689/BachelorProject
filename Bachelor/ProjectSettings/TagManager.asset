@@ -12,6 +12,12 @@ TagManager:
   - Stop
   - NormalSpeed
   - ChangeDirection
+  - SoundManager
+  - DanskTutorial
+  - EngelskTutorial
+  - Panel
+  - Tutorial
+  - StartBlock
   layers:
   - Default
   - TransparentFX
@@ -19,8 +25,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Grid
+  - Monster
   - 
   - 
   - 

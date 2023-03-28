@@ -9,6 +9,7 @@ public class Monster : MonoBehaviour
     Vector3 right = new Vector3(1, 0, 0);
     Vector3 left = new Vector3(-1, 0, 0);
     public bool movingRight = true;
+    public bool movingLeft = false;
     public float maxVelocity = 1;
     // Start is called before the first frame update
     void Start()
@@ -27,7 +28,7 @@ public class Monster : MonoBehaviour
         {
             rb.AddForce(right * force);
         }
-        else
+        else if (movingLeft)
         {
             rb.AddForce(left * force);
         }
@@ -35,15 +36,17 @@ public class Monster : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        tag = collision.gameObject.tag;
-        if (CompareTag("ChangeDirection") && movingRight)
+        //tag = collision.gameObject.tag;
+        if (collision.gameObject.CompareTag("ChangeDirection") && movingRight)
         {
             movingRight = false;
+            movingLeft = true;
             gameObject.transform.eulerAngles = new Vector3(0, 180);
         }
-        else
+        else if (collision.gameObject.CompareTag("ChangeDirection") && movingLeft)
         {
             movingRight = true;
+            movingLeft = false;
             gameObject.transform.eulerAngles = new Vector3(0, 0);
         }
     }

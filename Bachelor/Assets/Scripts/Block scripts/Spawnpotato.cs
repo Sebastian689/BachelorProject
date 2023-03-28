@@ -12,7 +12,7 @@ public class Spawnpotato : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(Bland, new Vector3(this.transform.position.x, this.transform.position.y + 1, this.transform.position.z), Quaternion.identity);
+        
     }
 
     // Update is called once per frame
@@ -27,5 +27,10 @@ public class Spawnpotato : MonoBehaviour
             cooldown -= Time.deltaTime;
         }
         
+    }
+
+    public void SpawnPotato()
+    {
+        Instantiate(Bland, new Vector3(this.transform.position.x, this.transform.position.y + 1, this.transform.position.z), Quaternion.identity);
     }
 }
