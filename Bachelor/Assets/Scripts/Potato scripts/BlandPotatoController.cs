@@ -100,6 +100,8 @@ public class BlandPotatoController : MonoBehaviour
     private void InitiateDeath()
     {
         //Oh no
+        GM.RecieveDeath();
+        Debug.LogWarning("I died");
         Destroy(this.gameObject);
     }
 }

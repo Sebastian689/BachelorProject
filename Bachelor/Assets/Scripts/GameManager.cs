@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public UITimer sceneTimer;
+    public DeathCounter DC;
     public bool timerHasBegun = false; 
 
     // Start is called before the first frame update
@@ -17,6 +18,12 @@ public class GameManager : MonoBehaviour
     {
         sceneTimer.timerStarted = true;
         timerHasBegun = true;
+    }
+
+    public void RecieveDeath()
+    {
+        Debug.LogWarning("Made it to GM");
+        DC.died = true;
     }
 
     // Update is called once per frame
