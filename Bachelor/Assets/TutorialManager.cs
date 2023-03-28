@@ -9,6 +9,7 @@ public class TutorialManager : MonoBehaviour
     GameObject DanskTutorial;
     GameObject EngelskTutorial;
     GameObject Panel;
+    public GameObject background;
 
     private void Start()
     {
@@ -25,6 +26,8 @@ public class TutorialManager : MonoBehaviour
     {
         GameObject.FindGameObjectWithTag("StartBlock").GetComponent<Spawnpotato>().Invoke("SpawnPotato",0);
         GameObject.FindGameObjectWithTag("Tutorial").SetActive(false);
+        Panel.SetActive(true);
+        background.SetActive(false);
     }
 
     public void OnTranslateButton()

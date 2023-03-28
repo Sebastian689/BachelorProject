@@ -4886,6 +4886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   engelsk: 1
+  background: {fileID: 1575546854}
 --- !u!4 &826532069
 Transform:
   m_ObjectHideFlags: 0
@@ -5764,7 +5765,6 @@ RectTransform:
   m_Children:
   - {fileID: 1920532835}
   - {fileID: 137180077}
-  - {fileID: 1575546856}
   m_Father: {fileID: 1971403145}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8625,7 +8625,7 @@ GameObject:
   - component: {fileID: 1575546856}
   - component: {fileID: 1575546855}
   m_Layer: 0
-  m_Name: Maintilemap_13
+  m_Name: TutorialBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8690,11 +8690,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1575546854}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -393.80716, y: -180.55714, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.71428573}
+  m_LocalPosition: {x: 8.651123, y: 4.0806274, z: 0}
+  m_LocalScale: {x: 0.6139011, y: 0.6379232, z: 2.2857144}
   m_Children: []
-  m_Father: {fileID: 950851095}
-  m_RootOrder: 2
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1593560887
 GameObject:

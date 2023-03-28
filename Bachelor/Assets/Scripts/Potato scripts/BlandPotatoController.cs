@@ -98,6 +98,7 @@ public class BlandPotatoController : MonoBehaviour
     private void InitiateDeath()
     {
         //Oh no
+        GameObject.FindGameObjectWithTag("StartBlock").GetComponent<Spawnpotato>().Invoke("SpawnPotato", 0);
         Destroy(this.gameObject);
     }
 }
