@@ -8,8 +8,8 @@ public class BlandPotatoController : MonoBehaviour
     //new Collider col;
     float cooldown = 3;
     public float force;
-    float jumpForce = 400f;
-    float boostForce = 100f;
+    float jumpForce = 1300f;
+    float boostForce = 500f;
     public float maxVelocity = 3f;
     Vector3 direction = new Vector3(1,0,0);
     bool finished = false;
@@ -69,7 +69,6 @@ public class BlandPotatoController : MonoBehaviour
                 Debug.Log("Normal speed");
             break;
         }
-
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -91,6 +90,10 @@ public class BlandPotatoController : MonoBehaviour
             case "Boost":
                 rb.AddForce(new Vector3(1, 0, 0) * boostForce);
                 soundManager.PlayBoost();
+                break;
+            
+            case "LeftBoost":
+                rb.AddForce(new Vector3(-1, 0, 0) * boostForce);
                 break;
         }
     }

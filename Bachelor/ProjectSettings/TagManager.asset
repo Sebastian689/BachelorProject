@@ -18,6 +18,8 @@ TagManager:
   - Panel
   - Tutorial
   - StartBlock
+  - LeftBoost
+  - Grid
   layers:
   - Default
   - TransparentFX
