@@ -8283,7 +8283,7 @@ MonoBehaviour:
   startNum: 0
   timerStarted: 0
   died: 0
-  numText: {fileID: 0}
+  numText: {fileID: 1660315371}
 --- !u!114 &1660315371
 MonoBehaviour:
   m_ObjectHideFlags: 0
