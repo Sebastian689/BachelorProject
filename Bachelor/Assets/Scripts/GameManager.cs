@@ -6,22 +6,39 @@ public class GameManager : MonoBehaviour
 {
     public UITimer sceneTimer;
     public DeathCounter DC;
-    public bool timerHasBegun = false; 
+    public bool timerHasBegun = false;
+    float cooldown = 3;
+
+    public GameObject Startbtn;
+    public GameObject Respawnbtn;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        Respawnbtn.SetActive(false);
     }
 
     public void BeginTimer()
     {
-        sceneTimer.timerStarted = true;
-        timerHasBegun = true;
+        if (Startbtn.activeInHierarchy | Respawnbtn.activeInHierarchy)
+        {
+            Startbtn.SetActive(false);
+            Respawnbtn.SetActive(false);
+        }
+        
+
+
+        
+            sceneTimer.timerStarted = true;
+            timerHasBegun = true;
+    
+
+   
     }
 
     public void RecieveDeath()
     {
+        Respawnbtn.SetActive(true);
         Debug.LogWarning("Made it to GM");
         DC.died = true;
     }
