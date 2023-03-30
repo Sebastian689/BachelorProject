@@ -21,6 +21,7 @@ TagManager:
   - StartBlock
   - LeftBoost
   - Grid
+  - GridSprite
   layers:
   - Default
   - TransparentFX

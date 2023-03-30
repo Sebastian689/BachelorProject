@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audio: {fileID: 0}
   boost: {fileID: 8300000, guid: 0cb302e5c7f533a49ba457cc7fa5ef96, type: 3}
-  jump: {fileID: 8300000, guid: d86e3a817ac00e7448c01a6dfe909767, type: 3}
+  jump: {fileID: 8300000, guid: f4925d1ea71752e438ee7d31d40ddf4d, type: 3}
 --- !u!82 &1105993557205625595
 AudioSource:
   m_ObjectHideFlags: 0

@@ -8,7 +8,7 @@ public class BlandPotatoController : MonoBehaviour
     //new Collider col;
     float cooldown = 3;
     public float force;
-    float jumpForce = 1300f;
+    float jumpForce = 500f;
     float boostForce = 500f;
     public float maxVelocity = 3f;
     Vector3 direction = new Vector3(1,0,0);

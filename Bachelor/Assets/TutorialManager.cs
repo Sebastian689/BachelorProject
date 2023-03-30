@@ -9,6 +9,7 @@ public class TutorialManager : MonoBehaviour
     GameObject DanskTutorial;
     GameObject EngelskTutorial;
     GameObject Panel;
+    GameObject Grid;
     public GameObject background;
 
     private void Start()
@@ -16,6 +17,9 @@ public class TutorialManager : MonoBehaviour
 
         Panel = GameObject.FindGameObjectWithTag("Panel");
         Panel.SetActive(false);
+        
+        Grid = GameObject.FindGameObjectWithTag("GridSprite");
+        Grid.SetActive(false);
 
         EngelskTutorial = GameObject.FindGameObjectWithTag("EngelskTutorial");
         
@@ -27,6 +31,7 @@ public class TutorialManager : MonoBehaviour
         GameObject.FindGameObjectWithTag("StartBlock").GetComponent<Spawnpotato>().Invoke("SpawnPotato",0);
         GameObject.FindGameObjectWithTag("Tutorial").SetActive(false);
         Panel.SetActive(true);
+        Grid.SetActive(true);
         background.SetActive(false);
     }
 
