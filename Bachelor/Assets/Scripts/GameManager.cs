@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public UITimer sceneTimer;
     public DeathCounter DC;
     public bool timerHasBegun = false;
-    float cooldown = 3;
+    //float cooldown = 3;
 
     public GameObject Startbtn;
     public GameObject Respawnbtn;
@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
         
 
 
-        z
+        
             sceneTimer.timerStarted = true;
             timerHasBegun = true;
     
