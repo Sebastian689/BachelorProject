@@ -37,13 +37,13 @@ public class Monster : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //tag = collision.gameObject.tag;
-        if (collision.gameObject.CompareTag("ChangeDirection") && movingRight)
+        if (collision.gameObject.CompareTag("MonsterGoLeft"))
         {
             movingRight = false;
             movingLeft = true;
             gameObject.transform.eulerAngles = new Vector3(0, 180);
         }
-        else if (collision.gameObject.CompareTag("ChangeDirection") && movingLeft)
+        else if (collision.gameObject.CompareTag("MonsterGoRight"))
         {
             movingRight = true;
             movingLeft = false;

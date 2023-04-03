@@ -1887,7 +1887,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 277438902}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 639433424}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddClickCounter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &277438902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3032,7 +3044,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 453754440}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 639433424}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddClickCounter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &453754440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3306,7 +3330,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 483300913}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 639433424}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddClickCounter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &483300913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4112,6 +4148,12 @@ MonoBehaviour:
   sceneTimer: {fileID: 7236168}
   DC: {fileID: 2121252554}
   timerHasBegun: 0
+  data:
+    deaths: {fileID: 0}
+    score: 0
+    time: {fileID: 0}
+    clicks: 0
+  clicked: 0
 --- !u!4 &639433425
 Transform:
   m_ObjectHideFlags: 0
@@ -4450,6 +4492,14 @@ PrefabInstance:
     - target: {fileID: 619303742, guid: 932c246515b08904e90a4652d06f30d0, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.295
+      objectReference: {fileID: 0}
+    - target: {fileID: 894380231224326085, guid: 932c246515b08904e90a4652d06f30d0, type: 3}
+      propertyPath: m_Size.x
+      value: 0.29079676
+      objectReference: {fileID: 0}
+    - target: {fileID: 894380231224326085, guid: 932c246515b08904e90a4652d06f30d0, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.35460162
       objectReference: {fileID: 0}
     - target: {fileID: 5462728115723561814, guid: 932c246515b08904e90a4652d06f30d0, type: 3}
       propertyPath: m_RootOrder
@@ -6496,7 +6546,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1153069202}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 639433424}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddClickCounter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1153069202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6639,8 +6701,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1172498864}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2583, y: 0.26, z: 0}
-  m_LocalScale: {x: 0.18463367, y: 0.09536586, z: 1}
+  m_LocalPosition: {x: 0.715, y: 0.255, z: 0}
+  m_LocalScale: {x: 0.11513756, y: 0.09474598, z: 1}
   m_Children: []
   m_Father: {fileID: 709689883}
   m_RootOrder: 1
@@ -6846,6 +6908,7 @@ GameObject:
   - component: {fileID: 1217906704}
   - component: {fileID: 1217906703}
   - component: {fileID: 1217906702}
+  - component: {fileID: 1217906705}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -6918,6 +6981,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1217906705
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217906701}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a05d9d747c554ed499aed8b25f9bcd56, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &1270756807 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2694475897605447471, guid: fc36fafcf289e054891ce81cae861f7a, type: 3}
@@ -9207,7 +9366,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2694475897605447471, guid: fc36fafcf289e054891ce81cae861f7a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.28
+      value: 0.71
       objectReference: {fileID: 0}
     - target: {fileID: 2694475897605447471, guid: fc36fafcf289e054891ce81cae861f7a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9251,7 +9410,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3488556232821283804, guid: fc36fafcf289e054891ce81cae861f7a, type: 3}
       propertyPath: m_TagString
-      value: ChangeDirection
+      value: MonsterGoRight
       objectReference: {fileID: 0}
     - target: {fileID: 7116333778840306620, guid: fc36fafcf289e054891ce81cae861f7a, type: 3}
       propertyPath: m_Size.x
@@ -10658,7 +10817,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2034193368}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 639433424}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddClickCounter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2034193368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11317,6 +11488,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Turn block
       objectReference: {fileID: 0}
+    - target: {fileID: 3463246382113817428, guid: 8686f60557eaf6340b7c6cedab54b3a3, type: 3}
+      propertyPath: m_TagString
+      value: MonsterGoLeft
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8686f60557eaf6340b7c6cedab54b3a3, type: 3}
 --- !u!1001 &7934803983195501165
@@ -11330,21 +11505,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monster
       objectReference: {fileID: 0}
+    - target: {fileID: 7934803983952750592, guid: 4fb7913ccf12a3a4d8846bb428290d0a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7934803983952750595, guid: 4fb7913ccf12a3a4d8846bb428290d0a, type: 3}
       propertyPath: m_RootOrder
       value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 7934803983952750595, guid: 4fb7913ccf12a3a4d8846bb428290d0a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.48
+      value: 1.243
       objectReference: {fileID: 0}
     - target: {fileID: 7934803983952750595, guid: 4fb7913ccf12a3a4d8846bb428290d0a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.494
+      value: -2.879
       objectReference: {fileID: 0}
     - target: {fileID: 7934803983952750595, guid: 4fb7913ccf12a3a4d8846bb428290d0a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7934803983952750595, guid: 4fb7913ccf12a3a4d8846bb428290d0a, type: 3}
       propertyPath: m_LocalRotation.w

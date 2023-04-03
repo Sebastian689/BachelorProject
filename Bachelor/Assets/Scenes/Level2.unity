@@ -682,7 +682,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 180325945}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 823727286}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddClickCounter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &180325945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3087,7 +3099,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 590328830}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 823727286}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddClickCounter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &590328830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3899,6 +3923,12 @@ MonoBehaviour:
   sceneTimer: {fileID: 895974597}
   DC: {fileID: 1660315370}
   timerHasBegun: 0
+  data:
+    deaths: {fileID: 0}
+    score: 0
+    time: {fileID: 0}
+    clicks: 0
+  clicked: 0
 --- !u!4 &823727287
 Transform:
   m_ObjectHideFlags: 0
@@ -5483,7 +5513,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1122372311}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 823727286}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddClickCounter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1122372311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6267,7 +6309,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1296233059}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 823727286}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddClickCounter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1296233059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9539,7 +9593,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1965193134}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 823727286}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddClickCounter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1965193134
 MonoBehaviour:
   m_ObjectHideFlags: 0

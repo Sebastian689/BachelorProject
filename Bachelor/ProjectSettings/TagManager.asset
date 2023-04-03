@@ -21,6 +21,9 @@ TagManager:
   - StartBlock
   - LeftBoost
   - Grid
+  - MonsterGoLeft
+  - MonsterGoRight
+  - Death1
   layers:
   - Default
   - TransparentFX

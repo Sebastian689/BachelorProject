@@ -24,7 +24,7 @@ public class TutorialManager : MonoBehaviour
     }
     public void OnUnderstoodButton()
     {
-        GameObject.FindGameObjectWithTag("StartBlock").GetComponent<Spawnpotato>().Invoke("SpawnPotato",0);
+        GameObject.FindGameObjectWithTag("StartBlock").GetComponent<SpawnPotatoLevel1>().Invoke("SpawnPotato",0);
         GameObject.FindGameObjectWithTag("Tutorial").SetActive(false);
         Panel.SetActive(true);
         background.SetActive(false);

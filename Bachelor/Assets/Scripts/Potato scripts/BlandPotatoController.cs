@@ -66,7 +66,11 @@ public class BlandPotatoController : MonoBehaviour
             break;
 
             case "Death":
-                InitiateDeath();
+                InitiateDeath(0);
+            break;
+
+            case "Death1":
+                InitiateDeath(1);
             break;
 
             case "Brake":
@@ -108,10 +112,18 @@ public class BlandPotatoController : MonoBehaviour
         }
     }
 
-    private void InitiateDeath()
+    private void InitiateDeath(int i)
     {
+        if (i == 1)
+        {
+          GameObject.FindGameObjectWithTag("StartBlock").GetComponent<SpawnPotatoLevel1>().Invoke("SpawnPotato", 3);
+        }
+        else
+        {
+          GameObject.FindGameObjectWithTag("StartBlock").GetComponent<Spawnpotato>().Invoke("SpawnPotato", 3);
+        }
         //Oh no
-        GameObject.FindGameObjectWithTag("StartBlock").GetComponent<Spawnpotato>().Invoke(nameof(Spawnpotato.SpawnPotato), 3);
+        
         GM.RecieveDeath();
         Destroy(this.gameObject);
         Debug.LogWarning("I died");

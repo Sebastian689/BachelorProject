@@ -20,8 +20,6 @@ public class MainButtonBehaviour : MonoBehaviour
 		btn.onClick.AddListener(TaskOnClick);
 		panel = overPanel;
 		panel.SetActive(false);
-
-		
 	}
 
     private void Update()
@@ -52,7 +50,6 @@ public class MainButtonBehaviour : MonoBehaviour
 			foreach(MainButtonBehaviour panel in panelHolder)
             {
 				panel.Active = false;
-				Debug.Log("Deactivated panel");
             }
         }
 
