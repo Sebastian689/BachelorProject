@@ -16,6 +16,7 @@ public class BlandPotatoController : MonoBehaviour
     public GameManager GM;
     public GameObject go;
 
+    private int level;
     public SoundManager soundManager;
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,8 @@ public class BlandPotatoController : MonoBehaviour
         soundManager = GameObject.FindWithTag("SoundManager").GetComponent<SoundManager>();
         //col = this.GetComponent<Collider>();
         GM.BeginTimer();
+
+        level = GM.level;
     }
 
     
@@ -39,10 +42,11 @@ public class BlandPotatoController : MonoBehaviour
             
 
             rb.AddForce(direction * force);
-        } /*else if(finished == true)
+        } else if(finished == true)
         {
             rb.velocity = new Vector3(0, 0, 0);
-        }*/
+            GM.Finish(level);
+        }
         else
         {
             cooldown -= Time.deltaTime;
