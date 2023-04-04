@@ -27,7 +27,7 @@ public class BlandPotatoController : MonoBehaviour
         rb = this.GetComponent<Rigidbody2D>();
         soundManager = GameObject.FindWithTag("SoundManager").GetComponent<SoundManager>();
         //col = this.GetComponent<Collider>();
-        GM.BeginTimer();
+        
 
         level = GM.level;
     }
@@ -39,11 +39,12 @@ public class BlandPotatoController : MonoBehaviour
     {
         if(cooldown <= 0 && finished != true)
         {
-            
+            GM.BeginTimer();
 
             rb.AddForce(direction * force);
         } else if(finished == true)
         {
+            Debug.LogWarning("Else");
             rb.velocity = new Vector3(0, 0, 0);
             GM.Finish(level);
         }
@@ -66,7 +67,9 @@ public class BlandPotatoController : MonoBehaviour
         {
             case "Goal":
                 finished = true;
+                GM.blandFinish = true;
                 Debug.Log("Finished");
+                
             break;
 
             case "Death":

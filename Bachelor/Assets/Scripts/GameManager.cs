@@ -17,12 +17,20 @@ public class GameManager : MonoBehaviour
     public bool blandFinish = false;
     public bool floatFinish = false;
     public bool thirdFinish = false;
+
+    //DO NOT REMOVE!!!
+    //goTo Level two
+    //SceneManager.LoadScene("Level2");
+
+
+
     // Start is called before the first frame update
     void Start()
     {
         Respawnbtn.SetActive(false);
         /*Get level code from document
           Set level parameter to level code*/
+        level = 1;
         
     }
 
@@ -56,14 +64,19 @@ public class GameManager : MonoBehaviour
     {
         int currentLevel = Level;
 
+        Debug.LogWarning("Made it to GM switch " + currentLevel);
         switch (currentLevel){
-            case 1:
+            case  1:
+                Debug.LogWarning("Correct level");
                 if (blandFinish == true)
                 {
-                    //goTo Level two
-                    SceneManager.LoadScene("Level2");
+                    sceneTimer.timerStarted = false;
+                    Debug.LogWarning("Timer Stop");
                 }
                 break;
+            default:
+                Debug.LogWarning("AHHHH");
+                break; 
         }
     }
     // Update is called once per frame
