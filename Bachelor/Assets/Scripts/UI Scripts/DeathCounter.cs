@@ -10,7 +10,7 @@ public class DeathCounter : MonoBehaviour
     [SerializeField] int startNum;
 
     // current Time
-    int currentNum;
+    public int currentNum;
 
     // whether the timer started?
     public bool timerStarted = false;

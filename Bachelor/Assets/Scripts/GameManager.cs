@@ -61,28 +61,90 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void Finish(int Level)
+    public void LevelProgress()
     {
-        int currentLevel = Level;
 
-        Debug.LogWarning("Made it to GM switch " + currentLevel);
-        switch (currentLevel){
-            case  1:
-                Debug.LogWarning("Correct level");
-                if (blandFinish == true)
-                {
-                    sceneTimer.timerStarted = false;
-                    Debug.LogWarning("Timer Stop");
-                }
+        switch (SceneManager.GetActiveScene().name)
+        {
+            case "Level1":
+                SceneManager.LoadScene("Level2");
                 break;
-            default:
-                Debug.LogWarning("AHHHH");
-                break; 
+            case "Level2":
+                SceneManager.LoadScene("Level3");
+                break;
+            case "Level3":
+                SceneManager.LoadScene("Level4");
+                break;
+            case "Level4":
+                SceneManager.LoadScene("Level5");
+                break;
+            case "Level5":
+                SceneManager.LoadScene("The End");
+                break;
         }
     }
     // Update is called once per frame
     void Update()
     {
-        
+        switch (SceneManager.GetActiveScene().name)
+        {
+            case "Level1":
+                if(blandFinish == true)
+                {
+                    LevelProgress();
+                }
+                break;
+            case "Level2":
+                if (blandFinish == true)
+                {
+                    LevelProgress();
+                }
+                break;
+            case "Level3":
+                if (blandFinish == true)
+                {
+                    LevelProgress();
+                }
+                break;
+            case "Level4":
+                if (blandFinish == true)
+                {
+                    LevelProgress();
+                }
+                break;
+            case "Level5":
+                if (blandFinish == true)
+                {
+                    LevelProgress();
+                }
+                break;
+        }
+    }
+
+    public void Score()
+    {
+        double points = 1000;
+        float time = sceneTimer.currentTime;
+        float deaths = DC.currentNum;
+        // Extra points
+
+        //Death calc
+
+        double deathMult;
+        if(deaths == 0)
+        {
+            deathMult = 0.5f;
+        }
+        else
+        {
+            deathMult = (1 + (0.1 * deaths));
+        }
+
+        points = points * deathMult;
+
+
+
+
+
     }
 }

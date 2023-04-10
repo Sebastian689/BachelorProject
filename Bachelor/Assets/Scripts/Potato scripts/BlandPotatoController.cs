@@ -46,7 +46,7 @@ public class BlandPotatoController : MonoBehaviour
         {
             Debug.LogWarning("Else");
             rb.velocity = new Vector3(0, 0, 0);
-            GM.Finish(level);
+            
         }
         else
         {
@@ -66,7 +66,7 @@ public class BlandPotatoController : MonoBehaviour
         switch (otherTag)
         {
             case "Goal":
-                GM.BlandFinish = true;
+                
                 finished = true;
                 GM.blandFinish = true;
                 Debug.Log("Finished");
@@ -125,4 +125,6 @@ public class BlandPotatoController : MonoBehaviour
         Debug.LogWarning("I died");
         
     }
+
+  
 }
