@@ -16,8 +16,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using CodeMonkey.Utils;
 
-public class GridXZ<TGridObject> {
-
+public class GridXZ<TGridObject>
+{
+    private GameObject gridSystemGO;
     public event EventHandler<OnGridObjectChangedEventArgs> OnGridObjectChanged;
     public class OnGridObjectChangedEventArgs : EventArgs {
         public int x;
@@ -36,8 +37,11 @@ public class GridXZ<TGridObject> {
         this.cellSize = cellSize;
         this.originPosition = originPosition;
 
-        gridArray = new TGridObject[width, height];
+        // Test
+        gridSystemGO = GameObject.FindGameObjectWithTag("Grid");
 
+        gridArray = new TGridObject[width, height];
+        
         for (int x = 0; x < gridArray.GetLength(0); x++) {
             for (int y = 0; y < gridArray.GetLength(1); y++) {
                 gridArray[x, y] = createGridObject(this, x, y);
@@ -50,7 +54,7 @@ public class GridXZ<TGridObject> {
 
             for (int x = 0; x < gridArray.GetLength(0); x++) {
                 for (int y = 0; y < gridArray.GetLength(1); y++) {
-                    debugTextArray[x, y] = UtilsClass.CreateWorldText(gridArray[x, y]?.ToString(), null, GetWorldPosition(x, y) + new Vector3(cellSize, cellSize, 0) * .5f, 15, Color.white, TextAnchor.MiddleCenter, TextAlignment.Center);
+                    debugTextArray[x, y] = UtilsClass.CreateWorldText(gridArray[x, y]?.ToString(), gridSystemGO.transform, GetWorldPosition(x, y) + new Vector3(cellSize, cellSize, 0) * .5f, 15, Color.white, TextAnchor.MiddleCenter, TextAlignment.Center);
                     Debug.DrawLine(GetWorldPosition(x, y), GetWorldPosition(x, y + 1), Color.white, 100f);
                     Debug.DrawLine(GetWorldPosition(x, y), GetWorldPosition(x + 1, y), Color.white, 100f);
                 }
