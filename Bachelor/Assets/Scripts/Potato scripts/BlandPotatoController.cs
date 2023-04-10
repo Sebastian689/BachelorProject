@@ -66,6 +66,7 @@ public class BlandPotatoController : MonoBehaviour
         switch (otherTag)
         {
             case "Goal":
+                GM.BlandFinish = true;
                 finished = true;
                 GM.blandFinish = true;
                 Debug.Log("Finished");

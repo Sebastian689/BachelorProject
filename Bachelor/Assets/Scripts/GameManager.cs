@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour
 
 
         
+     
             sceneTimer.timerStarted = true;
             timerHasBegun = true;
     
