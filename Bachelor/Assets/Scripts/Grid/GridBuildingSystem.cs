@@ -42,6 +42,11 @@ public class GridBuildingSystem : MonoBehaviour
             return transform == null;
         }
         
+        // Returns the transform associated with this grid object
+        public Transform GetTransform(){
+            return transform;
+        }
+        
         // Text in Unity showing grid text
         public override string ToString()
         {
@@ -53,7 +58,6 @@ public class GridBuildingSystem : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             // Takes world position of mouse and converts it to grid position
-            // This is most likely the problem, since it spawns in the wrong position
             grid.GetXZ(Mouse3D.GetMouseWorldPosition(), out int x, out int z);
 
             GridObject gridObject = grid.GetGridObject(x, z);
@@ -62,29 +66,15 @@ public class GridBuildingSystem : MonoBehaviour
             {
                 Transform builtTransform = Instantiate(testTransform, grid.GetWorldPosition(x, z), Quaternion.identity);
                 gridObject.SetTransform(builtTransform);
-            } else
+            } else if (Input.GetKey(KeyCode.LeftControl) && !gridObject.CanBuild())
+            {
+                Destroy(gridObject.GetTransform().gameObject);
+                gridObject.ClearTransform();
+            }
+            else
             {
                 Debug.Log("Cant build");
             }
         }
-        /*
-        if (Input.GetMouseButtonDown(1))
-        {
-            // Takes world position of mouse and converts it to grid position
-            // This is most likely the problem, since it spawns in the wrong position
-            grid.GetXZ(Mouse3D.GetMouseWorldPosition(), out int x, out int z);
-
-            GridObject gridObject = grid.GetGridObject(x, z);
-
-            if (gridObject.CanBuild())
-            {
-                Transform builtTransform = Instantiate(testTransform2, grid.GetWorldPosition(x, z), Quaternion.identity);
-                gridObject.SetTransform(builtTransform);
-            } else
-            {
-                Debug.Log("Cant build");
-            }
-        }
-        */
     }
 }

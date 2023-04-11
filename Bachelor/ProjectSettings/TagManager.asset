@@ -38,7 +38,7 @@ TagManager:
   - UI
   - Grid
   - Monster
-  - 
+  - IgnoreLayer
   - 
   - 
   - 
@@ -65,4 +65,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Grid
+    uniqueID: 3506998357
     locked: 0
