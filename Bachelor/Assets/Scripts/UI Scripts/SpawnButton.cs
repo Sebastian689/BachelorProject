@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class SpawnButton : MonoBehaviour
 {
-    public Spawnpotato SP;
+    public SpawnPotatoLevel1 SP;
     public GameObject GO;
 
     // Start is called before the first frame update
@@ -14,7 +14,7 @@ public class SpawnButton : MonoBehaviour
         Button btn = this.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
         GO = GameObject.FindWithTag("StartBlock");
-        SP = GO.GetComponent<Spawnpotato>();
+        SP = GO.GetComponent<SpawnPotatoLevel1>();
     }
 
     // Update is called once per frame
