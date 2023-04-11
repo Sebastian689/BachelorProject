@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class UnderButtonBehaviour : MonoBehaviour
 {
-
     public Button yourButton;
     public GameObject overPanel;
     GameObject panel;
@@ -22,11 +21,6 @@ public class UnderButtonBehaviour : MonoBehaviour
         GBS = GameObject.FindGameObjectWithTag("Grid");
         gridSystem = GBS.GetComponent<GridBuildingSystem>();
         
-        if (embeddedObject != null)
-        {
-            objectToPlace = embeddedObject.ToString();
-            //Debug.Log(objectToPlace);
-        }
         Button btn = yourButton.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
         panel = overPanel;
@@ -40,7 +34,7 @@ public class UnderButtonBehaviour : MonoBehaviour
         if (embeddedObject != null)
         {
             gridSystem.testTransform = embeddedObject.transform;
-            //objectToPlace = embeddedObject.ToString();
+            
             Debug.Log(embeddedObject);
         }
         

@@ -10,7 +10,7 @@ public class UITimer : MonoBehaviour
     [SerializeField] float startTime;
 
     // current Time
-    float currentTime;
+    public float currentTime;
 
     // whether the timer started?
     public bool timerStarted = false;

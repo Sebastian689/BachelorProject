@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class MainButtonBehaviour : MonoBehaviour
 {
-
 	public Button yourButton;
 	public GameObject overPanel;
+	public GameObject adaptivePanel;
 	public bool Active = false;
 	GameObject panel;
 	
@@ -20,8 +20,6 @@ public class MainButtonBehaviour : MonoBehaviour
 		btn.onClick.AddListener(TaskOnClick);
 		panel = overPanel;
 		panel.SetActive(false);
-
-		
 	}
 
     private void Update()
@@ -42,17 +40,15 @@ public class MainButtonBehaviour : MonoBehaviour
 		if (Active)
         {
 			Active = false;
-			
         }
 		else
         {
 			Active = true;
-			
-
+			adaptivePanel.SetActive(false);
 			foreach(MainButtonBehaviour panel in panelHolder)
             {
+				
 				panel.Active = false;
-				Debug.Log("Deactivated panel");
             }
         }
 
