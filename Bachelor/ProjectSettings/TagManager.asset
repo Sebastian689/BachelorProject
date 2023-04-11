@@ -27,6 +27,8 @@ TagManager:
   - Death1
   - AdaptiveButton
   - Tutorialmanager
+  - UITimer
+  - DeathCounter
   layers:
   - Default
   - TransparentFX

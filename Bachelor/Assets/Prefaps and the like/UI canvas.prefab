@@ -1405,6 +1405,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yourButton: {fileID: 4536805634688288629}
   overPanel: {fileID: 4536805635411652013}
+  adaptivePanel: {fileID: 0}
   Active: 0
   panelHolder:
   - {fileID: 4536805635653115155}
@@ -4732,6 +4733,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yourButton: {fileID: 4536805635653115244}
   overPanel: {fileID: 4536805636504165116}
+  adaptivePanel: {fileID: 0}
   Active: 0
   panelHolder:
   - {fileID: 4536805634688288628}
@@ -5016,6 +5018,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yourButton: {fileID: 4536805635672926523}
   overPanel: {fileID: 4536805636547827339}
+  adaptivePanel: {fileID: 0}
   Active: 0
   panelHolder:
   - {fileID: 4536805635653115155}
@@ -5391,6 +5394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yourButton: {fileID: 4536805635808669650}
   overPanel: {fileID: 4536805634706148290}
+  adaptivePanel: {fileID: 0}
   Active: 0
   panelHolder:
   - {fileID: 4536805635653115155}
@@ -8783,6 +8787,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yourButton: {fileID: 4536805636560408910}
   overPanel: {fileID: 4536805634773410052}
+  adaptivePanel: {fileID: 0}
   Active: 0
   panelHolder:
   - {fileID: 4536805635653115155}

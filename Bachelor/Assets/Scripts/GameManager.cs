@@ -14,7 +14,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        sceneTimer = GameObject.FindGameObjectWithTag("UITimer").GetComponent<UITimer>();
+        DC = GameObject.FindGameObjectWithTag("DeathCounter").GetComponent<DeathCounter>();
     }// Update is called once per frame
     void Update()
     {
