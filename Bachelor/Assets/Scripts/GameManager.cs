@@ -102,12 +102,15 @@ public class GameManager : MonoBehaviour
             case "Level1":
                 if (blandFinish == true)
                 {
+                    Debug.LogWarning("Helo");
                     LevelProgress();
+
                 }
                 break;
             case "Level2":
                 if (blandFinish == true)
                 {
+                    Debug.LogWarning("Helo");
                     LevelProgress();
                 }
                 break;

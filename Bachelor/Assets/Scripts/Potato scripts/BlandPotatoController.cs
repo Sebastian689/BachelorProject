@@ -65,13 +65,7 @@ public class BlandPotatoController : MonoBehaviour
 
         switch (otherTag)
         {
-            case "Goal":
-                
-                finished = true;
-                GM.blandFinish = true;
-                Debug.Log("Finished");
-                
-            break;
+        
 
             case "Death":
                 InitiateDeath(0);
@@ -99,6 +93,15 @@ public class BlandPotatoController : MonoBehaviour
 
         switch (otherTag)
         {
+
+            case "Goal":
+                Debug.LogWarning("I finished");
+                finished = true;
+                GM.blandFinish = true;
+                Debug.Log("Finished");
+
+                break;
+
             case "Jump":
                 rb.AddForce( new Vector3(0, 1f * jumpForce, 0));
                 soundManager.PlayJump();
