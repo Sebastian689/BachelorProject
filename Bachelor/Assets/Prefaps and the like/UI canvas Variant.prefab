@@ -619,16 +619,35 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4536805635994615132, guid: f9df1b92b55c5ee408d8b993238b3d14, type: 3}
+      propertyPath: overButton
+      value: 
+      objectReference: {fileID: 6344842487202779220}
     - target: {fileID: 4536805636215277268, guid: f9df1b92b55c5ee408d8b993238b3d14, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4536805636249850820, guid: f9df1b92b55c5ee408d8b993238b3d14, type: 3}
+      propertyPath: overButton
+      value: 
+      objectReference: {fileID: 6344842487202779220}
     - target: {fileID: 4536805636425280251, guid: f9df1b92b55c5ee408d8b993238b3d14, type: 3}
       propertyPath: m_TagString
       value: UITimer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9df1b92b55c5ee408d8b993238b3d14, type: 3}
+--- !u!114 &6344842487202779220 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4536805635808669649, guid: f9df1b92b55c5ee408d8b993238b3d14, type: 3}
+  m_PrefabInstance: {fileID: 7419838786581479301}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f33d9c3d83b0eb4282ee4f44d372595, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &6344842487294594274 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4536805635783308135, guid: f9df1b92b55c5ee408d8b993238b3d14, type: 3}
