@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6017323815348115642}
   - component: {fileID: 1214339891172406677}
+  - component: {fileID: -2923864042316459625}
   m_Layer: 0
   m_Name: Reverse Booster
   m_TagString: LeftBoost
@@ -58,6 +59,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.851557, y: 0.51271194}
   m_EdgeRadius: 0
+--- !u!114 &-2923864042316459625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359853892483995561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9c24c3ba93418448b809b0ed1b0b8df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GM: {fileID: 0}
 --- !u!1 &7597069703323234967
 GameObject:
   m_ObjectHideFlags: 0

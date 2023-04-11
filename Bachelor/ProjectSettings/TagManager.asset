@@ -24,6 +24,8 @@ TagManager:
   - MonsterGoLeft
   - MonsterGoRight
   - Death1
+  - AdaptiveButton
+  - Tutorialmanager
   layers:
   - Default
   - TransparentFX

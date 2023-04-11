@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour
     public Data data = new Data();
     public int clicked = 0;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +36,6 @@ public class GameManager : MonoBehaviour
         DC.died = true;
     }
 
-    
 
     public void SaveToJson()
     {
@@ -58,7 +56,6 @@ public class GameManager : MonoBehaviour
         Debug.Log("clicked");
     }
 
-    
 }
 [System.Serializable]
 public class Data

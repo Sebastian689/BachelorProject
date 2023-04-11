@@ -4509,6 +4509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTime: 0
+  currentTime: 0
   timerStarted: 0
   timerText: {fileID: 1019186112}
 --- !u!114 &1019186112
@@ -6046,6 +6047,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1541140017}
     m_Modifications:
+    - target: {fileID: 1563064555, guid: 4fb7913ccf12a3a4d8846bb428290d0a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7934803982510792408, guid: 4fb7913ccf12a3a4d8846bb428290d0a, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -6410,14 +6415,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75a66fc353f18e74bbe212a42be76a4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _camera: {fileID: 1828105308}
   sceneTimer: {fileID: 1019186111}
   DC: {fileID: 1708014128}
   timerHasBegun: 0
   data:
-    deaths: {fileID: 0}
+    deaths: 0
     score: 0
-    time: {fileID: 0}
+    time: 0
     clicks: 0
   clicked: 0
 --- !u!4 &1445631016
@@ -8378,6 +8382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startNum: 0
+  currentNum: 0
   timerStarted: 0
   died: 0
   numText: {fileID: 1708014129}
@@ -9065,6 +9070,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1541140017}
     m_Modifications:
+    - target: {fileID: 1563064555, guid: 4fb7913ccf12a3a4d8846bb428290d0a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7934803982510792408, guid: 4fb7913ccf12a3a4d8846bb428290d0a, type: 3}
       propertyPath: m_Layer
       value: 7
