@@ -1615,14 +1615,6 @@ PrefabInstance:
       value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7118602438051104270, guid: 4424fbd87767c5743a53e537dfe86a8c, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.14
-      objectReference: {fileID: 0}
-    - target: {fileID: 7118602438051104270, guid: 4424fbd87767c5743a53e537dfe86a8c, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.17
-      objectReference: {fileID: 0}
-    - target: {fileID: 7118602438051104270, guid: 4424fbd87767c5743a53e537dfe86a8c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.35
       objectReference: {fileID: 0}
@@ -1665,14 +1657,6 @@ PrefabInstance:
     - target: {fileID: 7118602438051104272, guid: 4424fbd87767c5743a53e537dfe86a8c, type: 3}
       propertyPath: m_Name
       value: GridSpriteGO
-      objectReference: {fileID: 0}
-    - target: {fileID: 7118602438051104272, guid: 4424fbd87767c5743a53e537dfe86a8c, type: 3}
-      propertyPath: m_TagString
-      value: GridSprite
-      objectReference: {fileID: 0}
-    - target: {fileID: 7118602438051104273, guid: 4424fbd87767c5743a53e537dfe86a8c, type: 3}
-      propertyPath: m_SortingOrder
-      value: -5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4424fbd87767c5743a53e537dfe86a8c, type: 3}
