@@ -8279,6 +8279,10 @@ MonoBehaviour:
   mouseColliderLayerMask:
     serializedVersion: 2
     m_Bits: 1
+  ignoreLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
+  canvasUI: {fileID: 229221150}
 --- !u!114 &1513731734
 MonoBehaviour:
   m_ObjectHideFlags: 0

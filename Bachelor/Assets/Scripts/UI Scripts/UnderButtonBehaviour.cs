@@ -40,7 +40,6 @@ public class UnderButtonBehaviour : MonoBehaviour
         if (embeddedObject != null)
         {
             gridSystem.testTransform = embeddedObject.transform;
-            //objectToPlace = embeddedObject.ToString();
             Debug.Log(embeddedObject);
         }
         

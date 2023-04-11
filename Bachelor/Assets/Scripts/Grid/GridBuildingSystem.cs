@@ -58,7 +58,6 @@ public class GridBuildingSystem : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             // Takes world position of mouse and converts it to grid position
-            // This is most likely the problem, since it spawns in the wrong position
             grid.GetXZ(Mouse3D.GetMouseWorldPosition(), out int x, out int z);
 
             GridObject gridObject = grid.GetGridObject(x, z);
