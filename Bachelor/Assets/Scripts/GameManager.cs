@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     public bool blandFinish = false;
     public bool floatFinish = false;
     public bool thirdFinish = false;
+    
+    private int target = 60;
 
     //DO NOT REMOVE!!!
     //goTo Level two
@@ -27,6 +29,13 @@ public class GameManager : MonoBehaviour
     public Data data = new Data();
     public int clicked = 0;
 
+    void Awake()
+    {
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = target;
+    }
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -92,6 +101,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        if(Application.targetFrameRate != target)
+            Application.targetFrameRate = target;
+        
         if (Input.GetKeyDown(KeyCode.S))
         {
             SaveToJson();

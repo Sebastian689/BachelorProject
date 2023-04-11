@@ -9,7 +9,7 @@ public class BlandPotatoController : MonoBehaviour
     float cooldown = 3;
     public float force;
     float jumpForce = 500f;
-    float boostForce = 500f;
+    float boostForce = 300f;
     public float maxVelocity = 3f;
     Vector3 direction = new Vector3(1,0,0);
     bool finished = false;
@@ -75,11 +75,6 @@ public class BlandPotatoController : MonoBehaviour
                 InitiateDeath(1);
             break;
 
-            case "Brake":
-                rb.velocity = new Vector3(0, 0, 0);
-                cooldown = 1;
-            break;
-
             case "NormalSpeed":
                 force = 0.1f;
                 Debug.Log("Normal speed");
@@ -119,6 +114,11 @@ public class BlandPotatoController : MonoBehaviour
             
             case "LeftBoost":
                 rb.AddForce(new Vector3(-1, 0, 0) * boostForce);
+                break;
+            
+            case "Brake":
+                rb.velocity = new Vector3(0, 0, 0);
+                cooldown = 1;
                 break;
         }
     }
