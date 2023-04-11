@@ -37,14 +37,8 @@ public class GameManager : MonoBehaviour
         
         sceneTimer = GameObject.FindGameObjectWithTag("UITimer").GetComponent<UITimer>();
         DC = GameObject.FindGameObjectWithTag("DeathCounter").GetComponent<DeathCounter>();
-    }// Update is called once per frame
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.S))
-        {
-            SaveToJson();
-        }
     }
+
 
     public void BeginTimer()
     {
@@ -97,13 +91,16 @@ public class GameManager : MonoBehaviour
     }
     // Update is called once per frame
     void Update()
-
-    public void SaveToJson()
     {
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            SaveToJson();
+        }
+
         switch (SceneManager.GetActiveScene().name)
         {
             case "Level1":
-                if(blandFinish == true)
+                if (blandFinish == true)
                 {
                     LevelProgress();
                 }
@@ -133,6 +130,11 @@ public class GameManager : MonoBehaviour
                 }
                 break;
         }
+    }
+
+    public void SaveToJson()
+    {
+     
         data.deaths = DC.currentNum;
         data.time = sceneTimer.currentTime;
         data.clicks = clicked;
