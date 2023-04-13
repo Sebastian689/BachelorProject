@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
+
 public class GameManager : MonoBehaviour
 {
     public GameObject endPanel;
@@ -213,8 +214,12 @@ public class GameManager : MonoBehaviour
         double coinScore = coinCount * 200;
         points = points + coinScore;
 
+        float score = (float)points;
+        //Cleanup
+        score = Mathf.Round(score);
 
-        scoreText.text = points.ToString();
+
+        scoreText.text = score.ToString();
 
     }
 
