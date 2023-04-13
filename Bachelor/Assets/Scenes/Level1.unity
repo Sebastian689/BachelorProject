@@ -2212,6 +2212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75a66fc353f18e74bbe212a42be76a4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endPanel: {fileID: 0}
   sceneTimer: {fileID: 223305433}
   DC: {fileID: 1337958567}
   timerHasBegun: 0
@@ -2221,7 +2222,8 @@ MonoBehaviour:
   blandFinish: 0
   floatFinish: 0
   thirdFinish: 0
-  targetFPS: 60
+  coinCount: 0
+  scoreText: {fileID: 0}
   data:
     deaths: 0
     score: 0
@@ -3901,8 +3903,16 @@ PrefabInstance:
       value: 0.8059578
       objectReference: {fileID: 0}
     - target: {fileID: 894380231224326085, guid: 932c246515b08904e90a4652d06f30d0, type: 3}
+      propertyPath: m_Size.y
+      value: 2.3591614
+      objectReference: {fileID: 0}
+    - target: {fileID: 894380231224326085, guid: 932c246515b08904e90a4652d06f30d0, type: 3}
       propertyPath: m_Offset.x
       value: -0.0970211
+      objectReference: {fileID: 0}
+    - target: {fileID: 894380231224326085, guid: 932c246515b08904e90a4652d06f30d0, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.6795807
       objectReference: {fileID: 0}
     - target: {fileID: 894380231224326085, guid: 932c246515b08904e90a4652d06f30d0, type: 3}
       propertyPath: m_IsTrigger

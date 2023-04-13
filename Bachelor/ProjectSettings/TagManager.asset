@@ -29,6 +29,9 @@ TagManager:
   - Tutorialmanager
   - UITimer
   - DeathCounter
+  - scoreText
+  - EndPanel
+  - coin
   layers:
   - Default
   - TransparentFX

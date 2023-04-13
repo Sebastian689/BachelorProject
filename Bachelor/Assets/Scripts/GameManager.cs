@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject endPanel;
     public UITimer sceneTimer;
     public DeathCounter DC;
     public bool timerHasBegun = false;
@@ -18,13 +21,12 @@ public class GameManager : MonoBehaviour
     public bool floatFinish = false;
     public bool thirdFinish = false;
     
+    
     private int target = 60;
 
-    //DO NOT REMOVE!!!
-    //goTo Level two
-    //SceneManager.LoadScene("Level2");
+    public int coinCount;
 
-
+    [SerializeField] TMP_Text scoreText;
 
     public Data data = new Data();
     public int clicked = 0;
@@ -39,13 +41,16 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.LogError("I started");
+        coinCount = 0;
         Respawnbtn.SetActive(false);
-        /*Get level code from document
-          Set level parameter to level code*/
-        level = 1;
-        
+        scoreText = GameObject.FindGameObjectWithTag("scoreText").GetComponent<TMP_Text>();
+        endPanel = GameObject.FindGameObjectWithTag("EndPanel");
+        endPanel.SetActive(false);
+
         sceneTimer = GameObject.FindGameObjectWithTag("UITimer").GetComponent<UITimer>();
         DC = GameObject.FindGameObjectWithTag("DeathCounter").GetComponent<DeathCounter>();
+  
     }
 
 
@@ -115,34 +120,34 @@ public class GameManager : MonoBehaviour
             case "Level1":
                 if (blandFinish == true)
                 {
-                    Debug.LogWarning("Helo");
-                    LevelProgress();
+                 
+                    EndLevel();
 
                 }
                 break;
             case "Level2":
                 if (blandFinish == true)
                 {
-                    Debug.LogWarning("Helo");
-                    LevelProgress();
+                 
+                    EndLevel();
                 }
                 break;
             case "Level3":
                 if (blandFinish == true)
                 {
-                    LevelProgress();
+                    EndLevel(); 
                 }
                 break;
             case "Level4":
                 if (blandFinish == true)
                 {
-                    LevelProgress();
+                    EndLevel();
                 }
                 break;
             case "Level5":
                 if (blandFinish == true)
                 {
-                    LevelProgress();
+                    EndLevel();
                 }
                 break;
         }
@@ -165,7 +170,7 @@ public class GameManager : MonoBehaviour
     public void Score()
     {
         double points = 1000;
-        float time = sceneTimer.currentTime;
+        double time = sceneTimer.currentTime;
         float deaths = DC.currentNum;
         // Extra points
 
@@ -183,9 +188,18 @@ public class GameManager : MonoBehaviour
 
         points = points * deathMult;
 
+        //Time calc
+        double timeMult;
+        timeMult = (time * 60);
+
+        points = points * timeMult;
+
+        //Coin calc
+        double coinScore = coinCount * 200;
+        points = points + coinScore;
 
 
-
+        scoreText.text = points.ToString();
 
     }
 
@@ -195,6 +209,12 @@ public class GameManager : MonoBehaviour
         Debug.Log("clicked");
     }
 
+
+    public void EndLevel()
+    {
+        endPanel.SetActive(true);
+        
+    }
 }
 [System.Serializable]
 public class Data
@@ -204,3 +224,7 @@ public class Data
     public float time;
     public int clicks; 
 }
+
+
+
+

@@ -120,6 +120,10 @@ public class BlandPotatoController : MonoBehaviour
                 rb.velocity = new Vector3(0, 0, 0);
                 cooldown = 1;
                 break;
+            case "coin":
+                coinBehaviour cb = other.gameObject.GetComponent<coinBehaviour>();
+                cb.COIN();
+                break;
         }
     }
 
