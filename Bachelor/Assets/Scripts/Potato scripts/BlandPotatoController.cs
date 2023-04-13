@@ -16,7 +16,7 @@ public class BlandPotatoController : MonoBehaviour
     public GameManager GM;
     public GameObject go;
 
-
+ 
     public SoundManager soundManager;
     // Start is called before the first frame update
     void Start()
