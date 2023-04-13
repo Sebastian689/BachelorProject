@@ -16,7 +16,7 @@ public class BlandPotatoController : MonoBehaviour
     public GameManager GM;
     public GameObject go;
 
-    private int level;
+
     public SoundManager soundManager;
     // Start is called before the first frame update
     void Start()
@@ -29,7 +29,7 @@ public class BlandPotatoController : MonoBehaviour
         //col = this.GetComponent<Collider>();
         
 
-        level = GM.level;
+        
     }
 
     

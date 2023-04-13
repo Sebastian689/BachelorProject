@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public DeathCounter DC;
     public bool timerHasBegun = false;
     //float cooldown = 3;
-    public int level;
+    public bool halt = false;
 
     public GameObject Startbtn;
     public GameObject Respawnbtn;
@@ -26,7 +26,8 @@ public class GameManager : MonoBehaviour
 
     public int coinCount;
 
-    [SerializeField] TMP_Text scoreText;
+    public TMP_Text scoreText;
+    public GameObject scoreHolder;
 
     public Data data = new Data();
     public int clicked = 0;
@@ -45,6 +46,7 @@ public class GameManager : MonoBehaviour
         coinCount = 0;
         Respawnbtn.SetActive(false);
         scoreText = GameObject.FindGameObjectWithTag("scoreText").GetComponent<TMP_Text>();
+        scoreHolder = GameObject.FindGameObjectWithTag("scoreText");
         endPanel = GameObject.FindGameObjectWithTag("EndPanel");
         endPanel.SetActive(false);
 
@@ -106,51 +108,59 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if(Application.targetFrameRate != target)
+
+        if (Application.targetFrameRate != target)
             Application.targetFrameRate = target;
-        
+
         if (Input.GetKeyDown(KeyCode.S))
         {
             SaveToJson();
         }
-
-        switch (SceneManager.GetActiveScene().name)
-        {
-            case "Level1":
-                if (blandFinish == true)
-                {
-                 
-                    EndLevel();
-
-                }
-                break;
-            case "Level2":
-                if (blandFinish == true)
-                {
-                 
-                    EndLevel();
-                }
-                break;
-            case "Level3":
-                if (blandFinish == true)
-                {
-                    EndLevel(); 
-                }
-                break;
-            case "Level4":
-                if (blandFinish == true)
-                {
-                    EndLevel();
-                }
-                break;
-            case "Level5":
-                if (blandFinish == true)
-                {
-                    EndLevel();
-                }
-                break;
-        }
+        if (halt != true) { 
+            switch (SceneManager.GetActiveScene().name)
+            {
+                case "Level1":
+                    if (blandFinish == true)
+                    {
+                        Score();
+                        EndLevel();
+                        halt = true;
+                    }
+                    break;
+                case "Level2":
+                    if (blandFinish == true)
+                    {
+                        Score();
+                        EndLevel();
+                        halt = true;
+                    }
+                    break;
+                case "Level3":
+                    if (blandFinish == true)
+                    {
+                        Score();
+                        EndLevel();
+                        halt = true;
+                    }
+                    break;
+                case "Level4":
+                    if (blandFinish == true)
+                    {
+                        Score();
+                        EndLevel();
+                        halt = true;
+                    }
+                    break;
+                case "Level5":
+                    if (blandFinish == true)
+                    {
+                        Score();
+                        EndLevel();
+                        halt = true;
+                    }
+                    break;
+            }
+    }
     }
 
     public void SaveToJson()
@@ -190,10 +200,15 @@ public class GameManager : MonoBehaviour
 
         //Time calc
         double timeMult;
-        timeMult = (time * 60);
-
-        points = points * timeMult;
-
+        timeMult = (time / 60);
+        if (timeMult <= 1)
+        {
+            points = points / timeMult;
+        }
+        else
+        {
+            points = points * timeMult;
+        }
         //Coin calc
         double coinScore = coinCount * 200;
         points = points + coinScore;
@@ -213,6 +228,7 @@ public class GameManager : MonoBehaviour
     public void EndLevel()
     {
         endPanel.SetActive(true);
+        timerHasBegun = false;
         
     }
 }
