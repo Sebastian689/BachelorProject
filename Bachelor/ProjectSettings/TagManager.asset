@@ -29,6 +29,9 @@ TagManager:
   - Tutorialmanager
   - UITimer
   - DeathCounter
+  - Blocker
+  - BlockLeft
+  - BlockRight
   layers:
   - Default
   - TransparentFX

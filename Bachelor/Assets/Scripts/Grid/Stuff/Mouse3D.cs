@@ -28,7 +28,7 @@ public class Mouse3D : MonoBehaviour {
         if (Physics.Raycast(ray, out RaycastHit raycastHit, 999f, mouseColliderLayerMask & ignoreLayerMask)) {
             transform.position = raycastHit.point;
         }
-        print(IsPointerOverUIElement() ? "Over UI" : "Not over UI");
+        //print(IsPointerOverUIElement() ? "Over UI" : "Not over UI");
     }
 
     public static Vector3 GetMouseWorldPosition() => Instance.GetMouseWorldPosition_Instance();

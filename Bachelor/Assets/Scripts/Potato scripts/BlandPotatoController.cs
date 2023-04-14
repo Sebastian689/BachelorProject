@@ -11,8 +11,9 @@ public class BlandPotatoController : MonoBehaviour
     float jumpForce = 500f;
     float boostForce = 300f;
     public float maxVelocity = 3f;
-    Vector3 direction = new Vector3(1,0,0);
+    Vector2 direction;
     bool finished = false;
+    public bool right = true;
     public GameManager GM;
     public GameObject go;
 
@@ -37,6 +38,15 @@ public class BlandPotatoController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (right)
+        {
+            direction = new Vector2(1, 0);
+        }
+        else
+        {
+            direction = new Vector2(-1, 0);
+        }
+
         if(cooldown <= 0 && finished != true)
         {
             GM.BeginTimer();
@@ -65,8 +75,20 @@ public class BlandPotatoController : MonoBehaviour
 
         switch (otherTag)
         {
-        
 
+            case "Blocker":
+                if (right)
+                {
+                    //direction = new Vector2(-1, 0);
+                    right = false;
+                }
+                    
+                else
+                {
+                    //direction = new Vector2(1, 0);
+                    right = true;
+                }
+                break;
             case "Death":
                 InitiateDeath(0);
             break;
@@ -119,6 +141,24 @@ public class BlandPotatoController : MonoBehaviour
             case "Brake":
                 rb.velocity = new Vector3(0, 0, 0);
                 cooldown = 1;
+                break;
+            case "BlockRight":
+                if (!right)
+                {
+                    //direction = new Vector2(1, 0);
+                    rb.velocity *= 0;
+                    right = true;
+                }
+                break;
+            case "BlockLeft":
+                {
+                    if (right)
+                    {
+                        //direction = new Vector2(-1, 0);
+                        rb.velocity *= 0;
+                        right = false;
+                    }
+                }
                 break;
         }
     }
