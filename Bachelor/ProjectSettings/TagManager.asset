@@ -29,6 +29,7 @@ TagManager:
   - Tutorialmanager
   - UITimer
   - DeathCounter
+  - MouseBinds
   layers:
   - Default
   - TransparentFX
