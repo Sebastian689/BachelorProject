@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject Startbtn;
     public GameObject Respawnbtn;
+    private GameObject keybindMouse;
 
     public bool blandFinish = false;
     public bool floatFinish = false;
@@ -46,6 +47,8 @@ public class GameManager : MonoBehaviour
         
         sceneTimer = GameObject.FindGameObjectWithTag("UITimer").GetComponent<UITimer>();
         DC = GameObject.FindGameObjectWithTag("DeathCounter").GetComponent<DeathCounter>();
+        keybindMouse = GameObject.Find("MouseBinds");
+        keybindMouse.SetActive(false);
     }
 
 
@@ -145,6 +148,11 @@ public class GameManager : MonoBehaviour
                     LevelProgress();
                 }
                 break;
+        }
+        
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            keybindMouse.SetActive(true);
         }
     }
 

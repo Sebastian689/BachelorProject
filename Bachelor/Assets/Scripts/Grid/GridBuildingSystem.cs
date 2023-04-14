@@ -66,15 +66,21 @@ public class GridBuildingSystem : MonoBehaviour
             {
                 Transform builtTransform = Instantiate(testTransform, grid.GetWorldPosition(x, z), Quaternion.identity);
                 gridObject.SetTransform(builtTransform);
-            } else if (Input.GetKey(KeyCode.LeftControl) && !gridObject.CanBuild())
-            {
-                Destroy(gridObject.GetTransform().gameObject);
-                gridObject.ClearTransform();
-            }
+            } 
             else
             {
                 Debug.Log("Cant build");
             }
+        }
+        if (Input.GetMouseButtonDown(1)/*&& !gridObject.CanBuild()*/)
+        {
+            // Takes world position of mouse and converts it to grid position
+            grid.GetXZ(Mouse3D.GetMouseWorldPosition(), out int x, out int z);
+
+            GridObject gridObject = grid.GetGridObject(x, z);
+            
+            Destroy(gridObject.GetTransform().gameObject);
+            gridObject.ClearTransform();
         }
     }
 }
