@@ -2,14 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
+
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject endPanel;
     public UITimer sceneTimer;
     public DeathCounter DC;
     public bool timerHasBegun = false;
     //float cooldown = 3;
-    public int level;
+    public bool halt = false;
 
     public GameObject Startbtn;
     public GameObject Respawnbtn;
@@ -18,16 +22,18 @@ public class GameManager : MonoBehaviour
     public bool floatFinish = false;
     public bool thirdFinish = false;
     
+    
     private int target = 60;
 
-    //DO NOT REMOVE!!!
-    //goTo Level two
-    //SceneManager.LoadScene("Level2");
+    public int coinCount;
 
-
+    public TMP_Text scoreText;
+    public GameObject scoreHolder;
 
     public Data data = new Data();
     public int clicked = 0;
+
+    bool isEnd = false;
 
     void Awake()
     {
@@ -39,40 +45,59 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.LogError("I started");
+        coinCount = 0;
         Respawnbtn.SetActive(false);
-        /*Get level code from document
-          Set level parameter to level code*/
-        level = 1;
-        
+        scoreText = GameObject.FindGameObjectWithTag("scoreText").GetComponent<TMP_Text>();
+        scoreHolder = GameObject.FindGameObjectWithTag("scoreText");
+        endPanel = GameObject.FindGameObjectWithTag("EndPanel");
+        endPanel.SetActive(false);
+
         sceneTimer = GameObject.FindGameObjectWithTag("UITimer").GetComponent<UITimer>();
         DC = GameObject.FindGameObjectWithTag("DeathCounter").GetComponent<DeathCounter>();
+
+        
+  
     }
 
 
     public void BeginTimer()
     {
-        if (Startbtn.activeInHierarchy | Respawnbtn.activeInHierarchy)
+        if (SceneManager.GetActiveScene().name != "TheEnd")
         {
-            Startbtn.SetActive(false);
-            Respawnbtn.SetActive(false);
-        }
-        
 
-
-        
      
+        
+            if (Startbtn.activeInHierarchy | Respawnbtn.activeInHierarchy)
+            {
+                Startbtn.SetActive(false);
+                Respawnbtn.SetActive(false);
+            }
+
+
+
+
+
+
             sceneTimer.timerStarted = true;
             timerHasBegun = true;
-    
 
+        } else
+        {
+            Debug.LogWarning("Is the end");
+        }
    
     }
 
     public void RecieveDeath()
     {
-        Respawnbtn.SetActive(true);
+        if (SceneManager.GetActiveScene().name != "TheEnd")
+        {
+            Respawnbtn.SetActive(true);
+            DC.died = true;
+        }
         Debug.LogWarning("Made it to GM");
-        DC.died = true;
+        
     }
 
 
@@ -94,58 +119,73 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadScene("Level5");
                 break;
             case "Level5":
-                SceneManager.LoadScene("The End");
+                SceneManager.LoadScene("TheEnd");
                 break;
         }
     }
     // Update is called once per frame
     void Update()
     {
-        
-        if(Application.targetFrameRate != target)
+        if (SceneManager.GetActiveScene().name == "TheEnd" && isEnd == false)
+        {
+            Debug.LogWarning("IsEnd");
+            isEnd = true;
+            GameObject.FindGameObjectWithTag("RegUI").SetActive(false);
+        }
+
+
+        if (Application.targetFrameRate != target)
             Application.targetFrameRate = target;
-        
+
         if (Input.GetKeyDown(KeyCode.S))
         {
             SaveToJson();
         }
-
-        switch (SceneManager.GetActiveScene().name)
-        {
-            case "Level1":
-                if (blandFinish == true)
-                {
-                    Debug.LogWarning("Helo");
-                    LevelProgress();
-
-                }
-                break;
-            case "Level2":
-                if (blandFinish == true)
-                {
-                    Debug.LogWarning("Helo");
-                    LevelProgress();
-                }
-                break;
-            case "Level3":
-                if (blandFinish == true)
-                {
-                    LevelProgress();
-                }
-                break;
-            case "Level4":
-                if (blandFinish == true)
-                {
-                    LevelProgress();
-                }
-                break;
-            case "Level5":
-                if (blandFinish == true)
-                {
-                    LevelProgress();
-                }
-                break;
-        }
+        if (halt != true) { 
+            switch (SceneManager.GetActiveScene().name)
+            {
+                case "Level1":
+                    if (blandFinish == true)
+                    {
+                        Score();
+                        EndLevel();
+                        halt = true;
+                    }
+                    break;
+                case "Level2":
+                    if (blandFinish == true)
+                    {
+                        Score();
+                        EndLevel();
+                        halt = true;
+                    }
+                    break;
+                case "Level3":
+                    if (blandFinish == true)
+                    {
+                        Score();
+                        EndLevel();
+                        halt = true;
+                    }
+                    break;
+                case "Level4":
+                    if (blandFinish == true)
+                    {
+                        Score();
+                        EndLevel();
+                        halt = true;
+                    }
+                    break;
+                case "Level5":
+                    if (blandFinish == true)
+                    {
+                        Score();
+                        EndLevel();
+                        halt = true;
+                    }
+                    break;
+            }
+    }
     }
 
     public void SaveToJson()
@@ -165,7 +205,7 @@ public class GameManager : MonoBehaviour
     public void Score()
     {
         double points = 1000;
-        float time = sceneTimer.currentTime;
+        double time = sceneTimer.currentTime;
         float deaths = DC.currentNum;
         // Extra points
 
@@ -183,9 +223,27 @@ public class GameManager : MonoBehaviour
 
         points = points * deathMult;
 
+        //Time calc
+        double timeMult;
+        timeMult = (time / 60);
+        if (timeMult <= 1)
+        {
+            points = points / timeMult;
+        }
+        else
+        {
+            points = points * timeMult;
+        }
+        //Coin calc
+        double coinScore = coinCount * 200;
+        points = points + coinScore;
+
+        float score = (float)points;
+        //Cleanup
+        score = Mathf.Round(score);
 
 
-
+        scoreText.text = score.ToString();
 
     }
 
@@ -195,6 +253,13 @@ public class GameManager : MonoBehaviour
         Debug.Log("clicked");
     }
 
+
+    public void EndLevel()
+    {
+        endPanel.SetActive(true);
+        timerHasBegun = false;
+        
+    }
 }
 [System.Serializable]
 public class Data
@@ -204,3 +269,7 @@ public class Data
     public float time;
     public int clicks; 
 }
+
+
+
+

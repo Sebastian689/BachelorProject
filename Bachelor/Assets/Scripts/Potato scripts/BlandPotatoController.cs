@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BlandPotatoController : MonoBehaviour
 {
@@ -15,8 +16,8 @@ public class BlandPotatoController : MonoBehaviour
     bool finished = false;
     public GameManager GM;
     public GameObject go;
+    float cooldownEnd = 5f;
 
-    private int level;
     public SoundManager soundManager;
     // Start is called before the first frame update
     void Start()
@@ -29,7 +30,7 @@ public class BlandPotatoController : MonoBehaviour
         //col = this.GetComponent<Collider>();
         
 
-        level = GM.level;
+        
     }
 
     
@@ -37,6 +38,8 @@ public class BlandPotatoController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
+
         if(cooldown <= 0 && finished != true)
         {
             GM.BeginTimer();
@@ -120,19 +123,26 @@ public class BlandPotatoController : MonoBehaviour
                 rb.velocity = new Vector3(0, 0, 0);
                 cooldown = 1;
                 break;
+            case "coin":
+                coinBehaviour cb = other.gameObject.GetComponent<coinBehaviour>();
+                cb.COIN();
+                break;
         }
     }
 
     private void InitiateDeath(int i)
     {
-        if (i == 1)
+        if (SceneManager.GetActiveScene().name != "TheEnd")
         {
-          GameObject.FindGameObjectWithTag("StartBlock").GetComponent<SpawnPotatoLevel1>().Invoke("SpawnPotato", 3);
-        }
-        else
-        {
-          GameObject.FindGameObjectWithTag("StartBlock").GetComponent<Spawnpotato>().Invoke("SpawnPotato", 3);
-        }
+            if (i == 1)
+            {
+                GameObject.FindGameObjectWithTag("StartBlock").GetComponent<SpawnPotatoLevel1>().Invoke("SpawnPotato", 3);
+            }
+            else
+            {
+                GameObject.FindGameObjectWithTag("StartBlock").GetComponent<Spawnpotato>().Invoke("SpawnPotato", 3);
+            }
+        } 
         //Oh no
         
         GM.RecieveDeath();
@@ -141,5 +151,6 @@ public class BlandPotatoController : MonoBehaviour
         
     }
 
+ 
   
 }

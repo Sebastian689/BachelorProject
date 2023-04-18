@@ -635,6 +635,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: UITimer
       objectReference: {fileID: 0}
+    - target: {fileID: 8356566503437972349, guid: f9df1b92b55c5ee408d8b993238b3d14, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9df1b92b55c5ee408d8b993238b3d14, type: 3}
 --- !u!114 &6344842487202779220 stripped

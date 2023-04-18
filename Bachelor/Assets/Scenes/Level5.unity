@@ -270,6 +270,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1513469946435439864, guid: 266831baeea8c764493746639f685549, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4684194947926166047, guid: 266831baeea8c764493746639f685549, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6344842486795516241, guid: 266831baeea8c764493746639f685549, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1920,6 +1928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75a66fc353f18e74bbe212a42be76a4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endPanel: {fileID: 0}
   sceneTimer: {fileID: 255004657}
   DC: {fileID: 255004656}
   timerHasBegun: 0
@@ -1929,7 +1938,8 @@ MonoBehaviour:
   blandFinish: 0
   floatFinish: 0
   thirdFinish: 0
-  targetFPS: 60
+  coinCount: 0
+  scoreText: {fileID: 0}
   data:
     deaths: 0
     score: 0
