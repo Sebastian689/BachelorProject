@@ -32,6 +32,7 @@ TagManager:
   - scoreText
   - EndPanel
   - coin
+  - RegUI
   layers:
   - Default
   - TransparentFX

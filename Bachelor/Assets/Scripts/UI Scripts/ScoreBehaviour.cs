@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ScoreBehaviour : MonoBehaviour
 {
@@ -20,8 +21,11 @@ public class ScoreBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        income = gm.scoreText.text;
-        hold = score.text;
-        score.text = gm.scoreText.text;   
+        if (SceneManager.GetActiveScene().name != "TheEnd")
+        {
+            income = gm.scoreText.text;
+            hold = score.text;
+            score.text = gm.scoreText.text;
+        }
     }
 }

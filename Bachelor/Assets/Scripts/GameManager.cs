@@ -53,26 +53,37 @@ public class GameManager : MonoBehaviour
 
         sceneTimer = GameObject.FindGameObjectWithTag("UITimer").GetComponent<UITimer>();
         DC = GameObject.FindGameObjectWithTag("DeathCounter").GetComponent<DeathCounter>();
+
+        
   
     }
 
 
     public void BeginTimer()
     {
-        if (Startbtn.activeInHierarchy | Respawnbtn.activeInHierarchy)
+        if (SceneManager.GetActiveScene().name != "TheEnd")
         {
-            Startbtn.SetActive(false);
-            Respawnbtn.SetActive(false);
-        }
-        
 
-
-        
      
+        
+            if (Startbtn.activeInHierarchy | Respawnbtn.activeInHierarchy)
+            {
+                Startbtn.SetActive(false);
+                Respawnbtn.SetActive(false);
+            }
+
+
+
+
+
+
             sceneTimer.timerStarted = true;
             timerHasBegun = true;
-    
 
+        } else
+        {
+            Debug.LogWarning("Is the end");
+        }
    
     }
 
@@ -102,13 +113,19 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadScene("Level5");
                 break;
             case "Level5":
-                SceneManager.LoadScene("The End");
+                SceneManager.LoadScene("TheEnd");
                 break;
         }
     }
     // Update is called once per frame
     void Update()
     {
+        if (SceneManager.GetActiveScene().name == "TheEnd")
+        {
+            Debug.LogWarning("IsEnd");
+            GameObject.FindGameObjectWithTag("RegUI").SetActive(false);
+        }
+
 
         if (Application.targetFrameRate != target)
             Application.targetFrameRate = target;
