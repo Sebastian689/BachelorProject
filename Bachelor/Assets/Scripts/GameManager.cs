@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject Startbtn;
     public GameObject Respawnbtn;
+    public GameObject keybindMouse;
 
     public bool blandFinish = false;
     public bool floatFinish = false;

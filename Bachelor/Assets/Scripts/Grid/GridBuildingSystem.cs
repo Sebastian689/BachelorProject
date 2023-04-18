@@ -7,6 +7,9 @@ public class GridBuildingSystem : MonoBehaviour
     public Transform testTransform;
     //public Transform testTransform2;
     private GridXZ<GridObject> grid;
+    public float targetTime = 2.0f;
+    public float timer;
+    public bool missPlaced = false;
 
     private void Awake(){
         int gridWidth = 17;
@@ -57,6 +60,10 @@ public class GridBuildingSystem : MonoBehaviour
     private void Update(){
         if (Input.GetMouseButtonDown(0))
         {
+            if (targetTime < timer)
+            {
+                missPlaced = true;
+            }
             // Takes world position of mouse and converts it to grid position
             grid.GetXZ(Mouse3D.GetMouseWorldPosition(), out int x, out int z);
 
@@ -66,15 +73,28 @@ public class GridBuildingSystem : MonoBehaviour
             {
                 Transform builtTransform = Instantiate(testTransform, grid.GetWorldPosition(x, z), Quaternion.identity);
                 gridObject.SetTransform(builtTransform);
-            } else if (Input.GetKey(KeyCode.LeftControl) && !gridObject.CanBuild())
-            {
-                Destroy(gridObject.GetTransform().gameObject);
-                gridObject.ClearTransform();
-            }
+            } 
             else
             {
                 Debug.Log("Cant build");
             }
         }
+        if (Input.GetMouseButtonDown(1)/*&& !gridObject.CanBuild()*/)
+        {
+            // Takes world position of mouse and converts it to grid position
+            grid.GetXZ(Mouse3D.GetMouseWorldPosition(), out int x, out int z);
+
+            GridObject gridObject = grid.GetGridObject(x, z);
+            
+            Destroy(gridObject.GetTransform().gameObject);
+            gridObject.ClearTransform();
+            
+        }
+    }
+
+    IEnumerator MissPlace()
+    {
+        timer += Time.deltaTime;
+        yield return new WaitForSeconds(.1f);
     }
 }

@@ -33,6 +33,7 @@ TagManager:
   - EndPanel
   - coin
   - RegUI
+  - MouseBinds
   layers:
   - Default
   - TransparentFX
