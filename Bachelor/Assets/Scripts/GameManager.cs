@@ -33,6 +33,8 @@ public class GameManager : MonoBehaviour
     public Data data = new Data();
     public int clicked = 0;
 
+    bool isEnd = false;
+
     void Awake()
     {
         QualitySettings.vSyncCount = 0;
@@ -89,9 +91,13 @@ public class GameManager : MonoBehaviour
 
     public void RecieveDeath()
     {
-        Respawnbtn.SetActive(true);
+        if (SceneManager.GetActiveScene().name != "TheEnd")
+        {
+            Respawnbtn.SetActive(true);
+            DC.died = true;
+        }
         Debug.LogWarning("Made it to GM");
-        DC.died = true;
+        
     }
 
 
@@ -120,9 +126,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (SceneManager.GetActiveScene().name == "TheEnd")
+        if (SceneManager.GetActiveScene().name == "TheEnd" && isEnd == false)
         {
             Debug.LogWarning("IsEnd");
+            isEnd = true;
             GameObject.FindGameObjectWithTag("RegUI").SetActive(false);
         }
 
