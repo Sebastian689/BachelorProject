@@ -39,38 +39,27 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Respawnbtn.SetActive(false);
+        
         /*Get level code from document
           Set level parameter to level code*/
         level = 1;
         
-        sceneTimer = GameObject.FindGameObjectWithTag("UITimer").GetComponent<UITimer>();
-        DC = GameObject.FindGameObjectWithTag("DeathCounter").GetComponent<DeathCounter>();
+       // sceneTimer = GameObject.FindGameObjectWithTag("UITimer").GetComponent<UITimer>();
+       // DC = GameObject.FindGameObjectWithTag("DeathCounter").GetComponent<DeathCounter>();
     }
 
 
     public void BeginTimer()
     {
-        if (Startbtn.activeInHierarchy | Respawnbtn.activeInHierarchy)
-        {
-            Startbtn.SetActive(false);
-            Respawnbtn.SetActive(false);
-        }
-        
-
-
-        
-     
-            sceneTimer.timerStarted = true;
-            timerHasBegun = true;
-    
-
-   
+        sceneTimer = GameObject.FindGameObjectWithTag("UITimer").GetComponent<UITimer>();
+        DC = GameObject.FindGameObjectWithTag("DeathCounter").GetComponent<DeathCounter>();
+        sceneTimer.timerStarted = true;
+        timerHasBegun = true;
     }
 
     public void RecieveDeath()
     {
-        Respawnbtn.SetActive(true);
+        
         Debug.LogWarning("Made it to GM");
         DC.died = true;
     }
@@ -78,7 +67,14 @@ public class GameManager : MonoBehaviour
 
     public void LevelProgress()
     {
+        data.deaths = DC.currentNum;
+        data.time = sceneTimer.currentTime;
+        data.clicks = clicked;
 
+        string parameterData = JsonUtility.ToJson(data);
+        string filePath = Application.persistentDataPath + "/UserData.json";
+        Debug.Log(filePath);
+        System.IO.File.WriteAllText(filePath, parameterData);
         switch (SceneManager.GetActiveScene().name)
         {
             case "Level1":
@@ -150,7 +146,6 @@ public class GameManager : MonoBehaviour
 
     public void SaveToJson()
     {
-     
         data.deaths = DC.currentNum;
         data.time = sceneTimer.currentTime;
         data.clicks = clicked;
@@ -159,7 +154,7 @@ public class GameManager : MonoBehaviour
         string filePath = Application.persistentDataPath + "/UserData.json";
         Debug.Log(filePath);
         System.IO.File.WriteAllText(filePath, parameterData);
-        Debug.Log("Saved");
+
     }
 
     public void Score()
@@ -183,21 +178,16 @@ public class GameManager : MonoBehaviour
 
         points = points * deathMult;
 
-
-
-
-
     }
 
     public void AddClickCounter()
     {
         clicked += 1;
-        Debug.Log("clicked");
     }
 
 }
 [System.Serializable]
-public class Data
+public struct Data
 {
     public int deaths;
     public int score;
