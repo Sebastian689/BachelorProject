@@ -98,8 +98,22 @@ public class RecommendedBtn : MonoBehaviour
     void ChooseLowest(GameObject one, GameObject two, GameObject three)
     {
 
-       // int uno = one.int;
-       // if 
+        // int a = one.int;
+        // int b = two.int;
+        // int c = three.int;
+
+        // if (a < b && a != b){
+        //     if (a < c && a != c){
+        //          return one.embeddedObject;
+        //     } else if (a == c){
+        //     }else {
+        //              return three.embeddedObject;
+        //     }
+        // } else if (b < c && b != c && b != a){
+        //      return two.embeddedObject;
+        // } else {
+        //          return three..embeddedObject
+        // }
     }
 
 }
