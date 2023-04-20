@@ -15,8 +15,8 @@ public class GameManager : MonoBehaviour
     //float cooldown = 3;
     public bool halt = false;
 
-    public GameObject Startbtn;
-    public GameObject Respawnbtn;
+    //public GameObject Startbtn;
+    //public GameObject Respawnbtn;
     public GameObject keybindMouse;
 
     public bool blandFinish = false;
@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.LogError("I started");
         coinCount = 0;
-        Respawnbtn.SetActive(false);
+        //Respawnbtn.SetActive(false);
         scoreText = GameObject.FindGameObjectWithTag("scoreText").GetComponent<TMP_Text>();
         scoreHolder = GameObject.FindGameObjectWithTag("scoreText");
         endPanel = GameObject.FindGameObjectWithTag("EndPanel");
@@ -57,29 +57,14 @@ public class GameManager : MonoBehaviour
         sceneTimer = GameObject.FindGameObjectWithTag("UITimer").GetComponent<UITimer>();
         DC = GameObject.FindGameObjectWithTag("DeathCounter").GetComponent<DeathCounter>();
 
-        
-  
     }
 
 
     public void BeginTimer()
     {
+        sceneTimer = GameObject.FindGameObjectWithTag("UITimer").GetComponent<UITimer>();
         if (SceneManager.GetActiveScene().name != "TheEnd")
         {
-
-     
-        
-            if (Startbtn.activeInHierarchy | Respawnbtn.activeInHierarchy)
-            {
-                Startbtn.SetActive(false);
-                Respawnbtn.SetActive(false);
-            }
-
-
-
-
-
-
             sceneTimer.timerStarted = true;
             timerHasBegun = true;
 
@@ -92,9 +77,10 @@ public class GameManager : MonoBehaviour
 
     public void RecieveDeath()
     {
+        DC = GameObject.FindGameObjectWithTag("DeathCounter").GetComponent<DeathCounter>();
         if (SceneManager.GetActiveScene().name != "TheEnd")
         {
-            Respawnbtn.SetActive(true);
+            //Respawnbtn.SetActive(true);
             DC.died = true;
         }
         Debug.LogWarning("Made it to GM");
@@ -104,7 +90,14 @@ public class GameManager : MonoBehaviour
 
     public void LevelProgress()
     {
+        data.deaths = DC.currentNum;
+        data.time = sceneTimer.currentTime;
+        data.clicks = clicked;
 
+        string parameterData = JsonUtility.ToJson(data);
+        string filePath = Application.persistentDataPath + "/UserData.json";
+        Debug.Log(filePath);
+        System.IO.File.WriteAllText(filePath, parameterData);
         switch (SceneManager.GetActiveScene().name)
         {
             case "Level1":
@@ -127,6 +120,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (SceneManager.GetActiveScene().name == "TheEnd" && isEnd == false)
         {
             Debug.LogWarning("IsEnd");
@@ -191,7 +185,6 @@ public class GameManager : MonoBehaviour
 
     public void SaveToJson()
     {
-     
         data.deaths = DC.currentNum;
         data.time = sceneTimer.currentTime;
         data.clicks = clicked;
@@ -200,14 +193,16 @@ public class GameManager : MonoBehaviour
         string filePath = Application.persistentDataPath + "/UserData.json";
         Debug.Log(filePath);
         System.IO.File.WriteAllText(filePath, parameterData);
-        Debug.Log("Saved");
+
     }
 
     public void Score()
     {
         double points = 1000;
         double time = sceneTimer.currentTime;
-        float deaths = DC.currentNum;
+
+        DC = GameObject.FindGameObjectWithTag("DeathCounter").GetComponent<DeathCounter>();
+        int deaths = DC.currentNum;
         // Extra points
 
         //Death calc
@@ -251,7 +246,6 @@ public class GameManager : MonoBehaviour
     public void AddClickCounter()
     {
         clicked += 1;
-        Debug.Log("clicked");
     }
 
 
@@ -263,7 +257,7 @@ public class GameManager : MonoBehaviour
     }
 }
 [System.Serializable]
-public class Data
+public struct Data
 {
     public int deaths;
     public int score;

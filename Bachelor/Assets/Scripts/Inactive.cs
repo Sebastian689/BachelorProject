@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Inactive : MonoBehaviour
 {
-    bool value = false;
+    public bool value = false;
+    public GameObject panel;
     // Start is called before the first frame update
     void Start()
     {
+       panel = GameObject.FindGameObjectWithTag("AdpPanel");
         
     }
 
@@ -22,14 +24,13 @@ public class Inactive : MonoBehaviour
         if (value)
         {
             value = false;
+            panel.SetActive(value);
         }
         else
         {
             value = true;
+            panel.SetActive(value);
         }
-        foreach (Transform child in transform)
-        {
-            child.gameObject.SetActive(value);
-        }
+        
     }
 }

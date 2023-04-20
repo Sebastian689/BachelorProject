@@ -29,6 +29,10 @@ TagManager:
   - Tutorialmanager
   - UITimer
   - DeathCounter
+  - Blocker
+  - BlockLeft
+  - BlockRight
+  - AdpPanel
   - scoreText
   - EndPanel
   - coin

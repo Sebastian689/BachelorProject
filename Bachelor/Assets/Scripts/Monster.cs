@@ -34,6 +34,25 @@ public class Monster : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Blocker"))
+        {
+            if (movingRight)
+            {
+                movingRight = false;
+                movingLeft = true;
+                gameObject.transform.eulerAngles = new Vector3(0, 180);
+            }
+            else
+            {
+                movingLeft = false;
+                movingRight = true;
+                gameObject.transform.eulerAngles = new Vector3(0, 0);
+            }
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //tag = collision.gameObject.tag;
@@ -41,12 +60,29 @@ public class Monster : MonoBehaviour
         {
             movingRight = false;
             movingLeft = true;
+            rb.velocity *= 0f;
             gameObject.transform.eulerAngles = new Vector3(0, 180);
         }
-        else if (collision.gameObject.CompareTag("MonsterGoRight"))
+        if (collision.gameObject.CompareTag("MonsterGoRight"))
         {
             movingRight = true;
             movingLeft = false;
+            rb.velocity *= 0f;
+            gameObject.transform.eulerAngles = new Vector3(0, 0);
+        }
+
+        if (collision.gameObject.CompareTag("BlockLeft"))
+        {
+            movingRight = false;
+            movingLeft = true;
+            rb.velocity *= 0f;
+            gameObject.transform.eulerAngles = new Vector3(0, 180);
+        }
+        if (collision.gameObject.CompareTag("BlockRight"))
+        {
+            movingRight = true;
+            movingLeft = false;
+            rb.velocity *= 0f;
             gameObject.transform.eulerAngles = new Vector3(0, 0);
         }
     }
