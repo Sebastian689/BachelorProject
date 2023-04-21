@@ -4,19 +4,31 @@ using UnityEngine;
 
 public class GridBuildingSystem : MonoBehaviour
 {
+    public static GridBuildingSystem instance;
     public Transform testTransform;
     //public Transform testTransform2;
     private GridXZ<GridObject> grid;
     public float targetTime = 2.0f;
     public float timer;
     public bool missPlaced = false;
-
-    private void Awake(){
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
         int gridWidth = 17;
         int gridHeight = 17;
         float cellSize = 1f;
         grid = new GridXZ<GridObject>(gridWidth, gridHeight, cellSize, Vector3.zero, (GridXZ<GridObject> g, int x, int y) => new GridObject(g, x, y));
     }
+    
+
 
     public class GridObject {
         private GridXZ<GridObject> grid;

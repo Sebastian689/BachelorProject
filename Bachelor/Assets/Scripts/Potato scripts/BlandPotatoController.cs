@@ -30,8 +30,6 @@ public class BlandPotatoController : MonoBehaviour
         soundManager = GameObject.FindWithTag("SoundManager").GetComponent<SoundManager>();
         //col = this.GetComponent<Collider>();
         
-
-        
     }
 
     
@@ -41,10 +39,12 @@ public class BlandPotatoController : MonoBehaviour
     {
         if (right)
         {
+            force = 0.1f;
             direction = new Vector2(1, 0);
         }
         else
         {
+            force = -1f;
             direction = new Vector2(-1, 0);
         }
 

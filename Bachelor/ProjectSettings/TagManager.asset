@@ -38,6 +38,7 @@ TagManager:
   - coin
   - RegUI
   - MouseBinds
+  - Accumulate
   layers:
   - Default
   - TransparentFX

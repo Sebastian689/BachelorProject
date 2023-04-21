@@ -25,5 +25,6 @@ public class NextLevelButton : MonoBehaviour
     void TaskOnClick()
     {
         gm.LevelProgress();
+
     }
 }
