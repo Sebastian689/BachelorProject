@@ -16,7 +16,7 @@ public class TutorialManager : MonoBehaviour
     {
 
         Panel = GameObject.FindGameObjectWithTag("Panel");
-        Panel.SetActive(false);
+        //Panel.SetActive(false);
         
         Grid = GameObject.FindGameObjectWithTag("GridSprite");
         Grid.SetActive(false);
@@ -25,6 +25,12 @@ public class TutorialManager : MonoBehaviour
         
         DanskTutorial = GameObject.FindGameObjectWithTag("DanskTutorial");
         DanskTutorial.SetActive(false);
+        Invoke("RemovePanel", 0.1f);
+    }
+
+    void RemovePanel()
+    {
+        Panel.SetActive(false);
     }
     public void OnUnderstoodButton()
     {

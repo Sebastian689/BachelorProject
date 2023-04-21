@@ -22,14 +22,15 @@ public class GameManager : MonoBehaviour
     public bool blandFinish = false;
     public bool floatFinish = false;
     public bool thirdFinish = false;
-    
-    
+
     private int target = 60;
 
     public int coinCount;
 
     public TMP_Text scoreText;
     public GameObject scoreHolder;
+
+    public Accumulate accum;
 
     public Data data = new Data();
     public int clicked = 0;
@@ -51,13 +52,20 @@ public class GameManager : MonoBehaviour
         coinCount = 0;
         //Respawnbtn.SetActive(false);
         scoreText = GameObject.FindGameObjectWithTag("scoreText").GetComponent<TMP_Text>();
-        scoreHolder = GameObject.FindGameObjectWithTag("scoreText");
+        //scoreHolder = GameObject.FindGameObjectWithTag("scoreText");
+        //endPanel = GameObject.FindGameObjectWithTag("EndPanel");
+        //endPanel.SetActive(false);
         endPanel = GameObject.FindGameObjectWithTag("EndPanel");
-        endPanel.SetActive(false);
-
+        scoreText = GameObject.FindGameObjectWithTag("scoreText").GetComponent<TMP_Text>();
         sceneTimer = GameObject.FindGameObjectWithTag("UITimer").GetComponent<UITimer>();
-        DC = GameObject.FindGameObjectWithTag("DeathCounter").GetComponent<DeathCounter>();
+        endPanel.SetActive(false);
+        
 
+        
+        //DC = GameObject.FindGameObjectWithTag("DeathCounter").GetComponent<DeathCounter>();
+        accum = GameObject.FindGameObjectWithTag("Accumulate").GetComponent<Accumulate>();
+        
+        Debug.Log("Made it here");
     }
 
 
@@ -91,9 +99,12 @@ public class GameManager : MonoBehaviour
 
     public void LevelProgress()
     {
-        data.deaths = DC.currentNum;
-        data.time = sceneTimer.currentTime;
-        data.clicks = clicked;
+        //endPanel.SetActive(false);
+
+        accum.deaths += DC.currentNum;
+        accum.timer += sceneTimer.currentTime;
+        accum.clicks += clicked;
+
 
         string parameterData = JsonUtility.ToJson(data);
         string filePath = Application.persistentDataPath + "/UserData.json";
@@ -121,62 +132,65 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+     
         if (SceneManager.GetActiveScene().name == "TheEnd" && isEnd == false)
         {
             Debug.LogWarning("IsEnd");
             isEnd = true;
             GameObject.FindGameObjectWithTag("RegUI").SetActive(false);
+            
         }
 
 
         if (Application.targetFrameRate != target)
             Application.targetFrameRate = target;
 
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            SaveToJson();
-        }
+        
         if (halt != true) { 
             switch (SceneManager.GetActiveScene().name)
             {
                 case "Level1":
                     if (blandFinish == true)
                     {
-                        Score();
                         EndLevel();
+                        Score();
+                        
                         halt = true;
                     }
                     break;
                 case "Level2":
                     if (blandFinish == true)
                     {
-                        Score();
+                        
                         EndLevel();
+                        Score();
                         halt = true;
                     }
                     break;
                 case "Level3":
                     if (blandFinish == true)
                     {
-                        Score();
                         EndLevel();
+                        Score();
+                        
                         halt = true;
                     }
                     break;
                 case "Level4":
                     if (blandFinish == true)
                     {
-                        Score();
                         EndLevel();
+                        Score();
+                        
                         halt = true;
                     }
                     break;
                 case "Level5":
                     if (blandFinish == true)
                     {
-                        Score();
                         EndLevel();
+                        Score();
+                        
                         halt = true;
                     }
                     break;
@@ -186,11 +200,8 @@ public class GameManager : MonoBehaviour
 
     public void SaveToJson()
     {
-        data.deaths = DC.currentNum;
-        data.time = sceneTimer.currentTime;
-        data.clicks = clicked;
-
-        string parameterData = JsonUtility.ToJson(data);
+       
+        string parameterData = JsonUtility.ToJson(accum);
         string filePath = Application.persistentDataPath + "/UserData.json";
         Debug.Log(filePath);
         System.IO.File.WriteAllText(filePath, parameterData);
@@ -204,6 +215,8 @@ public class GameManager : MonoBehaviour
         double time = sceneTimer.currentTime;
 
         DC = GameObject.FindGameObjectWithTag("DeathCounter").GetComponent<DeathCounter>();
+        //scoreText = GameObject.FindGameObjectWithTag("scoreText").GetComponent<TMP_Text>();
+        scoreHolder = GameObject.FindGameObjectWithTag("scoreText");
         int deaths = DC.currentNum;
         // Extra points
 
@@ -239,10 +252,13 @@ public class GameManager : MonoBehaviour
         float score = (float)points;
         //Cleanup
         score = Mathf.Round(score);
+        //loggedScore = score;
+        
 
 
         scoreText.text = score.ToString();
-
+        accum.score += score;
+        SaveToJson();
     }
 
     public void AddClickCounter()
@@ -262,7 +278,7 @@ public class GameManager : MonoBehaviour
 public struct Data
 {
     public int deaths;
-    public int score;
+    public float score;
     public float time;
     public int clicks; 
 }
