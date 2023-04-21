@@ -38,6 +38,8 @@ TagManager:
   - coin
   - RegUI
   - MouseBinds
+  - Hint
+  - UserProfileChoice
   layers:
   - Default
   - TransparentFX

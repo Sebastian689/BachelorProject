@@ -18,6 +18,9 @@ public class GameManager : MonoBehaviour
     //public GameObject Startbtn;
     //public GameObject Respawnbtn;
     public GameObject keybindMouse;
+    public GameObject hint;
+    public GameObject decision;
+    public UserProfiles userProfile;
 
     public bool blandFinish = false;
     public bool floatFinish = false;
@@ -46,6 +49,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        UserProfile();
         Debug.LogError("I started");
         coinCount = 0;
         //Respawnbtn.SetActive(false);
@@ -57,6 +61,7 @@ public class GameManager : MonoBehaviour
         sceneTimer = GameObject.FindGameObjectWithTag("UITimer").GetComponent<UITimer>();
         DC = GameObject.FindGameObjectWithTag("DeathCounter").GetComponent<DeathCounter>();
 
+        
     }
 
 
@@ -117,6 +122,15 @@ public class GameManager : MonoBehaviour
                 break;
         }
     }
+
+    public void UserProfile()
+    {
+        hint = GameObject.FindGameObjectWithTag("Hint");
+        decision = GameObject.FindGameObjectWithTag("UserProfileChoice");
+        hint.SetActive(false);
+        decision.SetActive(false);
+    }
+    
     // Update is called once per frame
     void Update()
     {
