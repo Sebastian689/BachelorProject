@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
     {
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = target;
+
     }
     
     
@@ -198,6 +199,7 @@ public class GameManager : MonoBehaviour
 
     public void Score()
     {
+        endPanel.SetActive(true);
         double points = 1000;
         double time = sceneTimer.currentTime;
 
@@ -251,7 +253,7 @@ public class GameManager : MonoBehaviour
 
     public void EndLevel()
     {
-        endPanel.SetActive(true);
+        
         timerHasBegun = false;
         
     }
