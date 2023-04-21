@@ -566,6 +566,50 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7195268409660069830, guid: 266831baeea8c764493746639f685549, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 132.5365
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195268409660069830, guid: 266831baeea8c764493746639f685549, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 69.6548
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195268409660069830, guid: 266831baeea8c764493746639f685549, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.7101
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195268409660069830, guid: 266831baeea8c764493746639f685549, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.0229
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195268409660069831, guid: 266831baeea8c764493746639f685549, type: 3}
+      propertyPath: m_text
+      value: The coins can be picked up for bonus score
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195268409660069831, guid: 266831baeea8c764493746639f685549, type: 3}
+      propertyPath: m_fontSize
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195268409660069831, guid: 266831baeea8c764493746639f685549, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195268410617392626, guid: 266831baeea8c764493746639f685549, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 158.293
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195268410617392626, guid: 266831baeea8c764493746639f685549, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 93.1143
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195268410617392626, guid: 266831baeea8c764493746639f685549, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.00067711
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195268410617392626, guid: 266831baeea8c764493746639f685549, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7419838785400215129, guid: 266831baeea8c764493746639f685549, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 266831baeea8c764493746639f685549, type: 3}
@@ -1169,15 +1213,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75a66fc353f18e74bbe212a42be76a4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endPanel: {fileID: 0}
   sceneTimer: {fileID: 462850200}
   DC: {fileID: 456865683}
   timerHasBegun: 0
-  level: 0
-  Startbtn: {fileID: 0}
-  Respawnbtn: {fileID: 0}
+  halt: 0
+  keybindMouse: {fileID: 0}
+  hint: {fileID: 0}
+  decision: {fileID: 0}
+  userProfile: {fileID: 0}
+  showHint: 0
   blandFinish: 0
   floatFinish: 0
   thirdFinish: 0
+  coinCount: 0
+  scoreText: {fileID: 0}
+  scoreHolder: {fileID: 0}
   data:
     deaths: 0
     score: 0
@@ -1215,6 +1266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c4bdca3643ccf742a68e9f2782321a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  value: 0
   panel: {fileID: 0}
 --- !u!1001 &957359861
 PrefabInstance:
@@ -1995,6 +2047,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   testTransform: {fileID: 0}
+  targetTime: 2
+  timer: 0
+  missPlaced: 0
 --- !u!4 &1478550641
 Transform:
   m_ObjectHideFlags: 0

@@ -1020,6 +1020,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   testTransform: {fileID: 0}
+  targetTime: 2
+  timer: 0
+  missPlaced: 0
 --- !u!4 &624059438
 Transform:
   m_ObjectHideFlags: 0
@@ -1068,15 +1071,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75a66fc353f18e74bbe212a42be76a4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endPanel: {fileID: 0}
   sceneTimer: {fileID: 1674972387}
   DC: {fileID: 1674972386}
   timerHasBegun: 0
-  level: 0
-  Startbtn: {fileID: 1674972385}
-  Respawnbtn: {fileID: 1674972384}
+  halt: 0
+  keybindMouse: {fileID: 0}
+  hint: {fileID: 0}
+  decision: {fileID: 0}
+  userProfile: {fileID: 0}
+  showHint: 0
   blandFinish: 0
   floatFinish: 0
   thirdFinish: 0
+  coinCount: 0
+  scoreText: {fileID: 0}
+  scoreHolder: {fileID: 0}
   data:
     deaths: 0
     score: 0
@@ -2989,6 +2999,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1665387399427749904, guid: 266831baeea8c764493746639f685549, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3236804935737311032, guid: 266831baeea8c764493746639f685549, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6344842487586519552, guid: 266831baeea8c764493746639f685549, type: 3}
       propertyPath: m_Name
       value: UI canvas Variant
@@ -3077,6 +3095,59 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7195268409660069830, guid: 266831baeea8c764493746639f685549, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 132.6368
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195268409660069830, guid: 266831baeea8c764493746639f685549, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 73.0118
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195268409660069830, guid: 266831baeea8c764493746639f685549, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.683
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195268409660069830, guid: 266831baeea8c764493746639f685549, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2.1898
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195268409660069831, guid: 266831baeea8c764493746639f685549, type: 3}
+      propertyPath: m_text
+      value: Watch out for the monsters they will eat the potato if they come close
+        enough
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195268409660069831, guid: 266831baeea8c764493746639f685549, type: 3}
+      propertyPath: m_fontSize
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195268409660069831, guid: 266831baeea8c764493746639f685549, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195268410617392626, guid: 266831baeea8c764493746639f685549, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 152.3143
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195268410617392626, guid: 266831baeea8c764493746639f685549, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 89.5974
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195268410617392626, guid: 266831baeea8c764493746639f685549, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0000038147
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195268410617392626, guid: 266831baeea8c764493746639f685549, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195268410790890404, guid: 266831baeea8c764493746639f685549, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000014542
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195268410790890404, guid: 266831baeea8c764493746639f685549, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -23.411
+      objectReference: {fileID: 0}
     - target: {fileID: 7419838785406761299, guid: 266831baeea8c764493746639f685549, type: 3}
       propertyPath: buttonPrefabs.Array.size
       value: 7
@@ -3103,16 +3174,6 @@ PrefabInstance:
       objectReference: {fileID: 1013950453}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 266831baeea8c764493746639f685549, type: 3}
---- !u!1 &1674972384 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8589397717011848576, guid: 266831baeea8c764493746639f685549, type: 3}
-  m_PrefabInstance: {fileID: 1674972383}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1674972385 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7793839273059840472, guid: 266831baeea8c764493746639f685549, type: 3}
-  m_PrefabInstance: {fileID: 1674972383}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1674972386 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6344842487650331406, guid: 266831baeea8c764493746639f685549, type: 3}

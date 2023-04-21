@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     public GameObject hint;
     public GameObject decision;
     public UserProfiles userProfile;
+    public int showHint;
 
     public bool blandFinish = false;
     public bool floatFinish = false;
@@ -49,7 +50,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        UserProfile();
+        //UserProfile();
         Debug.LogError("I started");
         coinCount = 0;
         //Respawnbtn.SetActive(false);
@@ -123,12 +124,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // Run in the Start method to find the two windows and setting the hint window to false because it will not be used in level 1
     public void UserProfile()
     {
         hint = GameObject.FindGameObjectWithTag("Hint");
         decision = GameObject.FindGameObjectWithTag("UserProfileChoice");
         hint.SetActive(false);
-        decision.SetActive(false);
+        decision.SetActive(true);
+    }
+    
+    public void ShowHint(int specificHint)
+    {
+        hint = GameObject.FindGameObjectWithTag("Hint");
+        decision = GameObject.FindGameObjectWithTag("UserProfileChoice");
+        hint.SetActive(false);
+        decision.SetActive(true);
     }
     
     // Update is called once per frame

@@ -22,40 +22,36 @@ public class UserProfiles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (userProfile == "Experienced")
-        {
+        
             switch (SceneManager.GetActiveScene().name)
             {
                 case "Level1":
-                    hintText.text = "The Spring can be used to launch the potato up";
-                    CloseWindow();
+                    CloseHint();
                     break;
                 case "Level2":
+                    OpenHint();
                     hintText.text = "The coins can be picked up for bonus score";
-                    OpenWindow();
                     break;
                 case "Level3":
+                    OpenHint();
                     hintText.text = "Watch out for the monsters they will eat the potato if they come close enough";
-                    OpenWindow();
                     break;
                 case "Level4":
-                    hintText.text = "The Traffic cone can be used to stop potato and make it turn around";
-                    CloseWindow();
+                    CloseHint();
                     break;
                 case "Level5":
-                    hintText.text = "Watch out for the monsters they will eat the potato if they come close enough";
-                    CloseWindow();
+                    CloseHint();
                     break;
             }
-        }
+        
     }
     
-    public void CloseWindow()
+    public void CloseHint()
     {
         Hint.SetActive(false);
     }
     
-    public void OpenWindow()
+    public void OpenHint()
     {
         Hint.SetActive(true);
     }
