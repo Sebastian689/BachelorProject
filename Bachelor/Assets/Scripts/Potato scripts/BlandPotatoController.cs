@@ -77,6 +77,13 @@ public class BlandPotatoController : MonoBehaviour
         switch (otherTag)
         {
 
+            case "Ramp":
+                rb.AddForce(new Vector3(1, 0, 0) * boostForce);
+                break;
+            case "ReverseRamp":
+                rb.AddForce(new Vector3(-1, 0, 0) * boostForce);
+                break;
+
             case "Blocker":
                 if (right)
                 {
