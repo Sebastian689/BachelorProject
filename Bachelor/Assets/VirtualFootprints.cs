@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class VirtualFootprints : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class VirtualFootprints : MonoBehaviour
     public int spring = 0;
     public int block = 0;
     public int ramp = 0;
+
+    public GameObject SpringPrint;
 
     private void Awake()
     {
@@ -23,19 +26,36 @@ public class VirtualFootprints : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        SpringPrint.SetActive(false);
+    }
+
     public void LogData(string name)
     {
         switch(name)
         {
-            case "SpringPrint":
+            case "SpringPoint":
                 spring++;
+                AdpSpring(spring);
                 break;
-            case "BlockPrint":
+            case "BlockPoint":
                 block++;
                 break;
-            case "RampPrint":
+            case "RampPoint":
                 ramp++;
                 break;
+        }
+    }
+
+    void AdpSpring(int counter)
+    {
+        if (counter > 3)
+        {
+            SpringPrint.SetActive(true);
+            SpringPrint.transform.GetChild(0).gameObject.SetActive(true);
+            SpringPrint.transform.GetChild(1).gameObject.SetActive(false);
+            spring = 0;
         }
     }
 }

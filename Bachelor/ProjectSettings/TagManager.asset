@@ -39,6 +39,8 @@ TagManager:
   - RegUI
   - MouseBinds
   - Accumulate
+  - Ramp
+  - ReverseRamp
   layers:
   - Default
   - TransparentFX

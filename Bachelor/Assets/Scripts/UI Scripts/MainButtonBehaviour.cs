@@ -11,6 +11,7 @@ public class MainButtonBehaviour : MonoBehaviour
 	public bool Active = false;
 	GameObject panel;
 	
+	
 	public MainButtonBehaviour[] panelHolder;
 
 	// Start is called before the first frame update
@@ -43,6 +44,7 @@ public class MainButtonBehaviour : MonoBehaviour
         }
 		else
         {
+			
 			Active = true;
 			adaptivePanel.SetActive(false);
 			foreach(MainButtonBehaviour panel in panelHolder)
@@ -50,6 +52,7 @@ public class MainButtonBehaviour : MonoBehaviour
 				
 				panel.Active = false;
             }
+			
         }
 
 	}
