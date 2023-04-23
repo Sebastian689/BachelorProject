@@ -11,8 +11,16 @@ public class Statistics : MonoBehaviour
     void Start()
     {
         GM = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-        Button button = gameObject.GetComponent<Button>();
+        button = gameObject.GetComponent<Button>();
         button.onClick.AddListener(OnClickCounter);
+    }
+
+    private void Update()
+    {
+        if (GM == null)
+        {
+            GM = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        }
     }
 
     public void OnClickCounter()
