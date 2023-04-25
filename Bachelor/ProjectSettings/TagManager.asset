@@ -42,6 +42,7 @@ TagManager:
   - Ramp
   - ReverseRamp
   - Recommended
+  - UserProfile
   layers:
   - Default
   - TransparentFX
