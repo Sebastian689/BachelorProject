@@ -8863,7 +8863,7 @@ GameObject:
   - component: {fileID: 4165763039867571257}
   m_Layer: 8
   m_Name: ReccomendedButton
-  m_TagString: AdaptiveButton
+  m_TagString: Recommended
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9006,5 +9006,6 @@ MonoBehaviour:
   BlockR: {fileID: 4536805635670871360}
   ramp: {fileID: 4536805635311324894}
   revRamp: {fileID: 4536805635458021071}
+  accum: {fileID: 0}
   GBS: {fileID: 0}
   gridSystem: {fileID: 0}
