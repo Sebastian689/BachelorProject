@@ -150,6 +150,7 @@ public class GameManager : MonoBehaviour
                     if (blandFinish == true)
                     {
                         ScreenCapture.CaptureScreenshot("Level1.png");
+                        StartCoroutine("Wait");
                         EndLevel();
                         Score();
                         
@@ -281,6 +282,12 @@ public class GameManager : MonoBehaviour
         sceneTimer.timerStarted = false;
         timerHasBegun = false;
         
+    }
+
+    IEnumerator Wait()
+    {
+        Debug.Log("I started");
+        yield return new WaitForSeconds(2);
     }
 }
 [System.Serializable]
