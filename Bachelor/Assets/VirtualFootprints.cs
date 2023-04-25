@@ -12,6 +12,12 @@ public class VirtualFootprints : MonoBehaviour
     public int ramp = 0;
 
     public GameObject SpringPrint;
+    public GameObject BlockPrint;
+    public GameObject RampPrint;
+
+    public GameObject SpringSquare;
+    public GameObject RampSquare;
+    public GameObject BlockSquare;
 
     private void Awake()
     {
@@ -29,6 +35,41 @@ public class VirtualFootprints : MonoBehaviour
     void Start()
     {
         SpringPrint.SetActive(false);
+        BlockPrint.SetActive(false);
+        RampPrint.SetActive(false);
+
+        
+    }
+
+    private void UpdateSquares()
+    {
+        spring = 0;
+        ramp = 0;
+        block = 0;
+        if (SpringSquare == null)
+        {
+            if (GameObject.Find("SpringSquare") != null)
+            {
+                SpringSquare = GameObject.Find("SpringSquare");
+                SpringSquare.SetActive(false);
+            }
+        }
+        if (RampSquare == null)
+        {
+            if (GameObject.Find("RampSquare") != null)
+            {
+                RampSquare = GameObject.Find("RampSquare");
+                RampSquare.SetActive(false);
+            }
+        }
+        if (BlockSquare == null)
+        {
+            if (GameObject.Find("BlockSquare") != null)
+            {
+                BlockSquare = GameObject.Find("BlockSquare");
+                BlockSquare.SetActive(false);
+            }
+        }
     }
 
     public void LogData(string name)
@@ -37,25 +78,63 @@ public class VirtualFootprints : MonoBehaviour
         {
             case "SpringPoint":
                 spring++;
-                AdpSpring(spring);
+               if (spring == 3)
+                {
+                    AdpSpring();
+                }
+               if (spring == 5)
+                {
+                    SpringSquare.SetActive(true);
+                    AdpSpring();
+                }
+                
                 break;
             case "BlockPoint":
                 block++;
+                if (block == 3)
+                {
+                    AdpBlock();
+                }
+                if (block == 5)
+                {
+                    BlockSquare.SetActive(true);
+                    AdpBlock();
+                }
+                    
+                
                 break;
             case "RampPoint":
                 ramp++;
+                if (ramp == 3)
+                {
+                    AdpRamp();
+                }
+                if (ramp == 5)
+                {
+                    RampSquare.SetActive(true);
+                    AdpRamp();
+                }
                 break;
         }
     }
 
-    void AdpSpring(int counter)
+    void AdpSpring()
     {
-        if (counter > 3)
-        {
             SpringPrint.SetActive(true);
             SpringPrint.transform.GetChild(0).gameObject.SetActive(true);
             SpringPrint.transform.GetChild(1).gameObject.SetActive(false);
-            spring = 0;
-        }
+    }
+
+    void AdpBlock()
+    {
+            BlockPrint.SetActive(true);
+            BlockPrint.transform.GetChild(0).gameObject.SetActive(true);
+            BlockPrint.transform.GetChild(1).gameObject.SetActive(false);
+    }
+    void AdpRamp()
+    {
+            RampPrint.SetActive(true);
+            RampPrint.transform.GetChild(0).gameObject.SetActive(true);
+            RampPrint.transform.GetChild(1).gameObject.SetActive(false);
     }
 }

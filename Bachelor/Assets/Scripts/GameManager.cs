@@ -41,14 +41,13 @@ public class GameManager : MonoBehaviour
     {
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = target;
-
     }
     
     
     // Start is called before the first frame update
     void Start()
     {
-        Debug.LogError("I started");
+        GameObject.Find("FootprintManager").GetComponent<VirtualFootprints>().Invoke("UpdateSquares", 0.01f);
         coinCount = 0;
         //Respawnbtn.SetActive(false);
         scoreText = GameObject.FindGameObjectWithTag("scoreText").GetComponent<TMP_Text>();
@@ -100,22 +99,19 @@ public class GameManager : MonoBehaviour
     public void LevelProgress()
     {
         //endPanel.SetActive(false);
-
-        accum.deaths += DC.currentNum;
-        accum.timer += sceneTimer.currentTime;
-        accum.clicks += clicked;
-
-
-        string parameterData = JsonUtility.ToJson(data);
-        string filePath = Application.persistentDataPath + "/UserData.json";
-        Debug.Log(filePath);
-        System.IO.File.WriteAllText(filePath, parameterData);
+        
+       // string parameterData = JsonUtility.ToJson(accum);
+       // string filePath = Application.persistentDataPath + "/UserData.json";
+       // Debug.Log(filePath);
+       // System.IO.File.WriteAllText(filePath, parameterData);
         switch (SceneManager.GetActiveScene().name)
         {
             case "Level1":
+                
                 SceneManager.LoadScene("Level2");
                 break;
             case "Level2":
+                
                 SceneManager.LoadScene("Level3");
                 break;
             case "Level3":
@@ -150,8 +146,11 @@ public class GameManager : MonoBehaviour
             switch (SceneManager.GetActiveScene().name)
             {
                 case "Level1":
+                    
                     if (blandFinish == true)
                     {
+                        ScreenCapture.CaptureScreenshot("Level1.png");
+                        StartCoroutine("Wait");
                         EndLevel();
                         Score();
                         
@@ -161,7 +160,7 @@ public class GameManager : MonoBehaviour
                 case "Level2":
                     if (blandFinish == true)
                     {
-                        
+                        ScreenCapture.CaptureScreenshot("Level2.png");
                         EndLevel();
                         Score();
                         halt = true;
@@ -170,6 +169,7 @@ public class GameManager : MonoBehaviour
                 case "Level3":
                     if (blandFinish == true)
                     {
+                        ScreenCapture.CaptureScreenshot("Level3.png");
                         EndLevel();
                         Score();
                         
@@ -179,6 +179,7 @@ public class GameManager : MonoBehaviour
                 case "Level4":
                     if (blandFinish == true)
                     {
+                        ScreenCapture.CaptureScreenshot("Level4.png");
                         EndLevel();
                         Score();
                         
@@ -188,6 +189,7 @@ public class GameManager : MonoBehaviour
                 case "Level5":
                     if (blandFinish == true)
                     {
+                        ScreenCapture.CaptureScreenshot("Level5.png");
                         EndLevel();
                         Score();
                         
@@ -200,17 +202,25 @@ public class GameManager : MonoBehaviour
 
     public void SaveToJson()
     {
-       
-        string parameterData = JsonUtility.ToJson(accum);
+        accum.deaths += DC.currentNum;
+        accum.timer += sceneTimer.currentTime;
+        accum.clicks += clicked;
+
+        data.deaths = accum.deaths;
+        data.score = accum.score;
+        data.clicks = accum.clicks;
+        data.time = accum.timer;
+        string parameterData = JsonUtility.ToJson(data);
         string filePath = Application.persistentDataPath + "/UserData.json";
         Debug.Log(filePath);
         System.IO.File.WriteAllText(filePath, parameterData);
-
+        sceneTimer.currentTime = 0f;
+        endPanel.SetActive(true);
     }
 
     public void Score()
     {
-        endPanel.SetActive(true);
+        
         double points = 1000;
         double time = sceneTimer.currentTime;
 
@@ -269,9 +279,15 @@ public class GameManager : MonoBehaviour
 
     public void EndLevel()
     {
-        
+        sceneTimer.timerStarted = false;
         timerHasBegun = false;
         
+    }
+
+    IEnumerator Wait()
+    {
+        Debug.Log("I started");
+        yield return new WaitForSeconds(2);
     }
 }
 [System.Serializable]

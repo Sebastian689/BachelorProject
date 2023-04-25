@@ -21,6 +21,7 @@ public class MainButtonBehaviour : MonoBehaviour
 		btn.onClick.AddListener(TaskOnClick);
 		panel = overPanel;
 		panel.SetActive(false);
+		adaptivePanel = GameObject.FindGameObjectWithTag("AdpPanel");
 	}
 
     private void Update()
