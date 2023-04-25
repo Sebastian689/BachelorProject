@@ -14,9 +14,7 @@ public class GameManager : MonoBehaviour
     public bool timerHasBegun = false;
     //float cooldown = 3;
     public bool halt = false;
-
-    //public GameObject Startbtn;
-    //public GameObject Respawnbtn;
+    public RecommendedBtn Rec;
     public GameObject keybindMouse;
 
     public bool blandFinish = false;
@@ -49,19 +47,19 @@ public class GameManager : MonoBehaviour
     {
         GameObject.Find("FootprintManager").GetComponent<VirtualFootprints>().Invoke("UpdateSquares", 0.01f);
         coinCount = 0;
-        //Respawnbtn.SetActive(false);
+       
         scoreText = GameObject.FindGameObjectWithTag("scoreText").GetComponent<TMP_Text>();
-        //scoreHolder = GameObject.FindGameObjectWithTag("scoreText");
-        //endPanel = GameObject.FindGameObjectWithTag("EndPanel");
-        //endPanel.SetActive(false);
+        scoreHolder = GameObject.FindGameObjectWithTag("scoreText");
+        endPanel = GameObject.FindGameObjectWithTag("EndPanel");
+        endPanel.SetActive(false);
         endPanel = GameObject.FindGameObjectWithTag("EndPanel");
         scoreText = GameObject.FindGameObjectWithTag("scoreText").GetComponent<TMP_Text>();
         sceneTimer = GameObject.FindGameObjectWithTag("UITimer").GetComponent<UITimer>();
         endPanel.SetActive(false);
-        
+        Rec = GameObject.FindGameObjectWithTag("Recommended").GetComponent<RecommendedBtn>();
 
         
-        //DC = GameObject.FindGameObjectWithTag("DeathCounter").GetComponent<DeathCounter>();
+        DC = GameObject.FindGameObjectWithTag("DeathCounter").GetComponent<DeathCounter>();
         accum = GameObject.FindGameObjectWithTag("Accumulate").GetComponent<Accumulate>();
         
         Debug.Log("Made it here");
@@ -280,7 +278,9 @@ public class GameManager : MonoBehaviour
     public void EndLevel()
     {
         sceneTimer.timerStarted = false;
+        coinCount = 0;
         timerHasBegun = false;
+        //Rec.Preset();
         
     }
 

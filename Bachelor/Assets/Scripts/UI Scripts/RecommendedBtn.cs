@@ -10,26 +10,34 @@ public class RecommendedBtn : MonoBehaviour
     public Button yourButton;
  
     public GameObject embeddedObject;
-    
+    public string[] objectNames;
     public GameObject boost;
     public GameObject revBoost;
     public GameObject spring;
     public GameObject brake;
     public GameObject block;
     public GameObject blockL;
-    public GameObject BlockR;
+    public GameObject blockR;
     public GameObject ramp;
     public GameObject revRamp;
+    public Accumulate accum;
 
     [SerializeField] private GameObject GBS;
     [SerializeField] private GridBuildingSystem gridSystem;
     private string objectToPlace;
 
+    private GameObject one;
+    private GameObject two;
+    private GameObject three;
+
+
     // Start is called before the first frame update
     void Start()
     {
+        objectNames = new string[] { "placeholder" };
         GBS = GameObject.FindGameObjectWithTag("Grid");
         gridSystem = GBS.GetComponent<GridBuildingSystem>();
+        accum = GameObject.FindGameObjectWithTag("Accumulate").GetComponent<Accumulate>();
 
         Button btn = yourButton.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
@@ -48,34 +56,53 @@ public class RecommendedBtn : MonoBehaviour
         {
 
             this.gameObject.SetActive(false);
-
         }
-        else {
-
-            /* switch (SceneManager.GetActiveScene().name)
-             {
-                 case ("Level2"):
-                     //run logic
-                     embeddedObject = ChooseLowest(spring, block, brake);
-                 break;
-                 case ("Level3"):
-                     //run logic
-                     embeddedObject = ChooseLowest(blockL, revBoost, revRamp);
-                 break;
-                 case ("Level4"):
-                     //run logic
-                     embeddedObject = ChooseLowest(ramp, block, revBoost);
-                 break;
-                 case ("Level5"):
-                     //run logic
-                     embeddedObject = ChooseLowest(blockL, blockR, ramp);
-                 break;
-             }
-            */
-        }
+       
 
     }
 
+    
+    public void Preset() 
+    {
+        this.gameObject.SetActive(true);
+         switch (SceneManager.GetActiveScene().name)
+               {
+                   case ("Level1"):
+                //run logic
+                one = spring;
+                two = block;
+                three = brake;
+                string[] objectNames = new string[] { one.name, two.name, three.name };
+                       embeddedObject = accum.LowestOf(objectNames);
+                   break;
+                   case ("Level2"):
+                //run logic
+                one = blockL;
+                two = revBoost;
+                three = revRamp;
+                string[] objectNamesTwo = new string[] { one.name, two.name, three.name };
+                embeddedObject = accum.LowestOf(objectNamesTwo);
+                break;
+                   case ("Level3"):
+                //run logic
+                one = ramp;
+                two = block;
+                three = revBoost;
+                string[] objectNamesThree = new string[] { one.name, two.name, three.name };
+                embeddedObject = accum.LowestOf(objectNamesThree);
+                break;
+                   case ("Level4"):
+                //run logic
+                one = blockL;
+                two = blockR;
+                three = ramp;
+                string[] objectNamesFour = new string[] { one.name, two.name, three.name };
+                embeddedObject = accum.LowestOf(objectNamesFour);
+                break;
+               }
+              
+
+    } 
     void TaskOnClick()
     {
         Debug.Log("You have clicked the button!");
@@ -95,25 +122,5 @@ public class RecommendedBtn : MonoBehaviour
      
     }
 
-    void ChooseLowest(GameObject one, GameObject two, GameObject three)
-    {
-
-        // int a = one.int;
-        // int b = two.int;
-        // int c = three.int;
-
-        // if (a < b && a != b){
-        //     if (a < c && a != c){
-        //          return one.embeddedObject;
-        //     } else if (a == c){
-        //     }else {
-        //              return three.embeddedObject;
-        //     }
-        // } else if (b < c && b != c && b != a){
-        //      return two.embeddedObject;
-        // } else {
-        //          return three..embeddedObject
-        // }
-    }
-
+  
 }

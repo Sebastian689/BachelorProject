@@ -41,6 +41,7 @@ TagManager:
   - Accumulate
   - Ramp
   - ReverseRamp
+  - Recommended
   layers:
   - Default
   - TransparentFX

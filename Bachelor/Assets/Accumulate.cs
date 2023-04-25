@@ -1,4 +1,3 @@
-
 using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,8 +11,9 @@ public class Accumulate : MonoBehaviour
 
     [SerializeField] private Object[] buttonPrefabs;
     [SerializeField] private int numButtonsToDisplay = 4;
-    private Dictionary<Object, int> buttonUsage = new Dictionary<Object, int>();
+    public Dictionary<Object, int> buttonUsage = new Dictionary<Object, int>();
     private List<Object> mostUsedButtons = new List<Object>();
+    private List<GameObject> leastUsedButtons = new List<GameObject>();
 
     public int deaths;
     public float score;
@@ -91,6 +91,33 @@ public class Accumulate : MonoBehaviour
         else
         {
             Debug.LogError("Button prefab not found in buttonUsage dictionary: " + buttonPrefab.name);
+        }
+    }
+
+    public GameObject LowestOf(string[] names)
+    {
+        string[] objectNames = names;
+        leastUsedButtons = (from entry in buttonUsage
+                            let gameObject = entry.Key as GameObject
+                            where gameObject != null && objectNames.Contains(gameObject.name)
+                            select gameObject).ToList();
+
+        leastUsedButtons.OrderBy(x => buttonUsage[x]);
+    
+
+        if (leastUsedButtons.Count > 0)
+        {
+            return leastUsedButtons[0].GetComponent<UnderButtonBehaviour>().embeddedObject;
+        }
+        else
+        {
+            // Handle the case where no matching GameObjects were found
+            Debug.LogWarning("No matching GameObjects found");
+            return null;
+
+
+
+
         }
     }
 }
