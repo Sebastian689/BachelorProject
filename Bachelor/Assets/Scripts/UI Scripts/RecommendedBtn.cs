@@ -42,21 +42,12 @@ public class RecommendedBtn : MonoBehaviour
         Button btn = yourButton.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
 
-        switch (SceneManager.GetActiveScene().name)
-        {
-            case ("Level1"):
-                this.gameObject.SetActive(false);
-                break;
-        }
+     
     }
 
     private void Awake()
     {
-        if (SceneManager.GetActiveScene().name == "Level1")
-        {
-
-            this.gameObject.SetActive(false);
-        }
+   
        
 
     }
@@ -67,7 +58,7 @@ public class RecommendedBtn : MonoBehaviour
         this.gameObject.SetActive(true);
          switch (SceneManager.GetActiveScene().name)
                {
-                   case ("Level1"):
+                   case ("Level2"):
                 //run logic
                 one = spring;
                 two = block;
@@ -75,7 +66,7 @@ public class RecommendedBtn : MonoBehaviour
                 string[] objectNames = new string[] { one.name, two.name, three.name };
                        embeddedObject = accum.LowestOf(objectNames);
                    break;
-                   case ("Level2"):
+                   case ("Level3"):
                 //run logic
                 one = blockL;
                 two = revBoost;
@@ -83,7 +74,7 @@ public class RecommendedBtn : MonoBehaviour
                 string[] objectNamesTwo = new string[] { one.name, two.name, three.name };
                 embeddedObject = accum.LowestOf(objectNamesTwo);
                 break;
-                   case ("Level3"):
+                   case ("Level4"):
                 //run logic
                 one = ramp;
                 two = block;
@@ -91,7 +82,7 @@ public class RecommendedBtn : MonoBehaviour
                 string[] objectNamesThree = new string[] { one.name, two.name, three.name };
                 embeddedObject = accum.LowestOf(objectNamesThree);
                 break;
-                   case ("Level4"):
+                   case ("Level5"):
                 //run logic
                 one = blockL;
                 two = blockR;

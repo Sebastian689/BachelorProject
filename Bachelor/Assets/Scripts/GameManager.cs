@@ -48,16 +48,18 @@ public class GameManager : MonoBehaviour
         GameObject.Find("FootprintManager").GetComponent<VirtualFootprints>().Invoke("UpdateSquares", 0.01f);
         coinCount = 0;
        
-        scoreText = GameObject.FindGameObjectWithTag("scoreText").GetComponent<TMP_Text>();
-        scoreHolder = GameObject.FindGameObjectWithTag("scoreText");
-        endPanel = GameObject.FindGameObjectWithTag("EndPanel");
-        endPanel.SetActive(false);
         endPanel = GameObject.FindGameObjectWithTag("EndPanel");
         scoreText = GameObject.FindGameObjectWithTag("scoreText").GetComponent<TMP_Text>();
         sceneTimer = GameObject.FindGameObjectWithTag("UITimer").GetComponent<UITimer>();
         endPanel.SetActive(false);
         Rec = GameObject.FindGameObjectWithTag("Recommended").GetComponent<RecommendedBtn>();
-
+        if(SceneManager.GetActiveScene().name == "Level1")
+        {
+            Rec.gameObject.SetActive(false);
+        } else { Rec.gameObject.SetActive(true);
+            Rec.Preset();
+        }
+        
         
         DC = GameObject.FindGameObjectWithTag("DeathCounter").GetComponent<DeathCounter>();
         accum = GameObject.FindGameObjectWithTag("Accumulate").GetComponent<Accumulate>();
@@ -280,7 +282,7 @@ public class GameManager : MonoBehaviour
         sceneTimer.timerStarted = false;
         coinCount = 0;
         timerHasBegun = false;
-        //Rec.Preset();
+        Rec.gameObject.SetActive(true);
         
     }
 
