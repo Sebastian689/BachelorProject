@@ -103,7 +103,7 @@ public class Accumulate : MonoBehaviour
                             select gameObject).ToList();
 
         leastUsedButtons.OrderBy(x => buttonUsage[x]);
-        leastUsedButtons.OrderBy(x => buttonUsage[x]);
+    
 
         if (leastUsedButtons.Count > 0)
         {
