@@ -43,6 +43,8 @@ TagManager:
   - ReverseRamp
   - Recommended
   - UserProfile
+  - Hint
+  - HintText
   layers:
   - Default
   - TransparentFX
