@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     public GameObject scoreHolder;
 
     public Accumulate accum;
+    public UserProfile UP;
 
     public Data data = new Data();
     public int clicked = 0;
@@ -97,7 +98,7 @@ public class GameManager : MonoBehaviour
 
 
     public void LevelProgress()
-    {
+    { 
         //endPanel.SetActive(false);
         
        // string parameterData = JsonUtility.ToJson(accum);
@@ -107,11 +108,9 @@ public class GameManager : MonoBehaviour
         switch (SceneManager.GetActiveScene().name)
         {
             case "Level1":
-                
                 SceneManager.LoadScene("Level2");
                 break;
             case "Level2":
-                
                 SceneManager.LoadScene("Level3");
                 break;
             case "Level3":

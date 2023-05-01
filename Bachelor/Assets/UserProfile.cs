@@ -15,8 +15,10 @@ public class UserProfile : MonoBehaviour
     private bool profile;
     
     private static UserProfile instance;
+    
+    private bool showHint2 = true;
+    private bool showHint3 = true;
 
-    private int hintScene = 1;
     
     private void Awake()
     {
@@ -44,19 +46,43 @@ public class UserProfile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("ShowHint 2 bool is: " + showHint2);
+        Debug.Log("ShowHint 3 bool is: " + showHint3);
         //Debug.Log("User has experience = " + profile);
         if (profile && accumulate.deaths >= 10 || profile && accumulate.timer >= 120.0f)
         {
             profile = false;
         }
 
-        if (hintScene == 2 || hintScene == 3)
+        if (!profile)
         {
             ShowHint();
         }
-        
     }
 
+    public void ShowHint()
+    {
+        switch (SceneManager.GetActiveScene().name)
+        {
+            case "Level2":
+                if (showHint2)
+                {
+                    HintWindow.SetActive(true);
+                    hintText.text = "You gain bonus score when picking up coins";
+                    showHint2 = false;
+                }
+                break;
+            case "Level3":
+                if (showHint3)
+                {
+                    HintWindow.SetActive(true);
+                    hintText.text = "Watch out for the monsters since they will eat the potato if they get too close";
+                    showHint3 = false;
+                }
+                break;
+        }
+    }
+    
     public void Experienced()
     {
         UserProfileWindow.SetActive(false);
@@ -68,22 +94,7 @@ public class UserProfile : MonoBehaviour
         UserProfileWindow.SetActive(false);
         profile = false;
     }
-
-    public void ShowHint()
-    {
-        switch (SceneManager.GetActiveScene().name)
-        {
-            case "Level2":
-                HintWindow.SetActive(true);
-                hintText.text = "You gain bonus score when picking up coins";
-                break;
-            case "Level3":
-                HintWindow.SetActive(true);
-                hintText.text = "Watch out for the monsters since they will eat the potato if they get too close";
-                break;
-        }
-    }
-
+    
     public void CloseHint()
     {
         HintWindow.SetActive(false);

@@ -3431,6 +3431,7 @@ MonoBehaviour:
   scoreText: {fileID: 0}
   scoreHolder: {fileID: 0}
   accum: {fileID: 0}
+  UP: {fileID: 0}
   data:
     deaths: 0
     score: 0
