@@ -134,5 +134,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efb9d9d96167438418f9b5f943832175, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 0.1
+  force: 0.15
   maxVelocity: 1
+  right: 1
+  GM: {fileID: 0}
+  go: {fileID: 0}
+  soundManager: {fileID: 0}

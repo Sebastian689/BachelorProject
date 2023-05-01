@@ -600,6 +600,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 76
       objectReference: {fileID: 0}
+    - target: {fileID: 1258401073, guid: 266831baeea8c764493746639f685549, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1258401074, guid: 266831baeea8c764493746639f685549, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 185.7
@@ -1731,6 +1735,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &891154874 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6344842488356583678, guid: 266831baeea8c764493746639f685549, type: 3}
+  m_PrefabInstance: {fileID: 315932885}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &891154875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891154874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d66ccbb95845e342b1ccf02d8fecfeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yourButton: {fileID: 0}
+  Blockprint: {fileID: 315932887}
 --- !u!1 &967385585
 GameObject:
   m_ObjectHideFlags: 0
@@ -2524,6 +2547,7 @@ MonoBehaviour:
   scoreText: {fileID: 0}
   scoreHolder: {fileID: 0}
   accum: {fileID: 0}
+  VF: {fileID: 0}
   data:
     deaths: 0
     score: 0
