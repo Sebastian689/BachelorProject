@@ -14,6 +14,23 @@ public class UserProfile : MonoBehaviour
 
     private bool profile;
     
+    private static UserProfile instance;
+
+    private int hintScene = 1;
+    
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +50,11 @@ public class UserProfile : MonoBehaviour
             profile = false;
         }
 
-        ShowHint();
+        if (hintScene == 2 || hintScene == 3)
+        {
+            ShowHint();
+        }
+        
     }
 
     public void Experienced()
