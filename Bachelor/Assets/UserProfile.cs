@@ -46,8 +46,6 @@ public class UserProfile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("ShowHint 2 bool is: " + showHint2);
-        Debug.Log("ShowHint 3 bool is: " + showHint3);
         //Debug.Log("User has experience = " + profile);
         if (profile && accumulate.deaths >= 10 || profile && accumulate.timer >= 120.0f)
         {

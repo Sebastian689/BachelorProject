@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,7 +27,7 @@ public class GameManager : MonoBehaviour
     public int coinCount;
 
     public TMP_Text scoreText;
-    public GameObject scoreHolder;
+    //public GameObject scoreHolder;
 
     public Accumulate accum;
     public VirtualFootprints VF;
@@ -124,6 +125,15 @@ public class GameManager : MonoBehaviour
                 break;
         }
     }
+
+    private void FixedUpdate()
+    {
+        if (SceneManager.GetActiveScene().name == "Level5")
+        {
+            accum = GameObject.FindGameObjectWithTag("Accumulate").GetComponent<Accumulate>();
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -227,7 +237,7 @@ public class GameManager : MonoBehaviour
 
         DC = GameObject.FindGameObjectWithTag("DeathCounter").GetComponent<DeathCounter>();
         //scoreText = GameObject.FindGameObjectWithTag("scoreText").GetComponent<TMP_Text>();
-        scoreHolder = GameObject.FindGameObjectWithTag("scoreText");
+        //scoreHolder = GameObject.FindGameObjectWithTag("scoreText");
         int deaths = DC.currentNum;
         // Extra points
 
