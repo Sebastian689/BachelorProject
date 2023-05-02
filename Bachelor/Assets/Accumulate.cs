@@ -13,8 +13,8 @@ public class Accumulate : MonoBehaviour
     [SerializeField] private int numButtonsToDisplay = 4;
     public Dictionary<Object, int> buttonUsage = new Dictionary<Object, int>();
     private List<Object> mostUsedButtons = new List<Object>();
-    private List<GameObject> leastUsedButtons = new List<GameObject>();
-
+     private List<GameObject> leastUsedButtons = new List<GameObject>();
+    
     public int deaths;
     public float score;
     public float timer;
@@ -96,14 +96,17 @@ public class Accumulate : MonoBehaviour
 
     public GameObject LowestOf(string[] names)
     {
+        leastUsedButtons.Clear();
+        
         string[] objectNames = names;
         leastUsedButtons = (from entry in buttonUsage
                             let gameObject = entry.Key as GameObject
                             where gameObject != null && objectNames.Contains(gameObject.name)
                             select gameObject).ToList();
 
+
         leastUsedButtons.OrderBy(x => buttonUsage[x]);
-    
+
 
         if (leastUsedButtons.Count > 0)
         {

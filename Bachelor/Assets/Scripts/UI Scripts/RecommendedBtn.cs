@@ -30,6 +30,8 @@ public class RecommendedBtn : MonoBehaviour
     private GameObject two;
     private GameObject three;
 
+    public Image image;
+
 
     // Start is called before the first frame update
     void Start()
@@ -61,18 +63,20 @@ public class RecommendedBtn : MonoBehaviour
                    case ("Level2"):
                 //run logic
                 one = spring;
-                two = block;
+                two = boost;
                 three = brake;
                 string[] objectNames = new string[] { one.name, two.name, three.name };
                        embeddedObject = accum.LowestOf(objectNames);
-                   break;
+                image.sprite = embeddedObject.GetComponentInChildren<SpriteRenderer>().sprite;
+                break;
                    case ("Level3"):
                 //run logic
-                one = blockL;
+                one = ramp;
                 two = revBoost;
-                three = revRamp;
+                three = block;
                 string[] objectNamesTwo = new string[] { one.name, two.name, three.name };
                 embeddedObject = accum.LowestOf(objectNamesTwo);
+                image.sprite = embeddedObject.GetComponentInChildren<SpriteRenderer>().sprite;
                 break;
                    case ("Level4"):
                 //run logic
@@ -81,14 +85,16 @@ public class RecommendedBtn : MonoBehaviour
                 three = revBoost;
                 string[] objectNamesThree = new string[] { one.name, two.name, three.name };
                 embeddedObject = accum.LowestOf(objectNamesThree);
+                image.sprite = embeddedObject.GetComponentInChildren<SpriteRenderer>().sprite;
                 break;
                    case ("Level5"):
                 //run logic
-                one = blockL;
-                two = blockR;
+                one = spring;
+                two = boost;
                 three = ramp;
                 string[] objectNamesFour = new string[] { one.name, two.name, three.name };
                 embeddedObject = accum.LowestOf(objectNamesFour);
+                image.sprite = embeddedObject.GetComponentInChildren<SpriteRenderer>().sprite;
                 break;
                }
               
