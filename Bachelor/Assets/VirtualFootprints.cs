@@ -38,7 +38,6 @@ public class VirtualFootprints : MonoBehaviour
         BlockPrint.SetActive(false);
         RampPrint.SetActive(false);
 
-        
     }
 
     private void UpdateSquares()
@@ -69,6 +68,18 @@ public class VirtualFootprints : MonoBehaviour
                 BlockSquare = GameObject.Find("BlockSquare");
                 BlockSquare.SetActive(false);
             }
+        }
+        if (SpringPrint.activeInHierarchy)
+        {
+            SpringPrint.SetActive(false);
+        }
+        if (BlockPrint.activeInHierarchy)
+        {
+            BlockPrint.SetActive(false);
+        }
+        if (RampPrint.activeInHierarchy)
+        {
+            RampPrint.SetActive(false);
         }
     }
 

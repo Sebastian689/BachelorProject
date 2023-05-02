@@ -7,6 +7,7 @@ public class RampPrint : MonoBehaviour
 {
     public Button myButton;
     public GameObject Rampprint;
+    [SerializeField] bool hasRecommended;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,10 +16,16 @@ public class RampPrint : MonoBehaviour
     }
     void TaskOnClick()
     {
+        if (hasRecommended)
+        {
+            Rampprint.SetActive(false);
+            hasRecommended = false;
+        }
         if (Rampprint.activeInHierarchy)
         {
             Rampprint.transform.GetChild(0).gameObject.SetActive(false);
             Rampprint.transform.GetChild(1).gameObject.SetActive(true);
+            hasRecommended = true;
         }
     }
 }

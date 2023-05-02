@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     public GameObject scoreHolder;
 
     public Accumulate accum;
-    public UserProfile UP;
+    public VirtualFootprints VF;
 
     public Data data = new Data();
     public int clicked = 0;
@@ -150,8 +150,8 @@ public class GameManager : MonoBehaviour
                     {
                         ScreenCapture.CaptureScreenshot("Level1.png");
                         StartCoroutine("Wait");
-                        EndLevel();
-                        Score();
+                        //EndLevel();
+                        //Score();
                         
                         halt = true;
                     }
@@ -160,8 +160,7 @@ public class GameManager : MonoBehaviour
                     if (blandFinish == true)
                     {
                         ScreenCapture.CaptureScreenshot("Level2.png");
-                        EndLevel();
-                        Score();
+                        StartCoroutine("Wait");
                         halt = true;
                     }
                     break;
@@ -169,9 +168,10 @@ public class GameManager : MonoBehaviour
                     if (blandFinish == true)
                     {
                         ScreenCapture.CaptureScreenshot("Level3.png");
-                        EndLevel();
-                        Score();
-                        
+                        StartCoroutine("Wait");
+                        // EndLevel();
+                        // Score();
+
                         halt = true;
                     }
                     break;
@@ -179,9 +179,10 @@ public class GameManager : MonoBehaviour
                     if (blandFinish == true)
                     {
                         ScreenCapture.CaptureScreenshot("Level4.png");
-                        EndLevel();
-                        Score();
-                        
+                        StartCoroutine("Wait");
+                        // EndLevel();
+                        // Score();
+
                         halt = true;
                     }
                     break;
@@ -189,9 +190,10 @@ public class GameManager : MonoBehaviour
                     if (blandFinish == true)
                     {
                         ScreenCapture.CaptureScreenshot("Level5.png");
-                        EndLevel();
-                        Score();
-                        
+                        StartCoroutine("Wait");
+                        // EndLevel();
+                        // Score();
+
                         halt = true;
                     }
                     break;
@@ -287,8 +289,10 @@ public class GameManager : MonoBehaviour
 
     IEnumerator Wait()
     {
-        Debug.Log("I started");
-        yield return new WaitForSeconds(2);
+        
+        yield return new WaitForSeconds(1);
+        EndLevel();
+        Score();
     }
 }
 [System.Serializable]

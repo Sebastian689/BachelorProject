@@ -3,29 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SpringPrint : MonoBehaviour
+public class BlockPrint : MonoBehaviour
 {
     public Button yourButton;
-    public GameObject Springprint;
+    public GameObject Blockprint;
     [SerializeField] bool hasRecommended;
     // Start is called before the first frame update
     void Start()
     {
-        Button btn = yourButton.GetComponent<Button>();
-        btn.onClick.AddListener(TaskOnClick);
+        yourButton = gameObject.GetComponent<Button>();
+        yourButton.onClick.AddListener(TaskOnClick);
     }
 
     void TaskOnClick()
     {
         if (hasRecommended)
         {
-            Springprint.SetActive(false);
+            Blockprint.SetActive(false);
             hasRecommended = false;
         }
-        if (Springprint.activeInHierarchy)
+        if (Blockprint.activeInHierarchy)
         {
-            Springprint.transform.GetChild(0).gameObject.SetActive(false);
-            Springprint.transform.GetChild(1).gameObject.SetActive(true);
+            Blockprint.transform.GetChild(0).gameObject.SetActive(false);
+            Blockprint.transform.GetChild(1).gameObject.SetActive(true);
             hasRecommended = true;
         }
     }
