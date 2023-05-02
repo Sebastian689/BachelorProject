@@ -20,6 +20,22 @@ public class BlandPotatoController : MonoBehaviour
     float cooldownEnd = 5f;
 
     public SoundManager soundManager;
+    
+    private static BlandPotatoController instance;
+    
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
+    }
+    
+    
     // Start is called before the first frame update
     void Start()
     {
