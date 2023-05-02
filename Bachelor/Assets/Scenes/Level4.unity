@@ -444,7 +444,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.85197663, y: -0.20879555}
+  m_Offset: {x: 0.63426256, y: -0.28835225}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -455,7 +455,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.7441392, y: 0.38736725}
+  m_Size: {x: 2.1950588, y: 0.22825384}
   m_EdgeRadius: 0
 --- !u!4 &151556238
 Transform:
@@ -706,7 +706,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spike block (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8647693643245049904, guid: 89e56f77ca759c34f9bac17ca75e4f81, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3074088525972111440, guid: 89e56f77ca759c34f9bac17ca75e4f81, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 89e56f77ca759c34f9bac17ca75e4f81, type: 3}
 --- !u!4 &448726018 stripped
 Transform:
@@ -747,13 +752,13 @@ MonoBehaviour:
   DC: {fileID: 0}
   timerHasBegun: 0
   halt: 0
+  Rec: {fileID: 0}
   keybindMouse: {fileID: 0}
   blandFinish: 0
   floatFinish: 0
   thirdFinish: 0
   coinCount: 0
   scoreText: {fileID: 0}
-  scoreHolder: {fileID: 0}
   accum: {fileID: 0}
   VF: {fileID: 0}
   data:
@@ -1219,7 +1224,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4203567875712562721, guid: 3666aaa2c86ecc54aae257ec1e9d9174, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4203567875712562721, guid: 3666aaa2c86ecc54aae257ec1e9d9174, type: 3}
       propertyPath: m_LocalScale.x
@@ -1366,7 +1371,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3226910078802285875, guid: eaff9a96c2445a545a62c785eca64b19, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3226910078802285875, guid: eaff9a96c2445a545a62c785eca64b19, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1459,7 +1464,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6536732807457626070, guid: b095277e9346846419c72c4eea075ca0, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6536732807457626070, guid: b095277e9346846419c72c4eea075ca0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2053,7 +2058,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3226910078802285875, guid: 46131551cece4ef4d8bd788f77f2fe56, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3226910078802285875, guid: 46131551cece4ef4d8bd788f77f2fe56, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2944,6 +2949,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 657017146}
     m_Modifications:
+    - target: {fileID: 3074088525972111440, guid: 89e56f77ca759c34f9bac17ca75e4f81, type: 3}
+      propertyPath: m_Size.x
+      value: 2.8521926
+      objectReference: {fileID: 0}
+    - target: {fileID: 3074088525972111440, guid: 89e56f77ca759c34f9bac17ca75e4f81, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.9877702
+      objectReference: {fileID: 0}
     - target: {fileID: 5218283166328839110, guid: 89e56f77ca759c34f9bac17ca75e4f81, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.06336814
@@ -3158,11 +3171,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3226910078802285875, guid: 639ce27c8022e8f49afb1a0124066927, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 4.8678293
+      value: 5.88
       objectReference: {fileID: 0}
     - target: {fileID: 3226910078802285875, guid: 639ce27c8022e8f49afb1a0124066927, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 4.8620763
+      value: 5.73
       objectReference: {fileID: 0}
     - target: {fileID: 3226910078802285875, guid: 639ce27c8022e8f49afb1a0124066927, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3351,7 +3364,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7021283733531738125, guid: 9c4c7c20c43a02d46bd7ab6f6c3c5a56, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7021283733531738125, guid: 9c4c7c20c43a02d46bd7ab6f6c3c5a56, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3707,7 +3720,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spike block (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3074088525972111440, guid: 89e56f77ca759c34f9bac17ca75e4f81, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 89e56f77ca759c34f9bac17ca75e4f81, type: 3}
 --- !u!4 &2053458741 stripped
 Transform:

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class VirtualFootprints : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class VirtualFootprints : MonoBehaviour
     public GameObject SpringPrint;
     public GameObject BlockPrint;
     public GameObject RampPrint;
+    public GameObject ReverseRampPrint;
+    
 
     public GameObject SpringSquare;
     public GameObject RampSquare;
@@ -37,6 +40,7 @@ public class VirtualFootprints : MonoBehaviour
         SpringPrint.SetActive(false);
         BlockPrint.SetActive(false);
         RampPrint.SetActive(false);
+        ReverseRampPrint.SetActive(false);
 
     }
 
@@ -91,12 +95,27 @@ public class VirtualFootprints : MonoBehaviour
                 spring++;
                if (spring == 3)
                 {
-                    AdpSpring();
+                    if (SceneManager.GetActiveScene().name == "Level4")
+                    {
+                        AdpReverseRamp();
+                    } else
+                    {
+                        AdpSpring();
+                    }
+                    
                 }
                if (spring == 5)
                 {
                     SpringSquare.SetActive(true);
-                    AdpSpring();
+                    if (SceneManager.GetActiveScene().name == "Level4")
+                    {
+                       AdpReverseRamp();
+                    }
+                    else
+                    {
+                       AdpSpring();
+                    }
+                    
                 }
                 
                 break;
@@ -147,5 +166,11 @@ public class VirtualFootprints : MonoBehaviour
             RampPrint.SetActive(true);
             RampPrint.transform.GetChild(0).gameObject.SetActive(true);
             RampPrint.transform.GetChild(1).gameObject.SetActive(false);
+    }
+    void AdpReverseRamp()
+    {
+        ReverseRampPrint.SetActive(true);
+        ReverseRampPrint.transform.GetChild(0).gameObject.SetActive(true);
+        ReverseRampPrint.transform.GetChild(1).gameObject.SetActive(false);
     }
 }
