@@ -160,6 +160,7 @@ public class BlandPotatoController : MonoBehaviour
             
             case "LeftBoost":
                 rb.AddForce(new Vector3(-1, 0, 0) * boostForce);
+                soundManager.PlayBoost();
                 break;
             
             case "Brake":

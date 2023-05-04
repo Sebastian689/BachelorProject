@@ -1005,14 +1005,15 @@ MonoBehaviour:
   DC: {fileID: 0}
   timerHasBegun: 0
   halt: 0
+  Rec: {fileID: 0}
   keybindMouse: {fileID: 0}
   blandFinish: 0
   floatFinish: 0
   thirdFinish: 0
   coinCount: 0
   scoreText: {fileID: 0}
-  scoreHolder: {fileID: 0}
   accum: {fileID: 0}
+  VF: {fileID: 0}
   data:
     deaths: 0
     score: 0
@@ -2227,7 +2228,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.2
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

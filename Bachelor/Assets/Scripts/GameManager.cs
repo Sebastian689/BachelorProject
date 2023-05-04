@@ -251,7 +251,7 @@ public class GameManager : MonoBehaviour
             deathMult = (1 + (0.1 * deaths));
         }
 
-        points = points * deathMult;
+        points = points / deathMult;
 
         //Time calc
         double timeMult;
@@ -291,15 +291,14 @@ public class GameManager : MonoBehaviour
         sceneTimer.timerStarted = false;
         timerHasBegun = false;
         Rec.gameObject.SetActive(true);
-        
+        DC.currentNum = 0;
     }
 
     IEnumerator Wait()
     {
-        
         yield return new WaitForSeconds(1);
-        EndLevel();
         Score();
+        EndLevel();
     }
 }
 [System.Serializable]
