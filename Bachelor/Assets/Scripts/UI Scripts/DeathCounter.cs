@@ -35,9 +35,8 @@ public class DeathCounter : MonoBehaviour
     void Update()
     {
 
-      if (died == true)
+      if (died)
         {
-            Debug.LogWarning("Made it to DC");
             currentNum ++;
             numText.text = currentNum.ToString();
             died = false;

@@ -93,8 +93,6 @@ public class GameManager : MonoBehaviour
             //Respawnbtn.SetActive(true);
             DC.died = true;
         }
-        Debug.LogWarning("Made it to GM");
-        
     }
 
 
@@ -267,7 +265,7 @@ public class GameManager : MonoBehaviour
             points = points * timeMult;
         }
         //Coin calc
-        double coinScore = coinCount * 200;
+        double coinScore = coinCount * 2000;
         points = points + coinScore;
 
         float score = (float)points;
@@ -291,7 +289,6 @@ public class GameManager : MonoBehaviour
     public void EndLevel()
     {
         sceneTimer.timerStarted = false;
-        coinCount = 0;
         timerHasBegun = false;
         Rec.gameObject.SetActive(true);
         
