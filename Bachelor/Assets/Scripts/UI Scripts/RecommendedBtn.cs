@@ -67,6 +67,7 @@ public class RecommendedBtn : MonoBehaviour
                 three = brake;
                 string[] objectNames = new string[] { one.name, two.name, three.name };
                        embeddedObject = accum.LowestOf(objectNames);
+                ChangeTransform();
                 image.sprite = embeddedObject.GetComponentInChildren<SpriteRenderer>().sprite;
                 break;
                    case ("Level3"):
@@ -76,6 +77,7 @@ public class RecommendedBtn : MonoBehaviour
                 three = block;
                 string[] objectNamesTwo = new string[] { one.name, two.name, three.name };
                 embeddedObject = accum.LowestOf(objectNamesTwo);
+                ChangeTransform();
                 image.sprite = embeddedObject.GetComponentInChildren<SpriteRenderer>().sprite;
                 break;
                    case ("Level4"):
@@ -85,6 +87,7 @@ public class RecommendedBtn : MonoBehaviour
                 three = revBoost;
                 string[] objectNamesThree = new string[] { one.name, two.name, three.name };
                 embeddedObject = accum.LowestOf(objectNamesThree);
+                ChangeTransform();
                 image.sprite = embeddedObject.GetComponentInChildren<SpriteRenderer>().sprite;
                 break;
                    case ("Level5"):
@@ -94,12 +97,34 @@ public class RecommendedBtn : MonoBehaviour
                 three = ramp;
                 string[] objectNamesFour = new string[] { one.name, two.name, three.name };
                 embeddedObject = accum.LowestOf(objectNamesFour);
+                ChangeTransform();
                 image.sprite = embeddedObject.GetComponentInChildren<SpriteRenderer>().sprite;
                 break;
                }
               
 
-    } 
+    }
+
+    void ChangeTransform()
+    {
+        if (embeddedObject.name == "Reverse Booster")
+        {
+            Debug.Log("Rev boost transform");
+            image.gameObject.transform.localRotation = Quaternion.Euler(0, 0, 90);
+            image.gameObject.transform.localScale = new Vector3(0.12f,5f,1f);
+        } 
+        else if (embeddedObject.name == "Booster")
+        {
+            image.gameObject.transform.localRotation = Quaternion.Euler(0, 0, -90);
+            image.gameObject.transform.localScale = new Vector3(0.12f,5f,1f);
+        }
+        else
+        {
+            image.gameObject.transform.localRotation = Quaternion.Euler(0, 0, 0);
+            image.gameObject.transform.localScale = new Vector3(1f,1f,1f);
+        }
+    }
+    
     void TaskOnClick()
     {
         Debug.Log("You have clicked the button!");
