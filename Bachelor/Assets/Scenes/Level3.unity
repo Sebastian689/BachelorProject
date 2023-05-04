@@ -2786,6 +2786,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlockSquare
       objectReference: {fileID: 0}
+    - target: {fileID: 3226910078802285886, guid: 46131551cece4ef4d8bd788f77f2fe56, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46131551cece4ef4d8bd788f77f2fe56, type: 3}
 --- !u!1001 &1597623814
@@ -3814,6 +3818,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RampSquare
       objectReference: {fileID: 0}
+    - target: {fileID: 3226910078802285886, guid: eaff9a96c2445a545a62c785eca64b19, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eaff9a96c2445a545a62c785eca64b19, type: 3}
 --- !u!1 &2099493096
@@ -3995,6 +4003,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RampPoint
       objectReference: {fileID: 0}
+    - target: {fileID: 2266942567858167781, guid: 15ab9ef20d913784aa42076cbfbd19c5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15ab9ef20d913784aa42076cbfbd19c5, type: 3}
 --- !u!1001 &3365274523537223895
@@ -4051,6 +4063,10 @@ PrefabInstance:
     - target: {fileID: 3365274523351752554, guid: b1f2de8c906b9364c9cc4a778c798382, type: 3}
       propertyPath: m_Name
       value: BlockPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 3365274523351752554, guid: b1f2de8c906b9364c9cc4a778c798382, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1f2de8c906b9364c9cc4a778c798382, type: 3}

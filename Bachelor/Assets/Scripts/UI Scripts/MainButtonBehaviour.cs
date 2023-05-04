@@ -47,7 +47,7 @@ public class MainButtonBehaviour : MonoBehaviour
         {
 			
 			Active = true;
-			adaptivePanel.SetActive(false);
+			//adaptivePanel.SetActive(false);
 			foreach(MainButtonBehaviour panel in panelHolder)
             {
 				

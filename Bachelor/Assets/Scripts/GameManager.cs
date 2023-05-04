@@ -47,20 +47,20 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject.Find("FootprintManager").GetComponent<VirtualFootprints>().Invoke("UpdateSquares", 0.01f);
+        //GameObject.Find("FootprintManager").GetComponent<VirtualFootprints>().Invoke("UpdateSquares", 0.01f);
         coinCount = 0;
        
         endPanel = GameObject.FindGameObjectWithTag("EndPanel");
         scoreText = GameObject.FindGameObjectWithTag("scoreText").GetComponent<TMP_Text>();
         sceneTimer = GameObject.FindGameObjectWithTag("UITimer").GetComponent<UITimer>();
         endPanel.SetActive(false);
-        Rec = GameObject.FindGameObjectWithTag("Recommended").GetComponent<RecommendedBtn>();
-        if(SceneManager.GetActiveScene().name == "Level1")
-        {
-            Rec.gameObject.SetActive(false);
-        } else { Rec.gameObject.SetActive(true);
-            Rec.Preset();
-        }
+        //Rec = GameObject.FindGameObjectWithTag("Recommended").GetComponent<RecommendedBtn>();
+        //if(SceneManager.GetActiveScene().name == "Level1")
+        //{
+        //    Rec.gameObject.SetActive(false);
+        //} else { Rec.gameObject.SetActive(true);
+        //    Rec.Preset();
+        //}
         
         
         DC = GameObject.FindGameObjectWithTag("DeathCounter").GetComponent<DeathCounter>();
@@ -290,7 +290,7 @@ public class GameManager : MonoBehaviour
     {
         sceneTimer.timerStarted = false;
         timerHasBegun = false;
-        Rec.gameObject.SetActive(true);
+        //Rec.gameObject.SetActive(true);
         DC.currentNum = 0;
     }
 
