@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
 
     public Accumulate accum;
     public VirtualFootprints VF;
+    public inactiveRecommended IR;
 
     public Data data = new Data();
     public int clicked = 0;
@@ -58,7 +59,8 @@ public class GameManager : MonoBehaviour
         if(SceneManager.GetActiveScene().name == "Level1")
         {
             Rec.gameObject.SetActive(false);
-        } else { Rec.gameObject.SetActive(true);
+        } else { 
+            Rec.gameObject.SetActive(true);
             Rec.Preset();
         }
         
@@ -299,6 +301,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(1);
         Score();
         EndLevel();
+        IR.NewLevel();
     }
 }
 [System.Serializable]

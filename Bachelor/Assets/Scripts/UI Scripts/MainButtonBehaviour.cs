@@ -8,6 +8,7 @@ public class MainButtonBehaviour : MonoBehaviour
 	public Button yourButton;
 	public GameObject overPanel;
 	public GameObject adaptivePanel;
+	public GameObject recommededPanel;
 	public bool Active = false;
 	GameObject panel;
 	
@@ -22,6 +23,7 @@ public class MainButtonBehaviour : MonoBehaviour
 		panel = overPanel;
 		panel.SetActive(false);
 		adaptivePanel = GameObject.FindGameObjectWithTag("AdpPanel");
+		recommededPanel = GameObject.FindGameObjectWithTag("Recommended Panel");
 	}
 
     private void Update()
@@ -48,6 +50,7 @@ public class MainButtonBehaviour : MonoBehaviour
 			
 			Active = true;
 			adaptivePanel.SetActive(false);
+			recommededPanel.SetActive(false);
 			foreach(MainButtonBehaviour panel in panelHolder)
             {
 				

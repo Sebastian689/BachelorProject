@@ -45,6 +45,7 @@ TagManager:
   - UserProfile
   - Hint
   - HintText
+  - Recommended Panel
   layers:
   - Default
   - TransparentFX

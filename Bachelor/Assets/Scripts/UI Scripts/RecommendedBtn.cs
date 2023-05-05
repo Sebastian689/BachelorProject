@@ -31,6 +31,7 @@ public class RecommendedBtn : MonoBehaviour
     private GameObject three;
 
     public Image image;
+    public Image imageBTN;
 
 
     // Start is called before the first frame update
@@ -68,7 +69,9 @@ public class RecommendedBtn : MonoBehaviour
                 string[] objectNames = new string[] { one.name, two.name, three.name };
                        embeddedObject = accum.LowestOf(objectNames);
                 ChangeTransform();
+                ChangeTransformBTN();
                 image.sprite = embeddedObject.GetComponentInChildren<SpriteRenderer>().sprite;
+                imageBTN.sprite = embeddedObject.GetComponentInChildren<SpriteRenderer>().sprite;
                 break;
                    case ("Level3"):
                 //run logic
@@ -78,7 +81,9 @@ public class RecommendedBtn : MonoBehaviour
                 string[] objectNamesTwo = new string[] { one.name, two.name, three.name };
                 embeddedObject = accum.LowestOf(objectNamesTwo);
                 ChangeTransform();
+                ChangeTransformBTN();
                 image.sprite = embeddedObject.GetComponentInChildren<SpriteRenderer>().sprite;
+                imageBTN.sprite = embeddedObject.GetComponentInChildren<SpriteRenderer>().sprite;
                 break;
                    case ("Level4"):
                 //run logic
@@ -88,7 +93,9 @@ public class RecommendedBtn : MonoBehaviour
                 string[] objectNamesThree = new string[] { one.name, two.name, three.name };
                 embeddedObject = accum.LowestOf(objectNamesThree);
                 ChangeTransform();
+                ChangeTransformBTN();
                 image.sprite = embeddedObject.GetComponentInChildren<SpriteRenderer>().sprite;
+                imageBTN.sprite = embeddedObject.GetComponentInChildren<SpriteRenderer>().sprite;
                 break;
                    case ("Level5"):
                 //run logic
@@ -98,7 +105,9 @@ public class RecommendedBtn : MonoBehaviour
                 string[] objectNamesFour = new string[] { one.name, two.name, three.name };
                 embeddedObject = accum.LowestOf(objectNamesFour);
                 ChangeTransform();
+                ChangeTransformBTN();
                 image.sprite = embeddedObject.GetComponentInChildren<SpriteRenderer>().sprite;
+                imageBTN.sprite = embeddedObject.GetComponentInChildren<SpriteRenderer>().sprite;
                 break;
                }
               
@@ -122,6 +131,26 @@ public class RecommendedBtn : MonoBehaviour
         {
             image.gameObject.transform.localRotation = Quaternion.Euler(0, 0, 0);
             image.gameObject.transform.localScale = new Vector3(1f,1f,1f);
+        }
+    }
+    
+    void ChangeTransformBTN()
+    {
+        if (embeddedObject.name == "Reverse Booster")
+        {
+            Debug.Log("Rev boost transform");
+            imageBTN.gameObject.transform.localRotation = Quaternion.Euler(0, 0, 90);
+            imageBTN.gameObject.transform.localScale = new Vector3(0.15f,0.9f,1f);
+        } 
+        else if (embeddedObject.name == "Booster")
+        {
+            imageBTN.gameObject.transform.localRotation = Quaternion.Euler(0, 0, -90);
+            imageBTN.gameObject.transform.localScale = new Vector3(0.15f,0.9f,1f);
+        }
+        else
+        {
+            imageBTN.gameObject.transform.localRotation = Quaternion.Euler(0, 0, 0);
+            imageBTN.gameObject.transform.localScale = new Vector3(1f,1f,1f);
         }
     }
     
