@@ -13,7 +13,9 @@ public class UserProfile : MonoBehaviour
     public TMP_Text hintText;
 
     private bool profile;
-    
+    private bool hint2;
+    private bool hint3;
+
     private static UserProfile instance;
     
     private bool showHint2 = true;
@@ -49,7 +51,17 @@ public class UserProfile : MonoBehaviour
         //Debug.Log("User has experience = " + profile);
         if (profile && accumulate.deaths >= 10 || profile && accumulate.timer >= 120.0f)
         {
-            profile = false;
+            switch (SceneManager.GetActiveScene().name)
+            {
+                case "Level1":
+                    profile = false;
+                    hint2 = true;
+                    break;
+                case "Level2":
+                    profile = false;
+                    hint3 = true;
+                    break;
+            }
         }
 
         if (!profile)
@@ -63,7 +75,7 @@ public class UserProfile : MonoBehaviour
         switch (SceneManager.GetActiveScene().name)
         {
             case "Level2":
-                if (showHint2)
+                if (showHint2 && hint2)
                 {
                     HintWindow.SetActive(true);
                     hintText.text = "You gain bonus score when picking up coins";
@@ -71,7 +83,7 @@ public class UserProfile : MonoBehaviour
                 }
                 break;
             case "Level3":
-                if (showHint3)
+                if (showHint3 && hint3)
                 {
                     HintWindow.SetActive(true);
                     hintText.text = "Watch out for the monsters since they will eat the potato if they get too close";
