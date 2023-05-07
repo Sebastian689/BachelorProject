@@ -55,6 +55,7 @@ public class GameManager : MonoBehaviour
         scoreText = GameObject.FindGameObjectWithTag("scoreText").GetComponent<TMP_Text>();
         sceneTimer = GameObject.FindGameObjectWithTag("UITimer").GetComponent<UITimer>();
         endPanel.SetActive(false);
+        IR = GameObject.FindGameObjectWithTag("Recommended Panel").GetComponent<inactiveRecommended>();
         Rec = GameObject.FindGameObjectWithTag("Recommended").GetComponent<RecommendedBtn>();
         if(SceneManager.GetActiveScene().name == "Level1")
         {
@@ -63,8 +64,8 @@ public class GameManager : MonoBehaviour
             Rec.gameObject.SetActive(true);
             Rec.Preset();
         }
-        
-        
+
+        IR.SetActiveFalse();
         DC = GameObject.FindGameObjectWithTag("DeathCounter").GetComponent<DeathCounter>();
         accum = GameObject.FindGameObjectWithTag("Accumulate").GetComponent<Accumulate>();
         
@@ -293,6 +294,7 @@ public class GameManager : MonoBehaviour
         sceneTimer.timerStarted = false;
         timerHasBegun = false;
         Rec.gameObject.SetActive(true);
+        IR.NewLevel();
         DC.currentNum = 0;
     }
 
@@ -301,7 +303,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(1);
         Score();
         EndLevel();
-        IR.NewLevel();
+        
     }
 }
 [System.Serializable]

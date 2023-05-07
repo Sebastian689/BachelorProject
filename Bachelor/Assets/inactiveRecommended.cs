@@ -26,19 +26,21 @@ public class inactiveRecommended : MonoBehaviour
         }
         else
         {
+            
             value = true;
             panel.SetActive(value);
         }
         
     }
 
-    void SetActiveFalse()
+    public void SetActiveFalse()
     {
         panel.SetActive(false);
     }
 
     public void NewLevel()
     {
+        
         value = false;
         SetChildValue();
     }
