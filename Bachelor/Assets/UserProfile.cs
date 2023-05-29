@@ -13,8 +13,8 @@ public class UserProfile : MonoBehaviour
     public TMP_Text hintText;
 
     private bool profile;
-    private bool hint2;
-    private bool hint3;
+    private bool hint2 = true;
+    private bool hint3 = true;
 
     private static UserProfile instance;
     
@@ -48,18 +48,18 @@ public class UserProfile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log("User has experience = " + profile);
+        Debug.Log("User has experience = " + profile);
         if (profile && accumulate.deaths >= 10 || profile && accumulate.timer >= 120.0f)
         {
             switch (SceneManager.GetActiveScene().name)
             {
                 case "Level1":
                     profile = false;
-                    hint2 = true;
+                    //hint2 = true;
                     break;
                 case "Level2":
                     profile = false;
-                    hint3 = true;
+                    //hint3 = true;
                     break;
             }
         }

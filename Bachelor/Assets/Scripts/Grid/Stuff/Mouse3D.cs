@@ -23,6 +23,7 @@ public class Mouse3D : MonoBehaviour {
         UILayer = LayerMask.NameToLayer("IgnoreLayer");
     }
 
+    /*
     private void Update() {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit raycastHit, 999f, mouseColliderLayerMask & ignoreLayerMask)) {
@@ -30,6 +31,7 @@ public class Mouse3D : MonoBehaviour {
         }
         //print(IsPointerOverUIElement() ? "Over UI" : "Not over UI");
     }
+    */
 
     public static Vector3 GetMouseWorldPosition() => Instance.GetMouseWorldPosition_Instance();
 
